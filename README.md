@@ -1,3 +1,3 @@
-# homepage
+# Homepage
 
 GanJiang agent homepage.
