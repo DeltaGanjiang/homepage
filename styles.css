@@ -66,7 +66,7 @@ html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3,html[lang="en"] .panel-
 html[lang="en"] .hero h1{font-size:clamp(48px,5.8vw,76px);line-height:.98}
 html[lang="en"] .intro h2,html[lang="en"] .section-heading h2,html[lang="en"] .why h2,html[lang="en"] .beta h2,html[lang="en"] .future h2,html[lang="en"] .presentation h2{font-size:clamp(37px,4.2vw,56px);line-height:1.02}
 html[lang="en"] .xrd-analysis h2,html[lang="en"] .field-intro h2{font-size:clamp(38px,4.6vw,60px);line-height:1}
-html[lang="en"] .name-copy h2{max-width:13ch;font-size:clamp(35px,3.7vw,50px);line-height:1.01}
+html[lang="en"] .name-copy h2{max-width:18ch;font-size:clamp(35px,3.7vw,50px);line-height:1.01}
 html[lang="en"] .hero-text,html[lang="en"] .intro-grid>div>p:first-child,html[lang="en"] .name-copy>p:not(.eyebrow),html[lang="en"] .why-copy>p:last-child,html[lang="en"] .future-body p,html[lang="en"] .presentation-copy>p:not(.eyebrow),html[lang="en"] .beta-copy>p:not(.eyebrow):not(.beta-footnote){font-size:16px;line-height:1.58}
 html[lang="en"] .capability-grid h3{font-size:22px;line-height:1.12}
 html[lang="en"] .capability-grid p,html[lang="en"] .principles p{font-size:13px;line-height:1.5}
@@ -211,3 +211,20 @@ html[lang="en"] .news-heading h2,html[lang="en"] .news-copy h3{font-family:-appl
 
 /* Center the first-screen outcome summary. */
 .hero>.outcomes .outcome-grid>*{text-align:center}
+
+/* Balance every title so a new line never looks like a one- or two-character afterthought. */
+:where(h1,h2,h3,.panel-statement,.outcome-grid>p,.xrd-step strong,.crystal-tab,.principles li>span,.team-group-heading p,.team-contact-person strong){text-wrap:balance}
+html[lang="en"] :where(h1,h2,h3,.panel-statement,.outcome-grid>p,.xrd-step strong,.crystal-tab,.principles li>span,.team-group-heading p,.team-contact-person strong){word-break:normal;overflow-wrap:normal;hyphens:none}
+
+/* Keep the Chinese team title compact and on one line at every viewport. */
+html[lang="zh-CN"] .team-intro h1{max-width:none;font-size:clamp(24px,4.25vw,60px);letter-spacing:-.04em;white-space:nowrap}
+
+/* Keep these short Chinese section statements on a single, intentional line. */
+html[lang="zh-CN"] [data-i18n="analysisTitle"]{font-size:clamp(27px,4vw,56px);white-space:nowrap}
+html[lang="zh-CN"] [data-i18n="presentationTitle"]{font-size:clamp(26px,3vw,40px);white-space:nowrap}
+
+/* Center the complete Gan Jiang summary card on the logo axis. */
+.hero-panel{text-align:center}
+.hero-panel .platform-logo{margin-right:auto;margin-left:auto}
+.hero-panel .signal-list div{grid-template-columns:1fr;gap:6px;justify-items:center;text-align:center}
+.hero-panel .signal-list p{max-width:360px}
