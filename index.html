@@ -46,15 +46,118 @@
         <div class="hero-copy"><p class="eyebrow" data-i18n="heroEyebrow">面向粉末 X 射线衍射</p><h1 data-i18n="heroTitle"><span class="title-line">从一张图谱，</span><br /><span class="title-line">到可信的<em>结构结论</em></span></h1><p class="hero-text" data-i18n="heroText">干将把 PXRD 图谱转化为可验证、可追溯的结构结论。</p><a class="button" href="#can-do" data-i18n="heroPrimary">了解干将 <span>↓</span></a></div>
         <aside class="hero-panel"><img class="platform-logo" src="assets/images/ganjiang-logo-small.webp" alt="干将平台标志" /><p class="panel-kicker" data-i18n="panelKicker">干将是什么</p><p class="panel-statement" data-i18n="panelStatement">面向 PXRD 的<br />科学智能体。</p><div class="signal-list"><div><span>01</span><p data-i18n="signalOne">识别、分解与精修，在一条路径完成。</p></div><div><span>02</span><p data-i18n="signalTwo">结论、依据与不确定性，一并保留。</p></div></div></aside>
       <div class="outcomes" aria-label="平台带来的研究结果"><div class="section-shell outcome-grid"><p data-i18n="outcomeIntro">从测量到结论，全程可审阅。</p><div><strong data-i18n="outcomeOne">识别</strong><span data-i18n="outcomeOneText">发现候选物相</span></div><div><strong data-i18n="outcomeTwo">验证</strong><span data-i18n="outcomeTwoText">分解与精修交叉检查</span></div><div><strong data-i18n="outcomeThree">决策</strong><span data-i18n="outcomeThreeText">标记边界，建议下一步</span></div></div></div></section>
-      <section class="xrd-analysis" data-reveal aria-labelledby="xrd-analysis-title">
-        <img class="xrd-analysis-image" width="1881" height="836" loading="lazy" decoding="async" src="assets/images/workflow-dark.webp" alt="干将将 X 射线衍射图谱、分析推理与晶体结构结论连接起来的工作流程图" />
-        <div class="xrd-analysis-shade"></div>
-        <div class="section-shell xrd-analysis-content">
-          <div class="xrd-analysis-heading"><p class="eyebrow" data-i18n="analysisEyebrow">一次测量，一条证据链</p><h2 id="xrd-analysis-title" data-i18n="analysisTitle">干将，连接表征到结构。</h2><p data-i18n="analysisText">从原始衍射峰，到候选物相、结构模型与可审阅的验证结论，分析过程在同一条路径上持续推进。</p></div>
-          <div class="xrd-process" aria-label="XRD 分析流程"><div class="xrd-process-line" aria-hidden="true"></div><article class="xrd-step xrd-step-measure"><span>01</span><strong data-i18n="analysisStepOne">读入图谱</strong><small data-i18n="analysisStepOneDetail">峰位 · 强度 · 背景</small></article><article class="xrd-step xrd-step-agent"><span>02</span><strong data-i18n="analysisStepTwo">干将推理</strong><small data-i18n="analysisStepTwoDetail">匹配 · 分解 · 验证</small></article><article class="xrd-step xrd-step-result"><span>03</span><strong data-i18n="analysisStepThree">交付结论</strong><small data-i18n="analysisStepThreeDetail">结构候选 · 可信依据</small></article></div>
+      <section class="xrd-analysis agent-system" data-reveal aria-labelledby="xrd-analysis-title">
+        <div class="section-shell agent-system-shell">
+          <header class="agent-system-heading">
+            <div><p class="eyebrow" data-i18n="systemEyebrow">自主材料表征系统</p><h2 id="xrd-analysis-title" data-i18n="systemTitle">干将，编排从图谱到下一次实验。</h2></div>
+            <p data-i18n="systemIntro">以研究意图为起点，调度分析模型、结构数据库与实验仪器；把每次测量、验证和修正连成可审阅的科学闭环。</p>
+          </header>
+
+          <div class="agent-map" id="agent-system-map" data-stage="0" aria-label="干将 XRD 科学智能体动态系统图">
+            <div class="agent-map-grid" aria-hidden="true"></div>
+            <svg class="agent-routes" viewBox="0 0 1200 620" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="route-cyan" x1="0" x2="1"><stop offset="0" stop-color="#76a9ff" /><stop offset=".52" stop-color="#77f6d2" /><stop offset="1" stop-color="#b889ff" /></linearGradient>
+                <filter id="route-glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+              </defs>
+              <path class="system-route system-route-intent" d="M600 112 C600 152 600 175 600 214" />
+              <path class="system-route system-route-model" d="M515 307 C465 307 430 307 375 307" />
+              <path class="system-route system-route-lab" d="M685 307 C735 307 770 307 825 307" />
+              <path class="system-route system-route-source" d="M600 404 C600 454 600 482 600 521" />
+              <path class="system-route system-route-loop" d="M280 382 C330 515 448 565 600 565 C752 565 870 515 920 382" />
+              <path class="system-route system-route-loop-return" d="M920 246 C870 148 754 122 676 224" />
+              <g class="route-points" filter="url(#route-glow)"><circle cx="600" cy="112" r="4" /><circle cx="375" cy="307" r="4" /><circle cx="825" cy="307" r="4" /><circle cx="600" cy="521" r="4" /><circle cx="600" cy="565" r="4" /></g>
+            </svg>
+
+            <article class="system-node system-human" data-system-node="0" tabindex="0">
+              <p><span>01</span><small data-i18n="systemHumanKicker">研究意图</small></p>
+              <h3 data-i18n="systemHumanTitle">材料研究者</h3>
+              <div data-i18n="systemHumanDetail">问题 · 约束 · 审阅</div>
+            </article>
+
+            <article class="system-node system-domain" data-system-node="1" tabindex="0">
+              <header><p><span>02</span><small data-i18n="systemDomainKicker">科学模型 · 干实验</small></p><h3 data-i18n="systemDomainTitle">XRD 分析智能</h3></header>
+              <ul>
+                <li data-i18n="systemDomainOne">图谱解析</li><li data-i18n="systemDomainTwo">物相识别</li><li data-i18n="systemDomainThree">定量分解</li><li data-i18n="systemDomainFour">结构精修</li>
+              </ul>
+              <div class="system-port"><i></i><span data-i18n="systemDomainPort">结构假设与证据</span></div>
+            </article>
+
+            <article class="system-hub" data-system-node="2" tabindex="0">
+              <div class="hub-orbit hub-orbit-one" aria-hidden="true"></div><div class="hub-orbit hub-orbit-two" aria-hidden="true"></div>
+              <div class="hub-core"><img src="assets/images/favicon.png" alt="" /></div>
+              <p data-i18n="systemHubKicker">GANJIANG / AGENTIC XRD</p>
+              <h3 data-i18n="systemHubTitle">干将</h3>
+              <strong data-i18n="systemHubSubtitle">自主分析编排中枢</strong>
+              <div class="hub-status"><i></i><span data-i18n="systemHubStatus">证据链运行中</span></div>
+              <ul><li data-i18n="systemHubOne">意图理解</li><li data-i18n="systemHubTwo">路径规划</li><li data-i18n="systemHubThree">交叉验证</li></ul>
+            </article>
+
+            <article class="system-node system-lab" data-system-node="3" tabindex="0">
+              <header><p><span>03</span><small data-i18n="systemLabKicker">物理实验 · 测量</small></p><h3 data-i18n="systemLabTitle">XRD 仪器与实验室</h3></header>
+              <ul>
+                <li data-i18n="systemLabOne">样品制备</li><li data-i18n="systemLabTwo">自动测量</li><li data-i18n="systemLabThree">原位序列</li><li data-i18n="systemLabFour">补测与复验</li>
+              </ul>
+              <div class="system-port"><i></i><span data-i18n="systemLabPort">新图谱与实验反馈</span></div>
+            </article>
+
+            <article class="system-node system-external" data-system-node="4" tabindex="0">
+              <p><span>04</span><small data-i18n="systemExternalKicker">接口 · 外部能力</small></p>
+              <div><strong data-i18n="systemExternalOne">结构数据库</strong><strong data-i18n="systemExternalTwo">分析引擎</strong><strong data-i18n="systemExternalThree">仪器与机器人 API</strong></div>
+            </article>
+
+            <div class="system-loop-label"><span data-i18n="systemLoopLabel">分析—实验闭环</span><small>MEASURE · REASON · VERIFY</small></div>
+          </div>
         </div>
       </section>
-      <section class="field section-shell" data-reveal><div class="field-intro"><p class="eyebrow" data-i18n="fieldEyebrow">探索晶体分析场景</p><h2 data-i18n="fieldTitle">每一种结构，都需要一条不同的证据路径</h2><p data-i18n="fieldDescription">选择一个材料体系，观察干将如何从衍射信号走向结构判断。</p></div><div class="field-explorer"><div class="field-image" id="xrd-field" role="img" aria-label="从 XRD 衍射峰动态演化为晶体结构的交互式科学图"><canvas id="xrd-canvas"></canvas><p class="field-hint">移动光标或选择下方场景，查看对应的分析路径</p></div><div class="crystal-tabs" role="tablist" aria-label="晶体分析场景"><button class="crystal-tab is-active" type="button" role="tab" aria-selected="true" data-crystal="0" data-i18n="tabLayer"><span>01</span>层状氧化物 <small>相识别</small></button><button class="crystal-tab" type="button" role="tab" aria-selected="false" data-crystal="1" data-i18n="tabPerovskite"><span>02</span>钙钛矿 <small>结构精修</small></button><button class="crystal-tab" type="button" role="tab" aria-selected="false" data-crystal="2" data-i18n="tabMixture"><span>03</span>多相体系 <small>定量分解</small></button></div></div></section>
+      <section class="field section-shell" data-reveal>
+        <div class="field-intro"><p class="eyebrow" data-i18n="fieldEyebrow">探索晶体分析场景</p><h2 data-i18n="fieldTitle">每一种结构，都需要一条不同的证据路径</h2><p data-i18n="fieldDescription">选择一个材料体系，观察干将如何从衍射信号走向结构判断。</p></div>
+        <div class="field-explorer evidence-explorer">
+          <div class="evidence-stage" id="evidence-stage" data-scene="0" data-phase="0" role="group" aria-label="XRD 动态证据工作台">
+            <div class="evidence-topbar"><div><i></i><span data-i18n="evidenceLive">实时证据链</span></div><p>PXRD / Cu Kα / <span data-i18n="evidenceDemo">演示数据</span></p></div>
+            <div class="evidence-workspace">
+              <section class="evidence-panel evidence-spectrum" data-evidence-panel="0" tabindex="0">
+                <header><div><span>01</span><p data-i18n="evidencePatternLabel">测量图谱</p></div><small data-i18n="evidencePatternUnit">强度 / 2θ</small></header>
+                <div class="spectrum-plot">
+                  <svg viewBox="0 0 560 300" preserveAspectRatio="none" aria-hidden="true">
+                    <defs><linearGradient id="spectrum-line" x1="0" x2="1"><stop offset="0" stop-color="#76a9ff" /><stop offset=".55" stop-color="#77f6d2" /><stop offset="1" stop-color="#b889ff" /></linearGradient><linearGradient id="spectrum-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#77f6d2" stop-opacity=".22" /><stop offset="1" stop-color="#77f6d2" stop-opacity="0" /></linearGradient></defs>
+                    <g class="spectrum-grid"><path d="M35 45H530M35 95H530M35 145H530M35 195H530M35 245H530" /><path d="M85 25V258M185 25V258M285 25V258M385 25V258M485 25V258" /></g>
+                    <g class="evidence-scene is-active" data-evidence-scene="0"><path class="spectrum-area" d="M35 242 L66 240 L76 237 L86 118 L94 239 L132 238 L142 198 L150 239 L198 237 L207 80 L215 238 L267 237 L276 160 L284 239 L339 237 L348 123 L356 239 L405 237 L413 183 L421 239 L470 237 L478 145 L486 239 L530 242 L530 258 L35 258Z" /><path class="spectrum-measured" d="M35 242 L52 241 L66 240 L76 237 L82 240 L86 118 L90 238 L94 239 L116 240 L132 238 L138 239 L142 198 L146 237 L150 239 L176 240 L198 237 L203 239 L207 80 L211 236 L215 238 L241 240 L267 237 L272 239 L276 160 L280 237 L284 239 L311 241 L339 237 L344 239 L348 123 L352 236 L356 239 L382 240 L405 237 L409 239 L413 183 L417 238 L421 239 L447 240 L470 237 L474 239 L478 145 L482 237 L486 239 L510 241 L530 242" /><path class="spectrum-fit" d="M35 240 L80 240 L86 123 L92 240 L137 240 L142 202 L147 240 L202 240 L207 86 L212 240 L271 240 L276 165 L281 240 L343 240 L348 128 L353 240 L408 240 L413 188 L418 240 L473 240 L478 150 L483 240 L530 240" /><path class="spectrum-residual" d="M35 273 C75 268 110 278 150 272 S225 269 270 274 S350 278 400 271 S480 270 530 274" /></g>
+                    <g class="evidence-scene" data-evidence-scene="1"><path class="spectrum-area" d="M35 242 L72 240 L91 220 L98 239 L144 238 L154 151 L162 239 L211 237 L223 99 L232 239 L278 238 L291 176 L299 239 L349 237 L365 70 L374 239 L422 238 L433 142 L441 239 L486 238 L497 194 L505 240 L530 242 L530 258 L35 258Z" /><path class="spectrum-measured" d="M35 242 L60 241 L72 240 L86 239 L91 220 L96 236 L98 239 L126 241 L144 238 L150 239 L154 151 L159 237 L162 239 L192 240 L211 237 L218 239 L223 99 L228 236 L232 239 L260 240 L278 238 L286 239 L291 176 L296 237 L299 239 L329 241 L349 237 L359 239 L365 70 L370 236 L374 239 L404 240 L422 238 L428 239 L433 142 L438 237 L441 239 L469 240 L486 238 L492 239 L497 194 L502 238 L505 240 L530 242" /><path class="spectrum-fit" d="M35 240 L86 240 L91 223 L96 240 L149 240 L154 156 L159 240 L218 240 L223 104 L228 240 L286 240 L291 181 L296 240 L360 240 L365 76 L370 240 L428 240 L433 148 L438 240 L492 240 L497 198 L502 240 L530 240" /><path class="spectrum-residual" d="M35 272 C82 276 122 267 168 273 S245 278 294 271 S377 267 423 274 S492 277 530 272" /></g>
+                    <g class="evidence-scene" data-evidence-scene="2"><path class="spectrum-area" d="M35 242 L61 238 L69 169 L76 239 L96 236 L104 118 L112 239 L143 235 L151 205 L158 239 L181 235 L190 88 L198 239 L224 237 L232 148 L240 239 L266 236 L277 192 L284 239 L309 235 L319 107 L327 239 L348 236 L357 171 L365 239 L390 235 L401 129 L409 239 L433 236 L443 197 L451 239 L476 236 L487 153 L495 239 L530 242 L530 258 L35 258Z" /><path class="spectrum-measured" d="M35 242 L55 241 L61 238 L65 240 L69 169 L73 237 L76 239 L92 240 L96 236 L100 239 L104 118 L108 237 L112 239 L137 240 L143 235 L147 239 L151 205 L155 237 L158 239 L177 240 L181 235 L186 239 L190 88 L194 236 L198 239 L220 240 L224 237 L228 239 L232 148 L236 237 L240 239 L261 240 L266 236 L272 239 L277 192 L281 237 L284 239 L304 240 L309 235 L314 239 L319 107 L323 236 L327 239 L344 240 L348 236 L353 239 L357 171 L361 237 L365 239 L386 240 L390 235 L396 239 L401 129 L405 236 L409 239 L429 240 L433 236 L439 239 L443 197 L447 238 L451 239 L471 240 L476 236 L482 239 L487 153 L491 237 L495 239 L530 242" /><path class="spectrum-fit" d="M35 240 L65 240 L69 175 L73 240 L100 240 L104 124 L108 240 L147 240 L151 210 L155 240 L186 240 L190 94 L194 240 L228 240 L232 154 L236 240 L272 240 L277 198 L281 240 L314 240 L319 113 L323 240 L353 240 L357 177 L361 240 L396 240 L401 135 L405 240 L439 240 L443 202 L447 240 L482 240 L487 159 L491 240 L530 240" /><path class="spectrum-residual" d="M35 272 C64 265 92 281 120 271 S178 265 207 275 S270 280 304 269 S369 266 405 275 S479 280 530 270" /></g>
+                    <line class="spectrum-scan" x1="45" y1="25" x2="45" y2="258" />
+                  </svg><span class="axis-y">I</span><span class="axis-x">2θ</span>
+                </div>
+                <div class="spectrum-legend"><span><i></i><b data-i18n="evidenceMeasured">实测</b></span><span><i></i><b data-i18n="evidenceFit">模型</b></span><span><i></i><b data-i18n="evidenceResidual">残差</b></span></div>
+              </section>
+              <section class="evidence-panel evidence-reasoning" data-evidence-panel="1" tabindex="0">
+                <header><div><span>02</span><p data-i18n="evidencePathLabel">证据路径</p></div><small>GANJIANG</small></header>
+                <div class="reason-scenes">
+                  <ol class="evidence-scene is-active" data-evidence-scene="0"><li><span>01</span><div><strong data-i18n="layerPathOne">定位层状特征峰</strong><small data-i18n="layerPathOneSub">峰位与强度比</small></div></li><li><span>02</span><div><strong data-i18n="layerPathTwo">检验层间距约束</strong><small data-i18n="layerPathTwoSub">00l 反射系列</small></div></li><li><span>03</span><div><strong data-i18n="layerPathThree">交叉验证候选相</strong><small data-i18n="layerPathThreeSub">理论谱 · 数据库</small></div></li></ol>
+                  <ol class="evidence-scene" data-evidence-scene="1"><li><span>01</span><div><strong data-i18n="perovPathOne">建立初始晶格</strong><small data-i18n="perovPathOneSub">空间群与晶胞</small></div></li><li><span>02</span><div><strong data-i18n="perovPathTwo">分阶段释放参数</strong><small data-i18n="perovPathTwoSub">背景 → 晶格 → 占位</small></div></li><li><span>03</span><div><strong data-i18n="perovPathThree">检查物理合理性</strong><small data-i18n="perovPathThreeSub">残差 · 键长 · 稳定性</small></div></li></ol>
+                  <ol class="evidence-scene" data-evidence-scene="2"><li><span>01</span><div><strong data-i18n="mixPathOne">搜索多个候选相</strong><small data-i18n="mixPathOneSub">主相与弱杂相</small></div></li><li><span>02</span><div><strong data-i18n="mixPathTwo">分离重叠峰贡献</strong><small data-i18n="mixPathTwoSub">联合分解与精修</small></div></li><li><span>03</span><div><strong data-i18n="mixPathThree">验证各相定量结果</strong><small data-i18n="mixPathThreeSub">含量 · 不确定性</small></div></li></ol>
+                </div>
+              </section>
+              <section class="evidence-panel evidence-structure" data-evidence-panel="2" tabindex="0">
+                <header><div><span>03</span><p data-i18n="evidenceStructureLabel">结构假设</p></div><small data-i18n="evidenceReviewable">可审阅</small></header>
+                <div class="crystal-viewport"><svg viewBox="0 0 360 300" aria-hidden="true">
+                  <g class="evidence-scene crystal-scene is-active" data-evidence-scene="0"><g class="crystal-body crystal-layered"><path class="crystal-bond" d="M55 78H305M55 128H305M55 178H305M55 228H305" /><g class="atom-row"><circle cx="72" cy="78" r="8" /><circle cx="116" cy="78" r="8" /><circle cx="160" cy="78" r="8" /><circle cx="204" cy="78" r="8" /><circle cx="248" cy="78" r="8" /><circle cx="292" cy="78" r="8" /></g><g class="atom-row alt"><circle cx="94" cy="128" r="7" /><circle cx="138" cy="128" r="7" /><circle cx="182" cy="128" r="7" /><circle cx="226" cy="128" r="7" /><circle cx="270" cy="128" r="7" /></g><g class="atom-row"><circle cx="72" cy="178" r="8" /><circle cx="116" cy="178" r="8" /><circle cx="160" cy="178" r="8" /><circle cx="204" cy="178" r="8" /><circle cx="248" cy="178" r="8" /><circle cx="292" cy="178" r="8" /></g><g class="atom-row alt"><circle cx="94" cy="228" r="7" /><circle cx="138" cy="228" r="7" /><circle cx="182" cy="228" r="7" /><circle cx="226" cy="228" r="7" /><circle cx="270" cy="228" r="7" /></g></g></g>
+                  <g class="evidence-scene crystal-scene" data-evidence-scene="1"><g class="crystal-body crystal-cube"><path class="crystal-bond" d="M92 91L242 75L277 201L126 219ZM92 91L126 219M242 75L277 201M92 91L151 55L300 44L242 75M300 44L326 170L277 201M126 219L180 183L326 170M151 55L180 183" /><circle class="atom-a" cx="92" cy="91" r="10" /><circle class="atom-a" cx="242" cy="75" r="10" /><circle class="atom-a" cx="277" cy="201" r="10" /><circle class="atom-a" cx="126" cy="219" r="10" /><circle class="atom-a" cx="151" cy="55" r="8" /><circle class="atom-a" cx="300" cy="44" r="8" /><circle class="atom-a" cx="326" cy="170" r="8" /><circle class="atom-a" cx="180" cy="183" r="8" /><circle class="atom-b" cx="207" cy="133" r="17" /><circle class="atom-c" cx="168" cy="112" r="6" /><circle class="atom-c" cx="250" cy="151" r="6" /></g></g>
+                  <g class="evidence-scene crystal-scene" data-evidence-scene="2"><g class="crystal-body crystal-mixture"><g class="phase-one"><path class="crystal-bond" d="M62 132L106 82L168 105L179 169L124 207L67 181Z" /><circle cx="62" cy="132" r="9" /><circle cx="106" cy="82" r="11" /><circle cx="168" cy="105" r="8" /><circle cx="179" cy="169" r="10" /><circle cx="124" cy="207" r="8" /><circle cx="67" cy="181" r="7" /></g><g class="phase-two"><path class="crystal-bond" d="M194 89L264 71L310 123L293 190L225 211L180 157Z" /><circle cx="194" cy="89" r="8" /><circle cx="264" cy="71" r="10" /><circle cx="310" cy="123" r="8" /><circle cx="293" cy="190" r="11" /><circle cx="225" cy="211" r="9" /><circle cx="180" cy="157" r="7" /></g><g class="phase-three"><circle cx="184" cy="234" r="6" /><circle cx="211" cy="252" r="6" /><circle cx="241" cy="238" r="6" /><path class="crystal-bond" d="M184 234L211 252L241 238" /></g></g></g>
+                </svg></div>
+                <div class="structure-captions"><p class="evidence-scene is-active" data-evidence-scene="0"><strong data-i18n="layerOutcome">层间距与目标相一致</strong><small data-i18n="layerOutcomeSub">保留弱杂相复查</small></p><p class="evidence-scene" data-evidence-scene="1"><strong data-i18n="perovOutcome">晶格参数收敛</strong><small data-i18n="perovOutcomeSub">键长与占位保持物理合理</small></p><p class="evidence-scene" data-evidence-scene="2"><strong data-i18n="mixOutcome">三相贡献已分离</strong><small data-i18n="mixOutcomeSub">未解释信号继续标记</small></p></div>
+              </section>
+            </div>
+            <div class="evidence-summary">
+              <div class="evidence-scene evidence-metrics is-active" data-evidence-scene="0"><p><small data-i18n="metricCandidate">候选结构</small><strong>O3 / R-3m</strong></p><p><small>d(003)</small><strong>4.72 Å</strong></p><p><small data-i18n="metricConfidence">证据一致度</small><strong>93%</strong></p></div>
+              <div class="evidence-scene evidence-metrics" data-evidence-scene="1"><p><small data-i18n="metricSpaceGroup">空间群</small><strong>Pm-3m</strong></p><p><small>Rwp</small><strong>6.8%</strong></p><p><small>Δa</small><strong>0.003 Å</strong></p></div>
+              <div class="evidence-scene evidence-metrics" data-evidence-scene="2"><p><small data-i18n="metricPhaseCount">物相数</small><strong>3</strong></p><p><small data-i18n="metricMajorPhase">主相含量</small><strong>71%</strong></p><p><small data-i18n="metricUnexplained">未解释信号</small><strong>2.6%</strong></p></div>
+              <p class="evidence-verdict"><span data-i18n="evidenceVerdict">结论随证据同步更新</span><i></i></p>
+            </div>
+          </div>
+          <div class="crystal-tabs" role="tablist" aria-label="晶体分析场景"><button class="crystal-tab is-active" type="button" role="tab" aria-selected="true" data-crystal="0" data-i18n="tabLayer"><span>01</span>层状氧化物 <small>相识别</small></button><button class="crystal-tab" type="button" role="tab" aria-selected="false" data-crystal="1" data-i18n="tabPerovskite"><span>02</span>钙钛矿 <small>结构精修</small></button><button class="crystal-tab" type="button" role="tab" aria-selected="false" data-crystal="2" data-i18n="tabMixture"><span>03</span>多相体系 <small>定量分解</small></button></div>
+        </div>
+      </section>
       <section class="name-story section-shell" data-reveal><div class="name-image"><img width="1254" height="1254" loading="lazy" decoding="async" src="assets/images/ganjiang-transparent.webp" alt="Gan Jiang ink-wash motif" /></div><div class="name-copy"><p class="eyebrow" data-i18n="nameEyebrow">为什么叫“干将”</p><h2 class="title-no-wrap" data-i18n="nameTitle">取意于淬炼，也取意于判断</h2><p data-i18n="nameTextOne">“干将”是中国古代铸剑文化中的名字。材料发现同样是一场漫长的淬炼：并非只追求制造更多样品，而是要在复杂的证据中分辨结构、剔除误判，并把每一次验证锻造成下一次更可靠的判断。</p><p data-i18n="nameTextTwo">干将希望成为研究者与未来机器人实验室之间，那位持续学习、谨慎求证的人工智能分析科学家。</p></div></section>
       <section id="what" class="intro section-shell" data-reveal><p class="eyebrow" data-i18n="whatEyebrow">它是什么</p><div class="intro-grid"><h2 data-i18n="whatTitle">高通量材料研发的瓶颈，正在从合成转向判断。</h2><div><p data-i18n="whatText">合成、计算和机器人实验室能够快速产生大量候选样品，但 PXRD 表征仍常依赖专家逐张分析。物相识别、多相分解、结构精修、微结构参数提取与异常判断被不同软件和经验割裂，已成为材料发现的关键瓶颈。干将将它们统一为可审阅、可复用的自主分析过程。</p><p class="note" data-i18n="whatNote">它服务于研究者的判断，不取代研究者的判断。</p></div></div></section>
       <section id="can-do" class="capabilities" data-reveal><div class="section-shell"><div class="section-heading"><p class="eyebrow" data-i18n="canDoEyebrow">它能做什么</p><h2 data-i18n="canDoTitle">像专家一样分析一张图谱，并决定下一步该做什么。</h2></div><div class="capability-grid"><article tabindex="0"><span>01 /</span><h3 data-i18n="capOneTitle">统一数据，先看清问题</h3><p data-i18n="capOneText">解析 .xy、.xrdml、.raw、.csv 等格式，检查元数据、噪声、背景、Kα₂ 与仪器域差异。</p></article><article tabindex="0"><span>02 /</span><h3 data-i18n="capTwoTitle">自主诊断分析任务</h3><p data-i18n="capTwoText">判断单相或多相、晶相或非晶、已知结构或未知结构，以及单张还是原位时间序列。</p></article><article tabindex="0"><span>03 /</span><h3 data-i18n="capThreeTitle">多路识别与定量验证</h3><p data-i18n="capThreeText">联合结构数据库、理论谱、XQueryer 与 XMatcher 输出候选；以 XDecomposer 和 Rietveld 精修共同验证。</p></article><article tabindex="0"><span>04 /</span><h3 data-i18n="capFourTitle">自主、分阶段地精修</h3><p data-i18n="capFourText">根据残差与物理合理性，在 PyWPEM、GSAS-II、FullProf 等引擎间动态选择并调整参数。</p></article><article tabindex="0"><span>05 /</span><h3 data-i18n="capFiveTitle">从失败到实验决策</h3><p data-i18n="capFiveText">记录失败原因、专家修正与后续验证，把可靠经验沉淀为技能，并指导下一轮实验条件。</p></article></div></div></section>
