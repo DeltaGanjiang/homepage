@@ -370,7 +370,7 @@ html[lang="zh-CN"] [data-i18n="presentationTitle"]{font-size:clamp(26px,3vw,40px
 /* Product release roadmap. */
 .roadmap{position:relative;isolation:isolate;display:flex;align-items:center;min-height:calc(100svh - 76px);padding:92px 0 106px;color:#eff4ff;background:radial-gradient(circle at 88% 10%,rgba(126,70,232,.23),transparent 30rem),radial-gradient(circle at 8% 92%,rgba(40,193,187,.13),transparent 28rem),linear-gradient(145deg,#070a1c,#0a102a 58%,#0b1530);overflow:hidden}
 .roadmap::before{position:absolute;z-index:-1;inset:0;background-image:linear-gradient(rgba(135,166,229,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(135,166,229,.045) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,transparent,#000 22%,#000 82%,transparent);content:"";pointer-events:none}
-.roadmap::after{position:absolute;z-index:-1;right:-.04em;bottom:-.24em;color:rgba(132,168,245,.035);font:700 clamp(170px,27vw,430px)/.8 var(--mono);letter-spacing:-.11em;content:"10.12";pointer-events:none}
+.roadmap::after{position:absolute;z-index:-1;right:-.04em;bottom:-.24em;color:rgba(132,168,245,.035);font:700 clamp(170px,27vw,430px)/.8 var(--mono);letter-spacing:-.11em;content:"10.08";pointer-events:none}
 .roadmap-shell{position:relative;z-index:1}
 .roadmap-heading{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(280px,.84fr);gap:9%;align-items:end;margin-bottom:42px}
 .roadmap-heading h2{max-width:780px;margin:0;color:#f5f7ff;font:600 clamp(42px,5.2vw,72px)/.96 var(--display);letter-spacing:-.055em}
