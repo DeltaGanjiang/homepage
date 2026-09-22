@@ -4,6 +4,7 @@ const english={navWhat:'What it is',navCanDo:'What it does',navBeta:'Download an
 Object.assign(english,{navNews:'News',newsEyebrow:'Media coverage',newsTitle:'News & Press',newsIntro:'Coverage from the media and industry, documenting Gan Jiang’s practice and progress in materials research.',newsSourceCns:'China News Service',newsSourceCzec:'Changzhou Science and Education Town',newsOneTitle:'Changzhou AI Developer Community’s inaugural event explores industrial AI needs from the bottom up',newsOneText:'The report covers the first Changzhou AI Developer Community event and Bin Cao’s presentation, “Gan Jiang — AI for Materials in Research Practice,” demonstrating agent applications in materials research.',newsTwoTitle:'AI Agent Application Development in Practice | Inaugural Salon Opens on September 16',newsTwoText:'Changzhou Science and Education Town previews the first salon at AI Lab, The Yangtze River Delta, covering personal AI assistants, cloud infrastructure, and practical Agent deployment.',newsRead:'Read the story <i aria-hidden="true">↗</i>'});
 Object.assign(english,{navHome:'Home',navTeam:'Team',backHome:'Back to home ←',teamEyebrow:'Gan Jiang Project Team',teamOrg:'AI Lab, The Yangtze River Delta',teamSalesConsultation:'Sales Enquiries',teamTitle:'The Gan Jiang XRD Development Team',teamIntroPrefix:'Based at ',teamIntroSuffix:', the team brings together researchers from industry labs and universities to collaborate across materials science, artificial intelligence, and engineering.',teamIntroMission:'Together, we are advancing intelligent materials characterization and building the ',teamIntroHighlight:'first science agent for XRD-based materials structure analysis',teamIntroEnd:'.',teamLead:'Project Lead',teamLeadRole:'Leads the Gan Jiang project',teamCore:'Core Contributors',teamTechnical:'Technical Support',teamRecord:'Operations & Sales',teamRecordRole:'Project Documentation · Xiaohongshu Operations',teamSalesRole:'Sales Lead',teamXiaohongshu:'Xiaohongshu ID',teamAdvisors:'Academic Advisors',advisorRole:'Academic Advisor',teamContact:'Project Contact',teamContactTitle:'Sales & Market Enquiries',teamChinaMarket:'China Market',teamOverseasMarket:'Overseas Market',teamNaName:'Na Wang',teamWenhanName:'Wenhan Gu',viewProfile:'Profile',orgBin:"Huawei Noah’s Ark Lab, London · HKUST(GZ)",orgHkust:'HKUST(GZ)',orgUcl:'UCL'});
 Object.assign(english,{orbTitle:'Gan Jiang',orbSubtitle:'A science agent for powder X-ray diffraction',orbTitleTwo:'Patterns',orbSubtitleTwo:'From raw diffraction data to testable structural hypotheses',orbTitleThree:'Decisions',orbSubtitleThree:'Keep evidence, uncertainty, and the next step connected',orbCta:'Enter the site <span aria-hidden="true">↓</span>'});
+Object.assign(english,{navRoadmap:'Roadmap',roadmapEyebrow:'Product roadmap · 2026',roadmapTitle:'From closed beta to a global release',roadmapIntro:'Validate real-world use through Beta, release Preview after two consecutive iterations, then enter the V1 campaign window before the permanent version launches globally on October 12.',roadmapBetaText:'First closed-beta release',roadmapInternal:'Closed-beta users',roadmapIterationLabel:'Iteration',roadmapIterationOne:'Iteration 01',roadmapIterationTwo:'Iteration 02',roadmapIterationText:'Closed-beta version update',roadmapPreviewText:'Preview version release',roadmapCampaignTitle:'Gan Jiang V1 Campaign',roadmapCampaignText:'Focused campaign before launch',roadmapCampaignTag:'V1 launch window',roadmapLaunchTitle:'Gan Jiang Official Release',roadmapLaunchText:'Official release for international users',roadmapGlobal:'International users · Permanent version'});
 const chinese=Object.fromEntries([...document.querySelectorAll('[data-i18n]')].map(n=>[n.dataset.i18n,n.innerHTML]));const isTeamPage=document.body.classList.contains('team-page');const metadata=isTeamPage?{zh:{lang:'zh-CN',locale:'zh_CN',title:'项目团队 — 干将',description:'干将 XRD 项目开发团队依托通用决策智能研究所，推动材料表征智能化发展。',socialDescription:'汇聚产业研究机构与高校力量，共同打造面向 XRD 材料结构分析的科学智能体。'},en:{lang:'en',locale:'en_US',title:'Team — Gan Jiang',description:'Meet the Gan Jiang XRD development team at AI Lab, The Yangtze River Delta.',socialDescription:'Researchers from industry labs and universities building a science agent for XRD-based materials structure analysis.'}}:{zh:{lang:'zh-CN',locale:'zh_CN',title:'干将 — X 射线衍射科学智能体',description:'干将是面向粉末 X 射线衍射的科学智能体：把图谱分析变成可追溯的研究判断。',socialDescription:'把复杂图谱转化为可验证的结构结论，推动材料表征智能化。'},en:{lang:'en',locale:'en_US',title:'Gan Jiang — Science Agent for X-ray Diffraction',description:'Gan Jiang is a science agent for PXRD that turns pattern analysis into traceable scientific judgement.',socialDescription:'Turning complex diffraction patterns into verifiable structural conclusions for intelligent materials characterization.'}};
 function setLanguage(language){const copy=language==='en'?english:chinese,pageMeta=metadata[language];document.querySelectorAll('[data-i18n]').forEach(n=>n.innerHTML=copy[n.dataset.i18n]);document.documentElement.lang=pageMeta.lang;document.title=pageMeta.title;document.querySelector('meta[name="description"]').setAttribute('content',pageMeta.description);document.querySelector('meta[property="og:locale"]')?.setAttribute('content',pageMeta.locale);document.querySelectorAll('meta[property="og:title"],meta[name="twitter:title"]').forEach(meta=>meta.setAttribute('content',pageMeta.title));document.querySelectorAll('meta[property="og:description"],meta[name="twitter:description"]').forEach(meta=>meta.setAttribute('content',pageMeta.socialDescription));languageToggle.textContent=language==='en'?'中文':'EN';languageToggle.setAttribute('aria-label',language==='en'?'切换至中文':'Switch to English');menu.setAttribute('aria-label',language==='en'?'Open navigation':'打开导航');if(!nav.classList.contains('is-open'))menu.textContent=language==='en'?'Menu':'菜单';localStorage.setItem('gan-jiang-language',language)}
 menu?.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');menu.setAttribute('aria-expanded',String(open));const en=document.documentElement.lang==='en';menu.textContent=open?(en?'Close':'关闭'):(en?'Menu':'菜单')});nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');menu?.setAttribute('aria-expanded','false');menu.textContent=document.documentElement.lang==='en'?'Menu':'菜单'}));languageToggle?.addEventListener('click',()=>setLanguage(document.documentElement.lang==='en'?'zh':'en'));const savedLanguage=localStorage.getItem('gan-jiang-language');setLanguage(savedLanguage==='zh'?'zh':'en');
@@ -55,17 +56,42 @@ if(orbCanvas){
 
       void main(){
         vec2 frag=gl_FragCoord.xy;
-        vec2 uv=(frag-0.5*u_resolution.xy)/min(u_resolution.x,u_resolution.y);
-        vec2 pointer=(u_pointer-0.5)*vec2(u_resolution.x/u_resolution.y,1.0);
+        vec2 rawUv=(frag-0.5*u_resolution.xy)/min(u_resolution.x,u_resolution.y);
+        float aspect=u_resolution.x/u_resolution.y;
+        float shapeMotion=smoothstep(0.0,2.2,u_time);
+        vec2 centerDrift=vec2(sin(u_time*0.31),cos(u_time*0.27))*0.003*shapeMotion;
+        vec2 uv=rawUv-centerDrift;
+        vec2 pointer=(u_pointer-0.5)*vec2(aspect,1.0)-centerDrift;
         float angle=atan(uv.y,uv.x);
         float radius=length(uv);
-        float aspect=u_resolution.x/u_resolution.y;
+        vec2 direction=uv/max(radius,0.0001);
         float orbRadius=mix(0.485,0.455,smoothstep(0.72,1.0,aspect));
         float pixel=1.5/min(u_resolution.x,u_resolution.y);
-        float disc=1.0-smoothstep(orbRadius-pixel,orbRadius+pixel,radius);
-        float normalizedRadius=clamp(radius/orbRadius,0.0,1.0);
+
+        // Keep a clean circular silhouette first, then add restrained breathing
+        // and a small local membrane response around the pointer.
+        vec2 boundaryFlow=direction*1.18+vec2(cos(u_time*0.13),sin(u_time*0.11))*0.48;
+        float boundaryNoise=fbm(boundaryFlow);
+        float elasticLobes=sin(angle*2.0+u_time*0.32)*0.58
+          +sin(angle*3.0-u_time*0.41)*0.28
+          +sin(angle*4.0+u_time*0.23)*0.14;
+        float breathing=sin(u_time*0.58)*0.0035;
+        float pointerDistance=length(pointer);
+        vec2 pointerDirection=pointer/max(pointerDistance,0.0001);
+        float pointerArc=pow(max(dot(direction,pointerDirection),0.0),10.0);
+        float pointerReady=smoothstep(0.08,0.2,pointerDistance)*u_hover;
+        float pointerDelta=pointerDistance-orbRadius;
+        float pointerReach=1.0-smoothstep(0.08,0.34,abs(pointerDelta));
+        float membranePull=pointerArc*pointerReady*pointerReach
+          *(clamp(pointerDelta*0.1,-0.006,0.012)+0.002*sin(u_time*2.4+angle*3.0));
+        float deformation=shapeMotion*((boundaryNoise-0.5)*0.006+elasticLobes*0.004+breathing+membranePull);
+        float deformedRadius=orbRadius+deformation;
+        float edgeDistance=radius-deformedRadius;
+        float edgeSoftness=0.0075+0.001*(0.5+0.5*sin(angle*2.0-u_time*0.52));
+        float disc=1.0-smoothstep(-pixel*1.5,edgeSoftness,edgeDistance);
+        float normalizedRadius=clamp(radius/deformedRadius,0.0,1.0);
         float depth=sqrt(max(0.0,1.0-normalizedRadius*normalizedRadius));
-        vec3 normal=normalize(vec3(uv/orbRadius,depth));
+        vec3 normal=normalize(vec3(uv/deformedRadius,depth));
 
         // Cartesian noise keeps the field continuous across the polar angle boundary.
         float turn=u_time*0.11;
@@ -77,10 +103,10 @@ if(orbCanvas){
         float ribbon=mix(centerFlow,0.5+0.5*sin(angle*2.0+flow*5.4-u_time*0.78),angularFade);
         float counterRibbon=mix(flow,0.5+0.5*cos(angle*3.0-flow*4.2+u_time*0.46),angularFade);
         float fineRibbon=pow(0.5+0.5*sin(angle*6.0-flow*8.0+u_time*1.12),7.0);
-        float fresnel=pow(1.0-depth,2.45)*disc;
-        float innerBand=exp(-pow((radius-(orbRadius-0.055))/0.075,2.0))*disc;
-        float halo=exp(-abs(radius-orbRadius)*19.0);
-        float hairline=1.0-smoothstep(pixel,5.0*pixel,abs(radius-orbRadius));
+        float fresnel=pow(1.0-depth,2.18)*disc;
+        float innerBand=exp(-pow((edgeDistance+0.055)/0.075,2.0))*disc;
+        float halo=exp(-abs(edgeDistance)*18.0);
+        float hairline=exp(-pow(edgeDistance/(0.007+pixel*2.0),2.0));
 
         vec2 restingLight=vec2(cos(u_time*0.43),sin(u_time*0.37))*0.58;
         vec2 pointerLight=clamp(pointer/orbRadius,vec2(-1.0),vec2(1.0));
@@ -104,9 +130,9 @@ if(orbCanvas){
         color+=vec3(0.72,0.82,1.0)*fineRibbon*innerBand*0.34;
         color*=0.78+0.58*flow+0.36*fresnel+0.08*sin(u_time*1.35);
 
-        float glass=disc*(0.045+0.085*flow+0.13*ribbon+0.05*counterRibbon);
-        float pulse=0.92+0.08*sin(u_time*1.35);
-        float alpha=clamp((glass+fresnel*0.76+innerBand*0.29+halo*0.19+hairline*0.62+specular*0.38+travelingLight*0.22)*pulse,0.0,1.0);
+        float glass=disc*(0.05+0.09*flow+0.13*ribbon+0.05*counterRibbon);
+        float pulse=0.91+0.09*sin(u_time*1.22+boundaryNoise*1.8);
+        float alpha=clamp((glass+fresnel*0.7+innerBand*0.27+halo*0.16+hairline*0.48+specular*0.38+travelingLight*0.22)*pulse,0.0,1.0);
         gl_FragColor=vec4(color*alpha,alpha);
       }
     `;
@@ -118,12 +144,12 @@ if(orbCanvas){
         const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
         const position=gl.getAttribLocation(program,"a_position"),resolution=gl.getUniformLocation(program,"u_resolution"),pointer=gl.getUniformLocation(program,"u_pointer"),time=gl.getUniformLocation(program,"u_time"),hover=gl.getUniformLocation(program,"u_hover");
         gl.useProgram(program);gl.enableVertexAttribArray(position);gl.vertexAttribPointer(position,2,gl.FLOAT,false,0,0);gl.clearColor(0,0,0,0);gl.enable(gl.BLEND);gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
-        let pointerTarget=[.5,.5],pointerCurrent=[.5,.5],hoverTarget=0,hoverCurrent=0,visible=true,frame=0;
+        let pointerTarget=[.5,.5],pointerCurrent=[.5,.5],pointerVelocity=[0,0],hoverTarget=0,hoverCurrent=0,visible=true,frame=0;
         const reducedMotion=matchMedia("(prefers-reduced-motion: reduce)").matches;
         const resizeOrb=()=>{const rect=orbCanvas.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,1.75),width=Math.max(1,Math.round(rect.width*dpr)),height=Math.max(1,Math.round(rect.height*dpr));if(orbCanvas.width!==width||orbCanvas.height!==height){orbCanvas.width=width;orbCanvas.height=height;gl.viewport(0,0,width,height)}};
         const updatePointer=event=>{const rect=orbCanvas.getBoundingClientRect();pointerTarget=[(event.clientX-rect.left)/rect.width,1-(event.clientY-rect.top)/rect.height];hoverTarget=1};
         const leaveOrb=()=>{pointerTarget=[.5,.5];hoverTarget=0};
-        const renderOrb=milliseconds=>{frame=0;resizeOrb();pointerCurrent[0]+=(pointerTarget[0]-pointerCurrent[0])*.075;pointerCurrent[1]+=(pointerTarget[1]-pointerCurrent[1])*.075;hoverCurrent+=(hoverTarget-hoverCurrent)*.07;gl.clear(gl.COLOR_BUFFER_BIT);gl.uniform2f(resolution,orbCanvas.width,orbCanvas.height);gl.uniform2f(pointer,pointerCurrent[0],pointerCurrent[1]);gl.uniform1f(time,reducedMotion?2.4:milliseconds*.001);gl.uniform1f(hover,hoverCurrent);gl.drawArrays(gl.TRIANGLES,0,3);if(visible&&!reducedMotion)frame=requestAnimationFrame(renderOrb)};
+        const renderOrb=milliseconds=>{frame=0;resizeOrb();for(let axis=0;axis<2;axis++){pointerVelocity[axis]=(pointerVelocity[axis]+(pointerTarget[axis]-pointerCurrent[axis])*.065)*.78;pointerCurrent[axis]+=pointerVelocity[axis]}hoverCurrent+=(hoverTarget-hoverCurrent)*.07;gl.clear(gl.COLOR_BUFFER_BIT);gl.uniform2f(resolution,orbCanvas.width,orbCanvas.height);gl.uniform2f(pointer,pointerCurrent[0],pointerCurrent[1]);gl.uniform1f(time,reducedMotion?2.4:milliseconds*.001);gl.uniform1f(hover,hoverCurrent);gl.drawArrays(gl.TRIANGLES,0,3);if(visible&&!reducedMotion)frame=requestAnimationFrame(renderOrb)};
         const startOrb=()=>{if(!frame&&!reducedMotion)frame=requestAnimationFrame(renderOrb)};
         const stopOrb=()=>{if(frame){cancelAnimationFrame(frame);frame=0}};
         orbCanvas.addEventListener("pointermove",updatePointer);orbCanvas.addEventListener("pointerleave",leaveOrb);addEventListener("resize",resizeOrb,{passive:true});
