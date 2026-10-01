@@ -22,12 +22,13 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="design-system.css" />
   </head>
-  <body class="team-page">
+  <body class="team-page site-v2">
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="返回干将首页"><img class="brand-logo" src="assets/images/logo-small.webp" alt="" /> GanJiang</a>
-      <div class="header-actions"><div class="social-links header-social" aria-label="社交链接"><a class="social-link github-link" href="https://github.com/DeltaGanjiang" target="_blank" rel="noreferrer" aria-label="GitHub: DeltaGanjiang"><img src="assets/images/github.webp" alt="" /><span>GitHub</span></a><span class="social-link xiaohongshu-link" aria-label="小红书：95614037352"><img src="assets/images/xaiohongshu.webp" alt="" /><span>95614037352</span></span></div><button class="language-toggle" type="button" aria-label="Switch to English">EN</button><button class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false">菜单</button></div>
-      <nav class="nav" aria-label="Main navigation"><a href="index.html" data-i18n="navHome">首页</a><a href="index.html#presentation" data-i18n="navPresentation">项目介绍</a><a href="index.html#news" data-i18n="navNews">新闻报道</a><a class="is-current" href="team.html" aria-current="page" data-i18n="navTeam">项目团队</a><a href="index.html#beta" data-i18n="navBeta">下载和体验</a></nav>
+      <div class="header-actions"><div class="social-links header-social" aria-label="社交链接"><a class="social-link github-link" href="https://github.com/DeltaGanjiang" target="_blank" rel="noreferrer" aria-label="GitHub: DeltaGanjiang"><img src="assets/images/github.webp" alt="" /><span>GitHub</span></a><span class="social-link xiaohongshu-link" aria-label="小红书：95614037352"><img src="assets/images/xaiohongshu.webp" alt="" /><span>95614037352</span></span></div><button class="language-toggle" type="button" aria-label="Switch to English">EN</button><button aria-controls="site-nav" class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false">菜单</button></div>
+      <nav id="site-nav" class="nav" aria-label="Main navigation"><a href="index.html" data-i18n="navHome">首页</a><a href="index.html#presentation" data-i18n="navPresentation">项目介绍</a><a href="index.html#news" data-i18n="navNews">新闻报道</a><a class="is-current" href="team.html" aria-current="page" data-i18n="navTeam">项目团队</a><a href="index.html#beta" data-i18n="navBeta">下载和体验</a></nav>
     </header>
     <main id="top">
       <section class="team" aria-labelledby="team-title">
@@ -114,6 +115,6 @@
       </section>
     </main>
     <footer class="footer section-shell"><p><img class="brand-logo" src="assets/images/logo-small.webp" alt="" /> GanJiang</p><p><a class="org-link" href="https://www.yangtzeailab.com" target="_blank" rel="noreferrer" data-i18n="teamOrg">通用决策智能研究所</a></p><div class="social-links footer-social" aria-label="社交链接"><a class="social-link github-link" href="https://github.com/DeltaGanjiang" target="_blank" rel="noreferrer" aria-label="GitHub: DeltaGanjiang"><img src="assets/images/github.webp" alt="" /><span>GitHub</span></a></div><a href="index.html" data-i18n="backHome">返回主页 ←</a></footer>
-    <script src="script.js"></script>
+    <script src="script.js"></script><script src="design.js"></script>
   </body>
 </html>
