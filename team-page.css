@@ -1,0 +1,184 @@
+/* People directory — shared research identity, with the people in the foreground. */
+.team-page{--people-rule:#2a374b;--people-secondary:#a7b6cb}
+#team-main:focus{outline:none}
+.site-v2 .people-intro{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:58px 7%;align-items:center;padding:90px 0 0}
+.people-intro-copy{min-width:0}
+.people-kicker{display:flex;align-items:center;gap:10px;margin:0 0 30px;color:#9eb2ce;font:11px/1.5 var(--sans)}
+.people-kicker>span:first-child{width:5px;height:5px;background:#77f6d2;border-radius:50%}
+.people-kicker-en{margin-left:9px;font:9px var(--mono);letter-spacing:.07em;color:#6f87a7}
+.site-v2 #people-title{margin:0 0 24px;color:#edf3fc;font:500 clamp(36px,4.2vw,62px)/1.2 var(--display);letter-spacing:-.045em;text-wrap:balance}
+.people-mission{margin:0 0 25px;font:400 clamp(21px,2.1vw,31px)/1.55 var(--display);letter-spacing:-.025em;color:#d3dfef}
+.people-mission em{font-style:normal;color:#77e8c8}
+.people-intro-text{max-width:510px;margin:0;color:var(--people-secondary);font-size:14px;line-height:1.95}
+.people-intro-actions{display:flex;align-items:center;flex-wrap:wrap;gap:30px;margin-top:29px}
+.people-primary-link,.people-text-link{display:inline-flex;align-items:center;gap:28px;font-size:12px;text-decoration:none}
+.people-primary-link{padding:12px 17px;background:#77f6d2;color:#091726;border:1px solid #77f6d2;border-radius:2px;transition:background .2s}
+.people-primary-link:hover{background:#a5ffe4}
+.people-text-link{color:#c0cfdf;gap:17px}.people-text-link:hover{color:#77f6d2}
+.people-cover{min-width:0;margin:0;align-self:center}
+.people-cover-art{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:1.25;background:#060918;border:1px solid #25354a}
+.people-cover-art img{display:block;width:100%;height:100%;object-fit:cover}
+.people-cover-art::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#06091866,transparent 24%,transparent 75%,#06091899)}
+.people-cover-wordmark{position:absolute;z-index:1;top:22px;left:24px;color:#e1edf5;font:500 12px var(--sans);letter-spacing:.13em}
+.people-cover-label{position:absolute;z-index:1;bottom:20px;left:24px;color:#a3c5cf;font:8px var(--mono);letter-spacing:.15em}
+.people-cover figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:15px;padding:15px 0 0;color:#91a6be;font-size:10px;line-height:1.7}
+.people-cover figcaption a{display:inline-flex;align-items:center;gap:13px;flex:none;color:#aad7cc;text-decoration:none;font-size:10px}
+.people-cover figcaption a:hover{color:#77f6d2}
+.people-foundation{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 0;border-top:1px solid var(--people-rule);border-bottom:1px solid var(--people-rule)}
+.people-foundation>div{display:flex;align-items:center;gap:24px}
+.people-foundation-label{font-size:10px;color:#8297b1;flex:none}
+.people-foundation a{display:inline-flex;align-items:center;gap:20px;color:#d2deec;text-decoration:none;font-size:13px}
+.people-foundation a:hover{color:#77f6d2}
+.people-foundation>p{display:flex;align-items:center;gap:17px;margin:0;color:#b0c0d5;font-size:11px}
+.people-foundation i{font:10px var(--mono);color:#4d6587}
+/* A quiet, sticky index keeps the long directory easy to navigate. */
+.people-directory{display:grid;grid-template-columns:174px minmax(0,1fr);align-items:start;gap:7%;padding-top:72px}
+.people-index{position:sticky;top:calc(var(--header-h) + 32px);padding:5px 0 0}
+.people-index-label{margin:0 0 24px;color:#8ba2bf;font-size:11px}
+.people-index nav{display:grid;gap:4px}
+.people-index nav a{display:grid;grid-template-columns:20px minmax(0,1fr) 18px;gap:10px;align-items:baseline;padding:11px 0 11px 10px;border-left:1px solid #2e3d54;color:#9eafc6;text-decoration:none;font-size:12px;line-height:1.6;transition:border-color .2s,color .2s,background .2s}
+.people-index-no,.people-index small{font:9px var(--mono);color:#768ba8}
+.people-index small{text-align:right}
+.people-index nav a:hover,.people-index nav a[aria-current="location"]{border-left-color:#77f6d2;color:#d8fff2;background:linear-gradient(90deg,#77f6d209,transparent)}
+.people-index nav a[aria-current="location"] .people-index-no{color:#77f6d2}
+.people-index-contact{display:flex;justify-content:space-between;gap:10px;margin:24px 0 0;padding:16px 0 0 11px;border-top:1px solid var(--people-rule);color:#9eb6d0;font-size:11px;text-decoration:none}
+.people-index-contact:hover{color:#77f6d2}
+.people-group{margin:0 0 68px;scroll-margin-top:calc(var(--header-h) + 30px)}
+.people-group:last-child{margin-bottom:0}
+.people-group-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding:0 0 22px;margin-bottom:26px;border-bottom:1px solid var(--people-rule)}
+.people-section-label{margin:0 0 11px;color:#7f98b9;font:9px/1.6 var(--mono);letter-spacing:.1em}
+.site-v2 .people-group-heading h2{margin:0;color:#e4edf9;font:450 clamp(24px,2.2vw,31px)/1.3 var(--display);letter-spacing:-.025em}
+.people-group-heading>p{margin:0 0 2px;max-width:265px;color:#8298b5;font-size:11px;line-height:1.8;text-align:right}
+.person-card{min-width:0;scroll-margin-top:calc(var(--header-h) + 30px)}
+.person-portrait{position:relative;overflow:hidden;background:#121d2e;aspect-ratio:4/5}
+.person-portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 25%;transition:transform .45s ease}
+.person-card:hover .person-portrait img{transform:scale(1.025)}
+.person-info{min-width:0;padding-top:18px}
+.person-name{display:flex;flex-direction:column;align-items:flex-start;gap:7px;margin:0 0 12px;color:#e1eaf7;font:450 23px/1.25 var(--display);letter-spacing:0}
+.person-name>span[lang="en"]{color:#a5b8d0;font:400 13px/1.35 var(--sans);letter-spacing:0}
+html[lang="en"] .person-name{flex-direction:column-reverse}
+html[lang="en"] .person-name>span[lang="en"]{font-size:20px;color:#e1eaf7}
+html[lang="en"] .person-name>span[lang="zh-CN"]{font-size:12px;color:#9fb2cb}
+.person-affiliation{margin:0;color:#90a5c1;font-size:11px;line-height:1.8}
+.person-role{margin:0 0 14px;color:#84d9c5;font-size:11px;line-height:1.6}
+.person-profile{display:inline-flex;align-items:center;gap:28px;margin-top:20px;padding:0 0 4px;border-bottom:1px solid #405877;color:#bad2e9;font-size:11px;text-decoration:none}
+.person-profile:hover{color:#77f6d2;border-color:#77f6d2}
+.person-lead{display:grid;grid-template-columns:minmax(180px,.65fr) minmax(0,1.35fr);gap:0;background:#0c1424;border:1px solid #2b3b52}
+.person-lead .person-portrait{aspect-ratio:1;max-height:330px;height:100%;min-height:250px}
+.person-lead .person-portrait img{object-position:center 25%}
+.person-lead .person-info{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:30px 12%}
+.person-lead .person-name{font-size:36px;margin-bottom:20px;gap:9px}
+.person-lead .person-name>span[lang="en"]{font-size:17px}
+html[lang="en"] .person-lead .person-name>span[lang="en"]{font-size:32px}
+html[lang="en"] .person-lead .person-name>span[lang="zh-CN"]{font-size:15px}
+.person-lead .person-affiliation{max-width:340px;font-size:12px}
+.person-lead .person-profile{margin-top:24px}
+.people-core-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:23px}
+.people-advisors-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.person-advisor{display:grid;grid-template-columns:42% minmax(0,1fr);gap:20px;align-items:center}
+.person-advisor .person-portrait{aspect-ratio:3/4}
+.person-advisor .person-info{padding:0}
+.person-advisor .person-role{font-size:10px;margin-bottom:12px}
+.person-advisor .person-name{font-size:24px}
+.person-advisor .person-profile{margin-top:16px}
+.people-support-grid,.people-operations-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px}
+.person-compact{display:grid;grid-template-columns:90px minmax(0,1fr);gap:20px;align-items:center;padding:22px 0;border-bottom:1px solid #23324a}
+.person-compact:nth-child(-n+2){padding-top:0}
+.person-compact .person-info{padding:0}
+.person-compact .person-name{font-size:20px;gap:5px;margin-bottom:9px}
+.person-compact .person-name>span[lang="en"]{font-size:12px}
+html[lang="en"] .person-compact .person-name>span[lang="en"]{font-size:17px}
+.person-compact .person-profile{margin-top:10px}
+.person-compact .person-role{font-size:10px;margin-bottom:9px;color:#99b5ce}
+.person-social{display:inline-block;color:#b7c9e0;font-size:10px;line-height:1.7;margin-top:10px;text-decoration:none;overflow-wrap:anywhere}
+.person-social:hover{color:#77f6d2;text-decoration:underline;text-underline-offset:4px}
+.people-operations-grid .person-compact{grid-template-columns:110px minmax(0,1fr);align-items:start}
+/* Contact details stay readable and are real mail links. */
+.site-v2 .people-contact{display:grid;grid-template-columns:1fr 1.25fr;gap:10%;padding:65px 0 70px;margin-top:82px;border-top:1px solid #46615f}
+.people-contact-intro .people-section-label{color:#91c7ba}
+.site-v2 .people-contact-intro h2{margin:17px 0 22px;color:#e3edf7;font:450 clamp(28px,3.3vw,44px)/1.4 var(--display);letter-spacing:-.035em}
+.people-contact-intro>p:not(.people-section-label){max-width:360px;margin:0 0 23px;color:#99aec8;font-size:13px;line-height:1.9}
+.people-contact-intro .people-text-link{font-size:11px;color:#9fdbcb}
+.people-contact-markets{min-width:0;display:grid;align-content:start;gap:29px}
+.people-market header{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+.people-market header>span{font:9px var(--mono);color:#7897b2}
+.people-market h3{margin:0;color:#c6d5e8;font:400 14px/1.5 var(--sans)}
+.people-email{display:grid;grid-template-columns:80px minmax(0,1fr) 14px;align-items:center;gap:18px;padding:16px 0;border-bottom:1px solid #2c3d55;color:#b1c6e0;text-decoration:none;transition:color .2s,border-color .2s}
+.people-email>span:first-child{color:#e0e9f5;font-size:13px}
+.people-email>span:nth-child(2){font:11px/1.5 var(--mono);overflow-wrap:anywhere}
+.people-email>span:last-child{text-align:right;color:#8cd5c0}
+.people-email:hover{color:#77f6d2;border-color:#77f6d2}
+#team-directory,#sales-contact{scroll-margin-top:calc(var(--header-h) + 25px)}
+@media(min-width:1600px){.site-v2 .people-intro{padding-top:110px;gap:70px 9%}.people-directory{grid-template-columns:190px minmax(0,1fr)}.person-lead{grid-template-columns:280px minmax(0,1fr)}}
+@media(max-width:1200px){
+ .site-v2 .people-intro{gap:45px 5%;padding-top:68px}.people-kicker-en{display:none}
+ 
+ .people-directory{grid-template-columns:154px minmax(0,1fr);gap:5%;padding-top:55px}
+ .people-index nav a{font-size:11px;grid-template-columns:17px minmax(0,1fr) 15px;gap:7px}
+ .people-core-grid{gap:18px}.person-name{font-size:21px}.person-name>span[lang="en"]{font-size:12px}
+ .people-advisors-grid{gap:23px}.person-advisor{grid-template-columns:1fr;gap:17px}.person-advisor .person-portrait{aspect-ratio:5/4}.person-advisor .person-role{display:none}
+ .person-compact{grid-template-columns:74px minmax(0,1fr);gap:14px}.people-operations-grid .person-compact{grid-template-columns:85px minmax(0,1fr)}
+ .person-lead .person-info{padding:26px 9%}.person-lead .person-portrait{min-height:245px}
+ .people-foundation>p{gap:11px}.people-foundation>div{gap:16px}.people-foundation a{font-size:12px;gap:14px}
+ html[lang="en"] .people-foundation{align-items:flex-start}html[lang="en"] .people-foundation>div{align-items:flex-start}
+}
+@media(max-width:1000px){
+ .people-core-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 23px}.people-core-grid .person-portrait{aspect-ratio:5/6}
+ .people-group-heading{align-items:flex-start;flex-direction:column;gap:10px}.people-group-heading>p{text-align:left;max-width:none}
+ .people-support-grid,.people-operations-grid{gap:0 23px}.person-compact{grid-template-columns:62px minmax(0,1fr);gap:12px}.people-operations-grid .person-compact{grid-template-columns:68px minmax(0,1fr)}
+ .person-compact .person-name{font-size:18px}.person-compact .person-name>span[lang="en"]{font-size:11px}
+ .people-foundation{flex-wrap:wrap;gap:17px}.people-foundation>div{flex:1 1 100%}
+ .site-v2 .people-contact{gap:6%;grid-template-columns:.9fr 1.1fr}.people-email{grid-template-columns:65px minmax(0,1fr) 12px;gap:10px}
+}
+@media(max-width:800px){
+ .people-cover{width:100%;max-width:620px;justify-self:center}.people-cover-art{aspect-ratio:1.45}
+ .site-v2 .people-intro{grid-template-columns:1fr;gap:36px;padding-top:47px}
+ .people-kicker{margin-bottom:22px}.people-kicker-en{display:inline;font-size:8px}
+ .site-v2 #people-title{font-size:clamp(36px,7.2vw,52px);margin-bottom:19px;max-width:620px}
+ .people-mission{font-size:clamp(23px,4vw,30px);margin-bottom:18px}.people-intro-text{max-width:600px;font-size:13px}
+ .people-intro-actions{margin-top:23px;gap:27px}.people-primary-link{padding:11px 15px}
+ 
+ 
+ .people-foundation{padding:22px 0}.people-foundation>div{align-items:flex-start;flex-wrap:wrap;gap:9px 18px}.people-foundation-label{padding-top:3px}.people-foundation>p{font-size:10px;gap:15px}
+ .people-directory{grid-template-columns:1fr;gap:35px;padding-top:32px}
+ .people-index{position:static;min-width:0;padding:0}.people-index-label{margin-bottom:15px}
+ .people-index nav{display:flex;flex-wrap:wrap;gap:9px 18px}.people-index nav a{display:flex;align-items:center;gap:9px;padding:8px 0;border-left:0;border-bottom:1px solid #324760;font-size:11px}
+ .people-index nav a:hover,.people-index nav a[aria-current="location"]{background:none;border-bottom-color:#77f6d2}.people-index small{display:none}.people-index-contact{display:none}
+ .people-group{margin-bottom:48px}.people-group-heading{flex-direction:row;align-items:flex-end;gap:20px;margin-bottom:22px;padding-bottom:18px}.people-group-heading>p{font-size:10px;text-align:right;max-width:210px}
+ .people-section-label{font-size:8px;margin-bottom:9px}.site-v2 .people-group-heading h2{font-size:25px}
+ .person-lead{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}.person-lead .person-portrait{min-height:230px}.person-lead .person-info{padding:25px 10%}.person-lead .person-name{font-size:29px}
+ .people-core-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.person-name{font-size:21px}
+ .people-advisors-grid{gap:25px}.person-advisor{grid-template-columns:41% minmax(0,1fr);gap:17px}.person-advisor .person-portrait{aspect-ratio:3/4}.person-advisor .person-name{font-size:23px}
+ .person-compact{grid-template-columns:80px minmax(0,1fr);gap:17px}.people-operations-grid .person-compact{grid-template-columns:87px minmax(0,1fr)}
+ .person-compact .person-name{font-size:20px}.person-compact .person-name>span[lang="en"]{font-size:12px}
+ .site-v2 .people-contact{grid-template-columns:1fr;gap:30px;padding:40px 0 45px;margin-top:48px}
+ .site-v2 .people-contact-intro h2{font-size:33px;margin:14px 0 17px}.people-contact-intro>p:not(.people-section-label){max-width:500px;font-size:12px}
+ .people-contact-markets{gap:26px}.people-email{grid-template-columns:100px minmax(0,1fr) 14px;gap:18px}
+}
+@media(max-width:600px){
+ .people-core-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 17px}.person-info{padding-top:14px}
+ .people-advisors-grid{gap:18px}.person-advisor{grid-template-columns:1fr;gap:14px}.person-advisor .person-portrait{aspect-ratio:4/5}.person-advisor .person-name{font-size:22px}
+ .people-group-heading{flex-direction:column;align-items:flex-start;gap:9px}.people-group-heading>p{text-align:left;max-width:none}
+ .people-support-grid,.people-operations-grid{grid-template-columns:1fr;gap:0}
+ .person-compact,.people-operations-grid .person-compact{grid-template-columns:88px minmax(0,1fr);gap:22px;padding:19px 0}
+ .person-compact:nth-child(2){padding-top:19px}.person-compact .person-affiliation{font-size:12px}
+ .people-operations-grid .person-compact{align-items:center}
+ .people-operations-grid .person-compact:first-child{padding-top:0}
+ .person-lead{grid-template-columns:42% minmax(0,1fr)}.person-lead .person-portrait{min-height:230px;aspect-ratio:auto}.person-lead .person-info{padding:23px 18px}
+ .person-lead .person-name{font-size:27px;gap:7px;margin-bottom:14px}.person-lead .person-name>span[lang="en"]{font-size:15px}
+ .person-lead .person-affiliation{font-size:11px}.person-lead .person-role{font-size:10px}.person-lead .person-profile{margin-top:17px}
+ html[lang="en"] .person-lead .person-name>span[lang="en"]{font-size:25px}
+ 
+ 
+}
+@media(max-width:380px){
+ .people-cover figcaption{flex-wrap:wrap;gap:5px}.people-cover-wordmark{top:17px;left:18px;font-size:10px}.people-cover-label{left:18px;bottom:16px;font-size:7px}
+ .people-kicker-en{display:none}.site-v2 #people-title{font-size:34px}.people-mission{font-size:22px}
+ .people-foundation a{font-size:11px}.people-foundation>p{gap:11px}.people-index nav{gap:7px 13px}
+ .person-lead .person-info{padding:20px 13px}.person-lead .person-name{font-size:24px}
+ .people-email{grid-template-columns:65px minmax(0,1fr) 12px;gap:10px}.people-email>span:nth-child(2){font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+ .person-portrait img,.people-index nav a,.people-primary-link,.people-email{transition:none}
+ .person-card:hover .person-portrait img{transform:none}
+}
