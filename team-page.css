@@ -112,7 +112,7 @@ html[lang="en"] .person-compact .person-name>span[lang="en"]{font-size:17px}
 @media(min-width:1600px){.site-v2 .people-intro{padding-top:110px;gap:70px 9%}.people-directory{grid-template-columns:190px minmax(0,1fr)}.person-lead{grid-template-columns:280px minmax(0,1fr)}}
 @media(max-width:1200px){
  .site-v2 .people-intro{gap:45px 5%;padding-top:68px}.people-kicker-en{display:none}
- 
+
  .people-directory{grid-template-columns:154px minmax(0,1fr);gap:5%;padding-top:55px}
  .people-index nav a{font-size:11px;grid-template-columns:17px minmax(0,1fr) 15px;gap:7px}
  .people-core-grid{gap:18px}.person-name{font-size:21px}.person-name>span[lang="en"]{font-size:12px}
@@ -137,8 +137,8 @@ html[lang="en"] .person-compact .person-name>span[lang="en"]{font-size:17px}
  .site-v2 #people-title{font-size:clamp(36px,7.2vw,52px);margin-bottom:19px;max-width:620px}
  .people-mission{font-size:clamp(23px,4vw,30px);margin-bottom:18px}.people-intro-text{max-width:600px;font-size:13px}
  .people-intro-actions{margin-top:23px;gap:27px}.people-primary-link{padding:11px 15px}
- 
- 
+
+
  .people-foundation{padding:22px 0}.people-foundation>div{align-items:flex-start;flex-wrap:wrap;gap:9px 18px}.people-foundation-label{padding-top:3px}.people-foundation>p{font-size:10px;gap:15px}
  .people-directory{grid-template-columns:1fr;gap:35px;padding-top:32px}
  .people-index{position:static;min-width:0;padding:0}.people-index-label{margin-bottom:15px}
@@ -168,8 +168,8 @@ html[lang="en"] .person-compact .person-name>span[lang="en"]{font-size:17px}
  .person-lead .person-name{font-size:27px;gap:7px;margin-bottom:14px}.person-lead .person-name>span[lang="en"]{font-size:15px}
  .person-lead .person-affiliation{font-size:11px}.person-lead .person-role{font-size:10px}.person-lead .person-profile{margin-top:17px}
  html[lang="en"] .person-lead .person-name>span[lang="en"]{font-size:25px}
- 
- 
+
+
 }
 @media(max-width:380px){
  .people-cover figcaption{flex-wrap:wrap;gap:5px}.people-cover-wordmark{top:17px;left:18px;font-size:10px}.people-cover-label{left:18px;bottom:16px;font-size:7px}
