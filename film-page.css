@@ -1,0 +1,31 @@
+.film-page #film-main { padding-top: clamp(36px, 6vw, 76px); padding-bottom: 60px; }
+.full-film-intro { max-width: 760px; margin-bottom: 32px; }
+.full-film-intro .eyebrow { margin-top: 0; margin-bottom: 16px; }
+.full-film-intro h1 { margin: 0 0 16px; font: 450 clamp(36px, 4.5vw, 64px)/1.1 var(--display); letter-spacing: -.045em; }
+.full-film-description { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.75; }
+.full-film-player { margin: 0; }
+.full-film-player video { display: block; width: 100%; height: auto; aspect-ratio: 16/9; border: 1px solid #283752; border-radius: 6px; background: #03070d; }
+.full-film-player figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px 24px; padding: 14px 0; color: #91a3be; font-size: 12px; }
+.full-film-player figcaption > span:first-child { font-variant-numeric: tabular-nums; }
+.full-film-player figcaption > span:first-child > span { margin: 0 12px; color: #435577; }
+.full-film-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 4px; }
+.full-film-links a { min-height: 44px; }
+.full-film-error { padding: 14px 18px; border: 1px solid #435577; border-radius: 4px; color: #dce6ff; font-size: 14px; }
+.full-film-error[hidden] { display: none; }
+.full-film-next { display: grid; grid-template-columns: 1.4fr 1fr 1fr; align-items: center; gap: 32px; margin-top: 44px; padding-top: 36px; border-top: 1px solid #283752; }
+.full-film-next .eyebrow { margin: 0 0 12px; }
+.full-film-next h2 { margin: 0; font-size: clamp(24px, 2.5vw, 34px); line-height: 1.25; }
+.full-film-next > a { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px; border: 1px solid #283752; border-radius: 4px; color: #dce6ff; font-size: 14px; text-decoration: none; }
+.full-film-next > a > span:last-child { color: #77f6d2; }
+.full-film-next > a:hover { border-color: #77f6d2; background: #77f6d20b; }
+@media (max-width: 800px) {
+  .full-film-next { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .full-film-next > div { grid-column: 1/-1; }
+  .full-film-description { font-size: 14px; }
+}
+@media (max-width: 480px) {
+  .full-film-intro { margin-bottom: 24px; }
+  .full-film-next { grid-template-columns: 1fr; gap: 12px; }
+  .full-film-next > div { margin-bottom: 8px; }
+  .full-film-player figcaption { font-size: 11px; }
+}

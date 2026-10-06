@@ -10,7 +10,7 @@
     zh: {
       eyebrow: 'GanJiang Agent · 材料智能', title: '读懂图谱，<br />看清材料。',
       body: '从复杂的 XRD 信号，到可审阅的物相、含量与精修证据。用一段短片，走进干将的分析过程。',
-      note: '真实案例可视化；晶体画面为概念示意。', download: '下载宣传片',
+      note: '真实案例可视化；晶体画面为概念示意。', download: '下载宣传片', watchFull: '观看完整视频', playFull: '播放完整视频',
       label: 'GanJiang Agent 英文宣传片：从 XRD 图谱到材料分析',
       play: '播放短片 ▷', pause: '暂停短片 Ⅱ', soundOn: '开启声音', soundOff: '关闭声音',
       error: '短片暂时无法播放，当前显示封面。'
@@ -18,7 +18,7 @@
     en: {
       eyebrow: 'GanJiang Agent · Material intelligence', title: 'Read the pattern.<br />Understand the material.',
       body: 'From complex XRD signals to reviewable phases, fractions and refinement evidence. Step inside the GanJiang analysis workflow.',
-      note: 'Case study visualization; crystal artwork is illustrative.', download: 'Download film',
+      note: 'Case study visualization; crystal artwork is illustrative.', download: 'Download film', watchFull: 'Watch the full film', playFull: 'Play the full film',
       label: 'GanJiang Agent promotional film: from XRD patterns to material analysis, with English titles',
       play: 'Play film ▷', pause: 'Pause film Ⅱ', soundOn: 'Sound on', soundOff: 'Sound off',
       error: 'The film is unavailable. Showing its cover.'

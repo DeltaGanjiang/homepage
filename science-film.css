@@ -59,6 +59,23 @@
 .people-cover-art.people-cover-film::after { display: none; }
 .science-film-note { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: space-between; margin: 8px 0 0; color: #91a3be; font-size: 10px; line-height: 1.7; }
 .science-film-note a { color: #aad7cc; text-underline-offset: 4px; }
+.science-film-full-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  margin-top: 12px;
+  padding: 12px 16px;
+  border: 1px solid #435577;
+  border-radius: 4px;
+  color: #dce6ff;
+  font-size: 13px;
+  text-decoration: none;
+}
+.science-film-full-link:hover { border-color: #77f6d2; background: #77f6d20b; color: #9ff9e2; }
+.science-film-full-meta { flex-shrink: 0; color: #91a3be; font-size: 10px; letter-spacing: .06em; }
+.science-film-full-meta > span { margin-left: 10px; color: #77f6d2; }
 @media (max-width: 800px) {
   .site-v2 .science-film { grid-template-columns: 1fr; gap: 28px; padding: 38px 0 44px; }
   .science-film-copy h2 br { display: none; }

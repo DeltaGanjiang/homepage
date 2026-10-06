@@ -1,4 +1,30 @@
 .DS_Store
 __pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.sb-*
+:memory:.ses
+.env
+.env.*
+!.env.example
+
+# Local research data and reusable film-production materials.
+/fig5/
+/output/
+/.local-production/
+/scripts/
 /A science agent for diffraction/
 /WPEMfitting/
+/Gan Jiang: A science agent for X-ray diffraction (1)/
+
+# Short-film inputs kept locally for future edits; not used by the website.
+/assets/video/promo-case.json
+/assets/images/ganjiang-science-cover.prompt.txt
+/assets/images/ganjiang-science-cover.webp
+
+# Publish only the two finished films and their covers from this directory.
+/assets/video/*
+!/assets/video/ganjiang-agent-promo.mp4
+!/assets/video/ganjiang-agent-promo-poster.jpg
+!/assets/video/ganjiang-full-film.mp4
+!/assets/video/ganjiang-full-film-poster.jpg
