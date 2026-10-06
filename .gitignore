@@ -3,16 +3,25 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 *.sb-*
+*.tmp
+*.part
 :memory:.ses
+.venv/
+venv/
+.cache/
+.pytest_cache/
 .env
 .env.*
 !.env.example
 
-# Local research data and reusable film-production materials.
+# Keep editable scenes, scientific inputs, narration caches, models and masters local.
+# Publish the final web video below; never add production folders with git add -f.
 /fig5/
 /output/
 /.local-production/
 /scripts/
+/render-cache/
+/exports/
 /A science agent for diffraction/
 /WPEMfitting/
 /Gan Jiang: A science agent for X-ray diffraction (1)/
@@ -22,7 +31,8 @@ __pycache__/
 /assets/images/ganjiang-science-cover.prompt.txt
 /assets/images/ganjiang-science-cover.webp
 
-# Publish only the two finished films and their covers from this directory.
+# Website playback assets: retain the existing short film and the latest full film.
+# All intermediate videos and production inputs in this directory stay local.
 /assets/video/*
 !/assets/video/ganjiang-agent-promo.mp4
 !/assets/video/ganjiang-agent-promo-poster.jpg
