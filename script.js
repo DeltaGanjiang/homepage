@@ -5,9 +5,40 @@ Object.assign(english,{navNews:'News',newsEyebrow:'Media coverage',newsTitle:'Ne
 Object.assign(english,{navHome:'Home',navTeam:'Team',backHome:'Back to home ←',teamEyebrow:'Gan Jiang Project Team',teamOrg:'AI Lab, The Yangtze River Delta',teamSalesConsultation:'Sales Enquiries',teamTitle:'Gan Jiang Project Team',teamIntroPrefix:'Based at ',teamIntroSuffix:', the team brings together researchers from industry labs and universities to collaborate across materials science, artificial intelligence, and engineering.',teamIntroMission:'Together, we are advancing intelligent materials characterization and building the ',teamIntroHighlight:'first science agent for XRD-based materials structure analysis',teamIntroEnd:'.',teamLead:'Project Lead',teamLeadRole:'Leads the Gan Jiang project',teamCore:'Core Contributors',teamTechnical:'Technical Support',teamRecord:'Operations & Sales',teamRecordRole:'Project Documentation · Xiaohongshu Operations',teamSalesRole:'Sales Lead',teamXiaohongshu:'Xiaohongshu ID',teamAdvisors:'Academic Advisors',advisorRole:'Academic Advisor',teamContact:'Project Contact',teamContactTitle:'Sales & Market Enquiries',teamChinaMarket:'China Market',teamOverseasMarket:'Overseas Market',teamNaName:'Na Wang',teamWenhanName:'Wenhan Gu',viewProfile:'Profile',orgBin:"Huawei Noah’s Ark Lab, London · HKUST(GZ)",orgHkust:'HKUST(GZ)',orgUcl:'UCL'});
 Object.assign(english,{orbTitle:'Gan Jiang',orbSubtitle:'A science agent for powder X-ray diffraction',orbTitleTwo:'Patterns',orbSubtitleTwo:'From raw diffraction data to testable structural hypotheses',orbTitleThree:'Decisions',orbSubtitleThree:'Keep evidence, uncertainty, and the next step connected',orbCta:'Enter the site <span aria-hidden="true">↓</span>'});
 Object.assign(english,{navRoadmap:'Roadmap',roadmapEyebrow:'Product roadmap · 2026',roadmapTitle:'From closed beta to a global release',roadmapIntro:'Validate real-world use through Beta, release Preview after two consecutive iterations, then enter the V0.1.0 campaign window before the permanent version launches globally on October 14.',roadmapBetaText:'First closed-beta release',roadmapInternal:'Closed-beta users',roadmapIterationLabel:'Iteration',roadmapIterationOne:'Iteration 01',roadmapIterationTwo:'Iteration 02',roadmapIterationText:'Closed-beta version update',roadmapPreviewText:'Preview version release',roadmapCampaignTitle:'Gan Jiang V0.1.0 Campaign',roadmapCampaignText:'Focused campaign before launch',roadmapCampaignTag:'V0.1.0 launch window',roadmapLaunchTitle:'Gan Jiang Official Release',roadmapLaunchText:'Official release for international users',roadmapGlobal:'International users · Permanent version'});
+Object.assign(english,{
+  paperJump:'Paper & citation <span aria-hidden="true">↓</span>',
+  paperTitle:'Paper & citation',
+  paperIntro:'Read our paper to learn more about Gan Jiang’s methods, experiments and evaluation results. If you use Gan Jiang in your research, please cite the following work.',
+  paperRead:'Read the paper on arXiv <span aria-hidden="true">↗</span>',
+  paperBibtex:'BibTeX citation',
+  paperCopy:'Copy BibTeX'
+});
 const chinese=Object.fromEntries([...document.querySelectorAll('[data-i18n]')].map(n=>[n.dataset.i18n,n.innerHTML]));const isTeamPage=document.body.classList.contains('team-page');const metadata=isTeamPage?{zh:{lang:'zh-CN',locale:'zh_CN',title:'干将项目团队 — GanJiang',description:'干将项目团队依托通用决策智能研究所，汇聚材料科学、人工智能与工程力量，开展面向粉末 X 射线衍射的科学智能体研究与工程实现。',socialDescription:'汇聚产业研究机构与高校力量，共同打造面向 XRD 材料结构分析的科学智能体。'},en:{lang:'en',locale:'en_US',title:'Gan Jiang Project Team',description:'Meet the Gan Jiang Project Team: materials science, AI and engineering for scientific agents in powder X-ray diffraction, based at AI Lab, The Yangtze River Delta.',socialDescription:'Researchers from industry labs and universities building a science agent for XRD-based materials structure analysis.'}}:{zh:{lang:'zh-CN',locale:'zh_CN',title:'干将 — X 射线衍射科学智能体',description:'干将是面向粉末 X 射线衍射的科学智能体：把图谱分析变成可追溯的研究判断。',socialDescription:'把复杂图谱转化为可验证的结构结论，推动材料表征智能化。'},en:{lang:'en',locale:'en_US',title:'Gan Jiang — Science Agent for X-ray Diffraction',description:'Gan Jiang is a science agent for PXRD that turns pattern analysis into traceable scientific judgement.',socialDescription:'Turning complex diffraction patterns into verifiable structural conclusions for intelligent materials characterization.'}};
 function setLanguage(language){const copy=language==='en'?english:chinese,pageMeta=metadata[language];document.querySelectorAll('[data-i18n]').forEach(n=>n.innerHTML=copy[n.dataset.i18n]);document.documentElement.lang=pageMeta.lang;document.title=pageMeta.title;document.querySelector('meta[name="description"]').setAttribute('content',pageMeta.description);document.querySelector('meta[property="og:locale"]')?.setAttribute('content',pageMeta.locale);document.querySelectorAll('meta[property="og:title"],meta[name="twitter:title"]').forEach(meta=>meta.setAttribute('content',pageMeta.title));document.querySelectorAll('meta[property="og:description"],meta[name="twitter:description"]').forEach(meta=>meta.setAttribute('content',pageMeta.socialDescription));languageToggle.textContent=language==='en'?'中文':'EN';languageToggle.setAttribute('aria-label',language==='en'?'切换至中文':'Switch to English');menu.setAttribute('aria-label',language==='en'?'Open navigation':'打开导航');if(!nav.classList.contains('is-open'))menu.textContent=language==='en'?'Menu':'菜单';localStorage.setItem('gan-jiang-language',language)}
 menu?.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');menu.setAttribute('aria-expanded',String(open));const en=document.documentElement.lang==='en';menu.textContent=open?(en?'Close':'关闭'):(en?'Menu':'菜单')});nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');menu?.setAttribute('aria-expanded','false');menu.textContent=document.documentElement.lang==='en'?'Menu':'菜单'}));languageToggle?.addEventListener('click',()=>setLanguage(document.documentElement.lang==='en'?'zh':'en'));const savedLanguage=localStorage.getItem('gan-jiang-language');setLanguage(savedLanguage==='zh'?'zh':'en');
+
+const copyCitation=document.querySelector('#copy-citation');
+if(copyCitation){
+  const bibtex=document.querySelector('#paper-bibtex');
+  const status=document.querySelector('#citation-status');
+  copyCitation.hidden=false;
+  languageToggle?.addEventListener('click',()=>{status.textContent='';});
+  copyCitation.addEventListener('click',async()=>{
+    status.textContent='';
+    try{
+      await navigator.clipboard.writeText(bibtex.textContent);
+      status.textContent=document.documentElement.lang==='en'?'BibTeX copied.':'BibTeX 已复制。';
+    }catch{
+      bibtex.focus({preventScroll:true});
+      const range=document.createRange();
+      range.selectNodeContents(bibtex);
+      const selection=window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      status.textContent=document.documentElement.lang==='en'?'Automatic copy is unavailable. The citation is selected; copy it manually.':'无法自动复制，已选中引用内容，请手动复制。';
+    }
+  });
+}
 
 const revealObserver = new IntersectionObserver((entries) => entries.forEach(({ isIntersecting, target }) => { if (isIntersecting) { target.classList.add("is-visible"); revealObserver.unobserve(target); } }), { threshold: 0.14 });
 document.querySelectorAll("[data-reveal]").forEach((section) => revealObserver.observe(section));

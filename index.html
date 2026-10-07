@@ -32,7 +32,7 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Gan Jiang 首页"><img class="brand-logo" src="assets/images/logo-small.webp" alt="" /> GanJiang</a>
       <div class="header-actions"><div class="social-links header-social" aria-label="社交链接"><a class="social-link github-link" href="https://github.com/DeltaGanjiang" target="_blank" rel="noreferrer" aria-label="GitHub: DeltaGanjiang"><img src="assets/images/github.webp" alt="" /><span>GitHub</span></a><span class="social-link xiaohongshu-link" aria-label="小红书：95614037352"><img src="assets/images/xaiohongshu.webp" alt="" /><span>95614037352</span></span></div><button class="language-toggle" type="button" aria-label="Switch to English">EN</button><button aria-controls="site-nav" class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false">菜单</button></div>
-      <nav id="site-nav" class="nav" aria-label="Main navigation"><a href="#egypt-story" data-design-copy="navCase">研究案例</a><a href="#benchmarks" data-design-copy="navPerformance">性能表现</a><a href="#can-do" data-design-copy="navApproach">分析方法</a><a href="film.html" data-design-copy="navFilm">干将视频介绍</a><a href="team.html" data-i18n="navTeam">项目团队</a><a class="nav-cta" href="#beta" data-design-copy="navTry">体验干将 <span>↗</span></a></nav>
+      <nav id="site-nav" class="nav" aria-label="Main navigation"><a href="#egypt-story" data-design-copy="navCase">研究案例</a><a href="#benchmarks" data-design-copy="navPerformance">性能表现</a><a href="#can-do" data-design-copy="navApproach">分析方法</a><a href="https://arxiv.org/abs/2610.07862" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="film.html" data-design-copy="navFilm">干将视频介绍</a><a href="team.html" data-i18n="navTeam">项目团队</a><a class="nav-cta" href="#beta" data-design-copy="navTry">体验干将 <span>↗</span></a></nav>
     <div class="reading-progress" aria-hidden="true"><i></i></div></header>
     <main id="top">
       <section class="orb-intro" aria-labelledby="orb-intro-title">
@@ -337,6 +337,7 @@
           <h2 data-i18n="betaTitle">正式版即将上线</h2>
           <p data-i18n="betaText">干将正式版计划面向所有用户开放，无需加入用户群即可使用。</p>
           <p class="beta-footnote" data-i18n="betaFootnote">下载安装链接即将公布，敬请期待。</p>
+          <a class="text-link" href="#paper" data-i18n="paperJump">论文与引用 <span aria-hidden="true">↓</span></a>
         </div>
         <div class="user-community">
           <p class="community-intro" data-i18n="groupIntro">欢迎扫码加入用户交流群，交流使用经验、获取问题解答，与开发者面对面讨论。</p>
@@ -349,6 +350,34 @@
               <a href="assets/images/user-group-i.png" target="_blank" rel="noopener noreferrer"><img width="560" height="724" loading="lazy" decoding="async" src="assets/images/user-group-i.png" alt="WhatsApp 用户交流群二维码 / WhatsApp user group QR code" /></a>
               <figcaption><span data-i18n="groupWhatsappCaption">WhatsApp 用户交流群</span><small data-i18n="groupInternational">面向国际用户</small></figcaption>
             </figure>
+          </div>
+        </div>
+      </section>
+      <section id="paper" class="paper-section section-shell" aria-labelledby="paper-title">
+        <div class="paper-copy">
+          <p class="eyebrow">PAPER / CITATION</p>
+          <h2 id="paper-title" data-i18n="paperTitle">论文与引用</h2>
+          <p data-i18n="paperIntro">想了解干将的方法、实验与评测结果，欢迎阅读我们的论文。如果您在研究中使用干将，请引用以下工作。</p>
+          <a class="text-link" href="https://arxiv.org/abs/2610.07862" target="_blank" rel="noopener noreferrer" data-i18n="paperRead">在 arXiv 阅读论文 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="paper-content">
+          <article class="paper-record" aria-labelledby="paper-record-title">
+            <p class="paper-meta">arXiv:2610.07862 · 2026</p>
+            <h3 id="paper-record-title" lang="en"><a href="https://arxiv.org/abs/2610.07862" target="_blank" rel="noopener noreferrer">A self-learning scientific agent for X-ray diffraction</a></h3>
+            <p class="paper-authors" lang="en">Bin Cao, Huichi Zhou, Runyu Yang, Jingsong Li, Shuchen Sun, Yan Song, Hanyu Gao, Zhongwei Yu, Tong-Yi Zhang, Jun Wang</p>
+          </article>
+          <div class="paper-citation">
+            <div class="citation-toolbar"><span id="paper-bibtex-label" data-i18n="paperBibtex">BibTeX 引用</span><button id="copy-citation" type="button" aria-controls="paper-bibtex" data-i18n="paperCopy" hidden>复制 BibTeX</button></div>
+            <pre id="paper-bibtex" tabindex="0" aria-labelledby="paper-bibtex-label"><code>@misc{cao2026selflearningscientificagentxray,
+      title={A self-learning scientific agent for X-ray diffraction},
+      author={Bin Cao and Huichi Zhou and Runyu Yang and Jingsong Li and Shuchen Sun and Yan Song and Hanyu Gao and Zhongwei Yu and Tong-Yi Zhang and Jun Wang},
+      year={2026},
+      eprint={2610.07862},
+      archivePrefix={arXiv},
+      primaryClass={cond-mat.mtrl-sci},
+      url={https://arxiv.org/abs/2610.07862},
+}</code></pre>
+            <p id="citation-status" class="citation-status" role="status"></p>
           </div>
         </div>
       </section>
