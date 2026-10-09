@@ -74,6 +74,8 @@ html[lang="en"] .person-lead .person-name>span[lang="zh-CN"]{font-size:15px}
 .person-lead .person-affiliation{max-width:340px;font-size:12px}
 .person-lead .person-profile{margin-top:24px}
 .people-core-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:23px}
+.people-testing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px}
+.people-testing-grid .person-compact{padding-top:0;align-items:start}
 .people-advisors-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
 .person-advisor{display:grid;grid-template-columns:42% minmax(0,1fr);gap:20px;align-items:center}
 .person-advisor .person-portrait{aspect-ratio:3/4}
@@ -164,6 +166,8 @@ html[lang="en"] .person-compact .person-name>span[lang="en"]{font-size:17px}
  .person-compact:nth-child(2){padding-top:19px}.person-compact .person-affiliation{font-size:12px}
  .people-operations-grid .person-compact{align-items:center}
  .people-operations-grid .person-compact:first-child{padding-top:0}
+ .people-testing-grid{gap:8px}.people-testing-grid .person-compact{grid-template-columns:minmax(0,1fr);gap:14px;padding-top:0;align-content:start}
+ .people-testing-grid .person-portrait{width:min(88px,100%)}
  .person-lead{grid-template-columns:42% minmax(0,1fr)}.person-lead .person-portrait{min-height:230px;aspect-ratio:auto}.person-lead .person-info{padding:23px 18px}
  .person-lead .person-name{font-size:27px;gap:7px;margin-bottom:14px}.person-lead .person-name>span[lang="en"]{font-size:15px}
  .person-lead .person-affiliation{font-size:11px}.person-lead .person-role{font-size:10px}.person-lead .person-profile{margin-top:17px}
