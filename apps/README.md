@@ -72,7 +72,7 @@ without JavaScript; active JavaScript recalculates all `data-usd-credits` fields
 
 The section beneath the download center explains complimentary access for article
 reviewers and editors. Users register and sign in with an anonymous email address,
-then send the article number from that same address to `ganjiang@yzailab.com`.
+then send the article number from that same address to `bincao@hkust-gz.edu.cn`.
 The team credits the corresponding account for review use at no charge. The page
 asks users to preserve anonymity throughout registration, login, and contact.
 The email link opens the user's mail client; it does not submit or send anything.
