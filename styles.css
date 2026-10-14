@@ -79,7 +79,6 @@ html[lang="en"] .capability-grid p,html[lang="en"] .principles p{font-size:13px;
 .team-org{display:flex;flex-wrap:wrap;align-items:center;gap:7px 12px;max-width:390px;margin:56px 0 0;color:#dce6ff;font:500 13px/1.7 var(--mono);letter-spacing:.025em}
 .team-org>span{color:rgba(181,202,255,.48)}
 .team-sales-link{color:var(--lime);text-decoration:none;text-underline-offset:4px}
-.team-sales-link::after{margin-left:6px;content:"↓"}
 .team-sales-link:hover{text-decoration:underline}
 .org-link{color:inherit;text-decoration-color:rgba(119,246,210,.58);text-decoration-thickness:1px;text-underline-offset:4px}
 .org-link:hover{color:var(--lime);text-decoration-color:var(--lime)}

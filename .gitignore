@@ -14,6 +14,10 @@ venv/
 .env.*
 !.env.example
 
+# Keep the local publisher checkout and publish output out of this repository.
+/publisher/
+/publish/
+
 # Keep editable scenes, scientific inputs, narration caches, models and masters local.
 # Publish the final web video below; never add production folders with git add -f.
 /fig5/

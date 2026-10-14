@@ -16,7 +16,6 @@
 .full-film-next .eyebrow { margin: 0 0 12px; }
 .full-film-next h2 { margin: 0; font-size: clamp(24px, 2.5vw, 34px); line-height: 1.25; }
 .full-film-next > a { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px; border: 1px solid #283752; border-radius: 4px; color: #dce6ff; font-size: 14px; text-decoration: none; }
-.full-film-next > a > span:last-child { color: #77f6d2; }
 .full-film-next > a:hover { border-color: #77f6d2; background: #77f6d20b; }
 @media (max-width: 800px) {
   .full-film-next { grid-template-columns: 1fr 1fr; gap: 20px; }

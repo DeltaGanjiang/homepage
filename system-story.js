@@ -13,8 +13,8 @@
     nodes.forEach(node=>{const show=revealed.has(Number(node.dataset.systemNode));node.classList.toggle('is-revealed',show);node.inert=!show;node.setAttribute('aria-hidden',String(!show));});
     document.querySelector('#system-sequence-count').textContent=`0${stage+1} / 06`;
     document.querySelector('#system-sequence-caption').textContent=captions[lang][stage];
-    play.textContent=playing?(lang==='en'?'Pause Ⅱ':'暂停 Ⅱ'):(stage===5?(lang==='en'?'Play again ↺':'再次播放 ↺'):(lang==='en'?'Continue ▷':'继续 ▷'));
-    replay.textContent=lang==='en'?'Restart ↺':'重播 ↺';
+    play.textContent=playing?(lang==='en'?'Pause Ⅱ':'暂停 Ⅱ'):(stage===5?(lang==='en'?'Play again':'再次播放'):(lang==='en'?'Continue ▷':'继续 ▷'));
+    replay.textContent=lang==='en'?'Restart':'重播';
     map.classList.toggle('is-running',playing&&visible&&!document.hidden&&!motion.matches);
   }
   function schedule(){clearTimeout(timer);timer=null;if(playing&&visible&&!document.hidden&&!motion.matches){timer=setTimeout(()=>{stage=Math.min(5,stage+1);if(stage===5)playing=false;paint();schedule();},1450);}}

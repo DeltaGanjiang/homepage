@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#060918" />
+    <meta name="description" content="下载干将 GanJiang 桌面客户端，了解 macOS、Windows 版本、XRD 物相识别与结构精修，以及计算工具积分和模型调用的收费方式。" />
+    <meta property="og:title" content="下载干将 GanJiang · 让 XRD 分析进入你的工作台" />
+    <meta property="og:description" content="macOS 与 Windows 客户端、XRD 分析能力、积分参考与任务费用估算。" />
+    <meta property="og:type" content="website" />
+    <title>下载干将 GanJiang · XRD 科学智能体</title>
+    <link rel="icon" href="../assets/images/favicon.png" />
+    <link rel="stylesheet" href="./apps.css" />
+    <link rel="stylesheet" href="../site-chrome.css" />
+    <script defer src="./downloads.js"></script>
+    <script defer src="./credits.js"></script>
+    <script defer src="./money.js"></script>
+    <script defer src="./locales.en.js"></script>
+    <script defer src="./i18n.js"></script>
+    <script defer src="./apps.js"></script>
+  </head>
+  <body class="download-page">
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header shared-header">
+        <a class="brand" href="../index.html#home" aria-label="返回官网"><img class="brand-logo" src="../assets/images/logo-small.webp" width="30" height="30" alt="" /> GanJiang</a>
+        <div class="header-actions"><button class="language-toggle" type="button" aria-label="Switch to English">EN</button><button class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="navigation">菜单</button></div>
+        <nav class="nav" id="navigation" aria-label="页面导航"><a href="#downloads">客户端下载</a><a href="#reviewer-support">审稿支持</a><a href="#capabilities">功能介绍</a><a href="#pricing">积分与费用</a><a class="nav-home" href="../index.html#home">返回官网</a></nav>
+    </header>
+    <main id="main">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> GANJIANG FOR DESKTOP</p>
+          <h1 id="hero-title">让 XRD 分析<br />进入你的<span class="accent">工作台</span></h1>
+          <p class="hero-description">从一张衍射图谱，到有证据的结构判断。<br class="desktop-break" />干将连接物相识别、多相分解与结构精修，<br class="desktop-break" />陪你走完每一步分析。</p>
+          <div class="hero-actions"><a class="button button-primary" href="#downloads" data-download-jump>获取桌面客户端</a><a class="text-link" href="#pricing">了解收费方式</a></div>
+          <p class="platform-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.8c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7s-1.5-.7-2.5-.7c-1.3 0-2.5.8-3.2 1.9-1.4 2.4-.4 6 1 8 .7.9 1.4 1.8 2.4 1.7 1 0 1.4-.6 2.6-.6s1.6.6 2.6.6 1.7-.9 2.3-1.8c.8-1.1 1.1-2.2 1.1-2.3-.1 0-2.1-.8-2.1-2.8ZM14.5 6.8c.5-.7.9-1.6.8-2.5-.8 0-1.8.5-2.4 1.2-.5.5-1 1.5-.8 2.4.9.1 1.8-.4 2.4-1.1Z"/></svg> macOS <span class="note-divider"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 5 8-1v7H3Zm10-1 8-1v8h-8ZM3 13h8v7l-8-1Zm10 0h8v8l-8-1Z"/></svg> Windows <span class="platform-note-end">为材料研究而构建</span></p>
+        </div>
+        <div class="hero-visual">
+          <div class="workbench">
+            <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>GanJiang · XRD Workspace</span><span class="window-demo">案例演示</span></div>
+            <div class="workbench-body">
+              <div class="workbench-title"><div><p>ANALYSIS / 001</p><h2>从信号，找到结构</h2></div><span class="sample-tag">粉末 XRD</span></div>
+              <div class="analysis-tabs" role="tablist" aria-label="切换分析案例视图"><button id="tab-identify" role="tab" type="button" aria-selected="true" aria-controls="analysis-panel" data-view="identify">物相识别</button><button id="tab-decompose" role="tab" type="button" aria-selected="false" aria-controls="analysis-panel" tabindex="-1" data-view="decompose">多相分解</button><button id="tab-refine" role="tab" type="button" aria-selected="false" aria-controls="analysis-panel" tabindex="-1" data-view="refine">结构精修</button></div>
+              <div id="analysis-panel" role="tabpanel" aria-labelledby="tab-identify" tabindex="0">
+                <div class="plot-meta"><span id="plot-title">古埃及化妆粉 · 实测图谱</span><span id="plot-legend"><i></i>Observed</span></div>
+                <img id="analysis-plot" src="./assets/identify.svg" width="720" height="280" alt="古埃及化妆粉的实测 XRD 图谱，以衍射角为横轴、相对强度为纵轴。" fetchpriority="high" />
+                <div class="analysis-insight"><div><strong id="insight-title">让每一个候选，都有图谱依据</strong><p id="insight-copy">从衍射信号出发，逐步识别与校验候选物相。</p></div><span id="insight-value">XRD / CIF</span></div>
+              </div>
+              <div class="phase-strip" aria-label="案例中的五种物相"><span>CaSO₄·2H₂O</span><span>Pb₂Cl₂CO₃</span><span>PbCO₃</span><span>PbS</span><span>PbOHCl</span></div>
+            </div>
+          </div>
+          <div class="visual-caption"><span><span class="caption-cross" aria-hidden="true">＋</span> 官网研究案例数据 · 分析流程示意，非软件截图</span><a href="../index.html#egypt-story">查看案例</a></div>
+        </div>
+      </section>
+
+      <section class="engine-band shell" aria-labelledby="engine-heading">
+        <div class="engine-heading"><p id="engine-heading">连接专业计算工具</p><div class="engine-controls"><span>8 TOOLS / ONE WORKSPACE</span><button id="marquee-toggle" type="button" aria-pressed="false" aria-controls="tool-marquee" hidden><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3v10M11 3v10"/></svg><span>暂停滚动</span></button></div></div>
+        <div class="engine-marquee" id="tool-marquee">
+          <div class="engine-track">
+            <ul class="engine-group" aria-label="支持的科学计算工具">
+                <li><span class="tool-logo"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h4l3-10 4 14 3-10h4"/><path d="M3 7h4m10 10h4" opacity=".45"/><circle cx="10" cy="7" r="2"/></svg></span><span>XMatcher</span></li>
+                <li><span class="tool-logo"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 7 6-3 6 3v7l-6 3-6-3Z"/><path d="m4 7 6 3 6-3m-6 3v7" opacity=".55"/><circle cx="17" cy="17" r="4"/><path d="m20 20 3 3"/></svg></span><span>XQueryer</span></li>
+                <li><span class="tool-logo"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h19M3 16l4-1 3-11 3 13 3-7 3 7 3 1"/><path d="M3 14c4 0 4-9 7-9s3 13 6 8 3 3 6 3" opacity=".45"/></svg></span><span>WPEM</span></li>
+                <li><span class="tool-logo"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4v17h19M7 17l3-10 3 10h3l3-5 3 5"/><path d="M7 4h12M7 7h3" opacity=".4"/></svg></span><span>FullProf</span></li>
+                <li><span class="tool-logo"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7Z"/><path d="m3 7 9 5 9-5M12 12v10M12 2v10L3 17m9-5 9 5" opacity=".65"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg></span><span>GSAS-II</span></li>
+                <li><span class="tool-logo"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h10l5 5v13H5ZM15 3v6h5"/><path d="M8 16h2l2-5 2 7 2-4h2"/></svg></span><span>PDF</span></li>
+                <li><span class="tool-logo"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19h19M4 15h3l3-11 3 11h2l2-7 3 7h2"/><path d="M10 2v19M17 5v16" stroke-dasharray="1 3" opacity=".45"/></svg></span><span>XRDsim</span></li>
+                <li><span class="tool-logo"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 7 7M5 11h2l2-5 2 8 2-4h2"/></svg></span><span>XRDinspector</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="downloads" class="section shell" aria-labelledby="download-title">
+        <div class="section-heading"><div><p class="eyebrow">01 / DOWNLOAD</p><h2 id="download-title">一个入口，开启你的研究</h2></div><p>前往干将下载中心，<br />选择适合你的桌面版本。</p></div>
+        <article class="download-portal" aria-labelledby="portal-title">
+          <div class="portal-content">
+            <div class="portal-topline"><p class="eyebrow">GANJIANG / DESKTOP</p><span class="portal-badge">官方客户端</span></div>
+            <div class="portal-identity"><div class="portal-logo"><img src="../assets/images/logo-small.webp" width="70" height="84" alt="" /></div><div><h3 id="portal-title">干将下载中心</h3><div class="portal-platforms" aria-label="支持的平台"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.8c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7s-1.5-.7-2.5-.7c-1.3 0-2.5.8-3.2 1.9-1.4 2.4-.4 6 1 8 .7.9 1.4 1.8 2.4 1.7 1 0 1.4-.6 2.6-.6s1.6.6 2.6.6 1.7-.9 2.3-1.8c.8-1.1 1.1-2.2 1.1-2.3-.1 0-2.1-.8-2.1-2.8ZM14.5 6.8c.5-.7.9-1.6.8-2.5-.8 0-1.8.5-2.4 1.2-.5.5-1 1.5-.8 2.4.9.1 1.8-.4 2.4-1.1Z"/></svg>macOS</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 5 8-1v7H3Zm10-1 8-1v8h-8ZM3 13h8v7l-8-1Zm10 0h8v8l-8-1Z"/></svg>Windows</span></div><p>把专业的 XRD 分析能力，<br />带到你的日常研究中。</p></div></div>
+            <ul class="portal-capabilities" aria-label="核心分析能力"><li>物相识别</li><li>多相分解</li><li>结构精修</li></ul>
+          </div>
+          <div class="portal-action">
+            <p class="portal-action-label">从这里开始</p>
+            <p class="portal-welcome">每个账户赠送<br /><strong>20,000</strong><span>积分</span></p>
+            <a class="download-button is-pending" data-download aria-disabled="true" aria-describedby="download-help"><span>下载入口即将开放</span></a>
+            <p class="portal-action-note" id="download-help">统一前往下载中心获取安装包</p>
+          </div>
+        </article>
+        <div class="download-footnote"><p>安装包与发布说明均在下载中心更新。</p><a href="../index.html#beta">加入用户社区</a></div>
+
+        <aside class="reviewer-support" id="reviewer-support" aria-labelledby="reviewer-title">
+          <div class="reviewer-heading">
+            <span class="reviewer-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h12l6 6v18H7Z"/><path d="M19 4v7h6M11 15h10M11 19h6M11 23h8"/></svg></span>
+            <div><p class="eyebrow">FOR REVIEWERS &amp; EDITORS</p><h3 id="reviewer-title">研究论文同行评审须知</h3></div>
+            <span class="reviewer-badge">审稿免费支持</span>
+          </div>
+          <p class="reviewer-intro">如果您是文章的审稿人或编辑，我们会为您的账户充值积分，支持您免费使用干将开展审稿工作，无需付费。</p>
+          <ol class="reviewer-steps">
+            <li><span class="reviewer-step-number" aria-hidden="true">01</span><div><h4>匿名注册与登录</h4><p>请使用不含个人身份信息的匿名邮箱注册并登录干将。</p></div></li>
+            <li><span class="reviewer-step-number" aria-hidden="true">02</span><div><h4>发送文章编号</h4><p>使用同一匿名邮箱，将文章编号发送至下方联系邮箱。</p></div></li>
+            <li><span class="reviewer-step-number" aria-hidden="true">03</span><div><h4>获取免费积分</h4><p>我们将为该邮箱对应的账户充值积分，供审稿使用。</p></div></li>
+          </ol>
+          <div class="reviewer-contact"><p>为维护同行评审的匿名性与公平性，<br class="desktop-break" />请在注册、登录与邮件联系时始终使用同一匿名邮箱。</p><div><span>审稿支持邮箱</span><a href="mailto:ganjiang@yzailab.com">ganjiang@yzailab.com</a></div></div>
+        </aside>
+      </section>
+
+      <section id="capabilities" class="section capability-section shell" aria-labelledby="capabilities-title">
+        <div class="capability-intro"><p class="eyebrow">02 / BUILT FOR XRD</p><h2 id="capabilities-title">不止看见峰<br />更要读懂材料</h2><p>把识别、分解与精修连接起来。<br />从候选结构到计算校验，让结论有迹可循。</p><a class="text-link" href="../index.html#can-do">深入了解分析方法</a><div class="workflow-line" aria-label="输入图谱，识别物相，校验结构"><span>图谱</span><span>物相</span><span>结构</span></div></div>
+        <div class="capability-list">
+          <article><span class="step-number">01</span><div><p class="tool-label">XMATCHER / XQUERYER</p><h3>识别，让候选有依据</h3><p>从 XRD 图谱寻找候选物相；有元素信息时结合条件检索，再通过结构校验逐步判断。</p></div><span class="feature-mark" aria-hidden="true">⌁</span></article>
+          <article><span class="step-number">02</span><div><p class="tool-label">MATCHING / DECOMPOSITION</p><h3>分解，把复杂信号展开</h3><p>通过多相匹配与分解处理混合物相，按组合进行校验，进一步理解重叠信号。</p></div><span class="feature-mark" aria-hidden="true">≋</span></article>
+          <article><span class="step-number">03</span><div><p class="tool-label">WPEM / FULLPROF / GSAS-II</p><h3>精修，让结构经得起对照</h3><p>衔接专业精修工具，结合实测与计算图谱检验结构。也支持单个或多个 CIF 的 XRD 模拟与 PDF 卡分析。</p></div><span class="feature-mark" aria-hidden="true">⊕</span></article>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing-section" aria-labelledby="pricing-title">
+        <div class="shell">
+          <div class="section-heading"><div><p class="eyebrow">03 / CREDITS & COST</p><h2 id="pricing-title">每一次计算<br class="mobile-break" />都有清楚的账</h2></div><p>按实际提交的收费计算累计。<br />先理解计费，再开始分析。</p></div>
+          <div class="credit-benefits" aria-label="积分获取方式">
+            <article class="credit-benefit credit-benefit-gift"><h3>每个账户赠送</h3><p class="benefit-value">20,000 <span>积分</span></p><p>从第一张图谱开始，探索干将的分析能力。</p></article>
+            <article class="credit-benefit"><h3>按需充值</h3><p class="benefit-value">¥9.90 <span>= 990 积分</span></p><p class="topup-usd" data-usd-credits="990">≈ US$1.48</p><p>人民币兑换积分，按你的研究需要补充。</p></article>
+            <article class="credit-benefit"><h3>社区活动</h3><p class="benefit-value benefit-value-text">定期赠送积分</p><p>参与社区活动，获取更多积分。<a href="../index.html#beta">关注用户社区</a></p></article>
+          </div>
+          <div class="billing-model"><div><span class="billing-number">01</span><h3>计算工具积分</h3><p>按功能与实际提交次数计费。一次计算内部的迭代，不按迭代次数重复收费。</p></div><span class="billing-plus" aria-hidden="true">＋</span><div><span class="billing-number">02</span><h3>模型调用费用</h3><p>模型费用另计，不包含在工具积分中。默认模型按所用模型和实际 Token 用量计费；自定义模型由对应服务商计费。</p></div></div>
+          <div class="pricing-note"><span aria-hidden="true">ⓘ</span><p>以下为当前流程的<strong>积分参考</strong>，实际扣费以账单明细为准。人民币可以兑换积分，积分仅用于账号内消耗，不可兑换回人民币。</p></div>
+
+          <div class="exchange-note"><div><span>汇率参考</span><strong id="exchange-rate">1 USD = 6.6923 CNY</strong></div><p>美元金额按积分充值比例折算，仅供费用比较，不代表积分可以兑换现金。</p></div>
+
+          <div class="estimator" id="estimator">
+            <div class="estimator-form">
+              <div class="estimator-heading"><div><p class="eyebrow">PLAN YOUR ANALYSIS</p><h3>算一算，这次分析要多少积分</h3></div><span class="reference-tag">参考估算</span></div>
+              <form id="credit-form">
+                <div class="form-row"><label>分析任务<select id="task" name="task"><option value="single">单相识别 · XMatcher</option><option value="element">单相识别 · 有元素条件</option><option value="multi">多相识别 · 默认双通道</option><option value="simulation">XRD 模拟 · 单个 / 多个 CIF</option><option value="pdf">PDF 卡分析</option><option value="refinement">仅结构精修</option></select></label><label>同一流程重复次数<input id="quantity" name="quantity" type="number" min="1" max="10000" step="1" value="1" inputmode="numeric" /></label></div>
+                <div id="single-options" class="task-options"><label class="check-field"><input id="match" type="checkbox" checked />峰数足够，继续执行匹配 <span class="check-cost"><span>＋400 积分</span><small class="usd-amount" data-usd-credits="400">≈ US$0.60</small></span></label><div class="form-row"><label>每次校验的候选数<input id="candidates" type="number" min="0" max="10000" step="1" value="3" inputmode="numeric" /></label><label>额外峰位偏移校验次数<input id="shifts" type="number" min="0" max="10000" step="1" value="0" inputmode="numeric" /></label></div></div>
+                <div id="multi-options" class="task-options" hidden><div class="form-row"><label>每次校验的组合数<input id="combinations" type="number" min="0" max="10000" step="1" value="1" inputmode="numeric" /></label><label>补查单相基线次数<input id="baselines" type="number" min="0" max="10000" step="1" value="0" inputmode="numeric" /></label></div></div>
+                <label class="refinement-field">衔接结构精修<select id="refinement" name="refinement"><option value="none">不追加精修</option><option value="gsas" data-usd-credits="1300" data-usd-label="GSAS-II · 通常 1,300 积分">GSAS-II · 通常 1,300 积分</option><option value="wpem" data-usd-credits="1900" data-usd-other="2500" data-usd-label="WPEM · 通常 1,900–2,500 积分">WPEM · 通常 1,900–2,500 积分</option><option value="fullprof" data-usd-credits="4600" data-usd-label="FullProf · 最多 4,600 积分">FullProf · 最多 4,600 积分</option></select></label>
+                <div id="wpem-options" class="task-options" hidden><label>预计 WPEM 提交次数<select id="wpem-runs"><option value="3" data-usd-credits="1900" data-usd-label="3 次 · 含最终校验共 1,900 积分">3 次 · 含最终校验共 1,900 积分</option><option value="4" data-usd-credits="2500" data-usd-label="4 次 · 含最终校验共 2,500 积分">4 次 · 含最终校验共 2,500 积分</option></select></label><label class="check-field"><input id="wpem-extra" type="checkbox" />补做两次试算 <span class="check-cost"><span>＋1,200 积分</span><small class="usd-amount" data-usd-credits="1200">≈ US$1.79</small></span></label></div>
+                <p class="form-hint" id="refinement-hint">识别与精修连续执行时，两部分费用相加。</p>
+                <button class="reset-button" type="reset">重置估算</button>
+              </form>
+              <noscript><p class="no-script-note">启用 JavaScript 后可使用交互估算；下方积分表可直接查阅。</p></noscript>
+            </div>
+            <div class="estimate-result" aria-live="polite" aria-atomic="true"><p class="eyebrow">ESTIMATED TOOL CREDITS</p><p class="estimate-label" id="estimate-label">本次流程参考积分</p><div class="estimate-total"><output id="credit-total" for="task quantity match candidates shifts combinations baselines refinement wpem-runs wpem-extra">1,100</output><span>积分</span></div><div class="estimate-usd"><span>美元参考</span><output id="usd-total" for="task quantity match candidates shifts combinations baselines refinement wpem-runs wpem-extra">≈ US$1.64</output></div><p id="estimate-scope">1 次流程 · 不含模型调用费用</p><p class="estimate-credit-note">每个账户赠送 20,000 积分。<br />充值比例：人民币 9.9 元 = 990 积分。 <span class="usd-amount" data-usd-credits="990">≈ US$1.48</span></p><div class="result-rule"></div><dl id="credit-breakdown"><div><dt>寻峰</dt><dd>400<small>≈ US$0.60</small></dd></div><div><dt>物相匹配</dt><dd>400<small>≈ US$0.60</small></dd></div><div><dt>候选校验 × 3</dt><dd>300<small>≈ US$0.45</small></dd></div></dl><p class="estimate-disclaimer" id="estimate-disclaimer">各次流程按相同配置估算，实际扣费以账单明细为准。</p><a href="#credit-reference">查看完整积分参考</a></div>
+          </div>
+
+          <div class="reference-heading" id="credit-reference"><div><h3>功能积分，一目了然</h3><p>以下均为计算工具积分，不含模型调用费用。</p></div><span>积分 / 次收费计算或所述流程</span></div>
+          <div class="table-scroll" role="region" aria-label="功能积分参考表，可横向滚动" tabindex="0"><table><thead><tr><th scope="col">功能</th><th scope="col">积分参考</th><th scope="col">美元参考</th><th scope="col">怎么计算</th></tr></thead><tbody>
+            <tr><th scope="row">XRD 模拟 <span>单个 / 多个 CIF</span></th><td>100</td><td class="usd-reference"><span class="usd-amount" data-usd-credits="100">≈ US$0.15</span></td><td>单个或多个 CIF 在同一次任务中提交，均为 100 积分，包含 CIF 解析和理论峰计算。</td></tr>
+            <tr><th scope="row">PDF 卡分析</th><td>800</td><td class="usd-reference"><span class="usd-amount" data-usd-credits="800">≈ US$1.20</span></td><td>同一次报告可提交多个 CIF。</td></tr>
+            <tr><th scope="row">单相识别 <span>XMatcher</span></th><td>400 或 800 <small>＋校验费</small></td><td class="usd-reference"><span class="usd-amount" data-usd-credits="400" data-usd-other="800" data-usd-join="or">≈ US$0.60 / US$1.20</span><small>＋校验费</small></td><td>寻峰 400；峰数足够再匹配 400。一次返回多个候选，不按候选数重复收匹配费。</td></tr>
+            <tr><th scope="row">单相识别 <span>有元素条件</span></th><td>700 或 1,100 <small>＋校验费</small></td><td class="usd-reference"><span class="usd-amount" data-usd-credits="700" data-usd-other="1100" data-usd-join="or">≈ US$1.05 / US$1.64</span><small>＋校验费</small></td><td>在 XMatcher 费用上增加 XQueryer 300。</td></tr>
+            <tr><th scope="row">多相识别 <span>默认双通道</span></th><td>600 <small>＋校验费</small></td><td class="usd-reference"><span class="usd-amount" data-usd-credits="600">≈ US$0.90</span><small>＋校验费</small></td><td>匹配 400＋分解 200；如需补查单相基线，每次再加 400。</td></tr>
+            <tr><th scope="row">WPEM 精修</th><td><small>通常</small> 1,900–2,500</td><td class="usd-reference"><small>通常</small><span class="usd-amount" data-usd-credits="1900" data-usd-other="2500">≈ US$2.84–US$3.74</span></td><td>通常提交 3–4 次，每次 600；含一次最终校验。特殊情况补做两次试算，可再增加 1,200。</td></tr>
+            <tr><th scope="row">FullProf 精修</th><td><small>最多</small> 4,600</td><td class="usd-reference"><small>最多</small><span class="usd-amount" data-usd-credits="4600">≈ US$6.87</span></td><td>基线＋最多两次追加，每次 1,500；含一次最终校验。轮数由云端决定，可能提前停止。</td></tr>
+            <tr><th scope="row">GSAS-II 精修</th><td><small>通常</small> 1,300</td><td class="usd-reference"><small>通常</small><span class="usd-amount" data-usd-credits="1300">≈ US$1.94</span></td><td>一次计算 1,200＋一次最终校验 100。</td></tr>
+          </tbody></table></div>
+          <div class="validation-note"><div><strong>校验费用单独累计</strong><p class="validation-usd"><span>每 100 积分</span> <span class="usd-amount" data-usd-credits="100">≈ US$0.15</span></p></div><p>单相：每个候选 100 积分，额外峰位偏移校验每次再加 100。多相：每个组合 100 积分，组合内多个 CIF 仍算一次。精修：每成功完成并提交一次校验，计 100 积分。</p></div>
+          <p class="reference-footnote">功能积分按当前计费规则与客户端流程整理，实际扣费以账号账单明细为准。</p>
+        </div>
+      </section>
+
+      <section class="section faq-section shell" aria-labelledby="faq-title"><div><p class="eyebrow">GOOD TO KNOW</p><h2 id="faq-title">开始之前<br />你可能想知道</h2></div><div class="faq-list">
+        <details><summary>如何获取积分？<span aria-hidden="true">＋</span></summary><p>每个账户赠送 20,000 积分。需要更多积分时，可按人民币 9.9 元 = 990 积分的比例充值；社区也会定期举办活动赠送积分。</p></details>
+        <details><summary>积分可以兑换回人民币吗？<span aria-hidden="true">＋</span></summary><p>不可以。人民币可以兑换为积分，积分只能在账号内消耗，不能兑换回人民币。</p></details>
+        <details><summary>任务里的每次迭代、每个候选都会收费吗？<span aria-hidden="true">＋</span></summary><p>一次计算内部的迭代不按迭代次数收费；另行提交收费计算才会累计费用。XMatcher 一次返回多个候选，不按候选数重复收匹配费，但分别进行的结构校验按实际次数收费。</p></details>
+        <details><summary>查询结果、下载文件或者复用结果要收费吗？<span aria-hidden="true">＋</span></summary><p>查询结果、下载文件不额外收取计算积分。复用已有结果且没有重新提交计算时，不新增计算费用；若过程中实际调用了模型，模型费用仍另行计算。</p></details>
+        <details><summary>使用默认模型，还会产生额外费用吗？<span aria-hidden="true">＋</span></summary><p>会。只要实际调用模型，就会按照所用模型和实际 Token 用量计费，这部分不包含在计算工具积分中。使用自定义模型时，由对应模型服务商计费。</p></details>
+      </div></section>
+
+      <section class="closing shell"><div><p class="eyebrow">YOUR NEXT DISCOVERY STARTS HERE</p><h2>让下一张图谱<br class="mobile-break" />成为新的发现</h2></div><div><a class="button button-primary" href="#downloads" data-download-jump>前往下载中心</a><a class="text-link" href="../team.html#sales-contact">联系团队</a></div></section>
+    </main>
+    <footer class="shared-footer">
+      <div class="footer-identity"><a class="brand" href="../index.html#home" aria-label="返回官网"><img class="brand-logo" src="../assets/images/logo-small.webp" width="30" height="30" alt="" /> GanJiang</a><p data-i18n="footerTagline">让材料研究的判断更清楚。</p></div>
+      <div class="footer-links" aria-label="页脚链接"><a href="https://github.com/DeltaGanjiang" target="_blank" rel="noreferrer"><img src="../assets/images/github.webp" width="16" height="16" alt="" />GitHub</a><a href="../team.html" data-i18n="navTeam">项目团队</a><a href="../index.html#beta" data-design-copy="footerCommunity">用户社区</a><a href="mailto:ganjiang@yzailab.com" data-i18n="projectEmail">联系我们</a><a href="../index.html#home" data-design-copy="backWebsite">返回官网</a><a href="#main" data-i18n="backToTop">回到顶部</a></div>
+    </footer>
+  </body>
+</html>
