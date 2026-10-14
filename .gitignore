@@ -35,10 +35,12 @@ venv/
 /assets/images/ganjiang-science-cover.prompt.txt
 /assets/images/ganjiang-science-cover.webp
 
-# Website playback assets: retain the existing short film and the latest full film.
+# Website playback assets: homepage explainer, team preview and full film.
 # All intermediate videos and production inputs in this directory stay local.
 /assets/video/*
 !/assets/video/ganjiang-agent-promo.mp4
 !/assets/video/ganjiang-agent-promo-poster.jpg
+!/assets/video/ganjiang-inside-matter-58s-en.mp4
+!/assets/video/ganjiang-inside-matter-poster.jpg
 !/assets/video/ganjiang-full-film.mp4
 !/assets/video/ganjiang-full-film-poster.jpg

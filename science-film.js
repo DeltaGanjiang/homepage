@@ -1,9 +1,10 @@
-/* Shared homepage/team film. Decode only while visible, with sound off by default. */
+/* Narrated films start with sound on a click; ambient previews autoplay muted. */
 (() => {
   const video = document.getElementById('science-film-video');
   const button = document.getElementById('science-film-toggle');
   const soundButton = document.getElementById('science-film-sound');
   if (!video || !button) return;
+  const narrated = video.hasAttribute('data-narrated');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const connection = navigator.connection;
   const copy = {
@@ -24,8 +25,20 @@
       error: 'The film is unavailable. Showing its cover.'
     }
   };
+  if (narrated) {
+    Object.assign(copy.zh, {
+      body: '用 58 秒了解原子排列如何影响材料，XRD 如何揭示结构，以及干将如何连接分析工具、检验结果并积累经验。',
+      note: '英文 AI 配音 · 英文字幕 · 真实晶体与案例数据。',
+      label: '干将 58 秒说明短片：晶体结构的意义与干将的贡献，含英文配音和字幕'
+    });
+    Object.assign(copy.en, {
+      body: 'In 58 seconds, discover how atomic arrangements shape materials, how XRD reveals structure, and how Gan Jiang connects tools, checks evidence and learns from experience.',
+      note: 'English AI narration and captions · Real crystal and case data.',
+      label: 'Gan Jiang: a 58-second introduction to crystal structures and our contribution, with English narration and captions'
+    });
+  }
   let visible = false;
-  let wanted = !reducedMotion.matches && !connection?.saveData;
+  let wanted = !narrated && !reducedMotion.matches && !connection?.saveData;
   let pending = false;
   let resyncAfterPlay = false;
   let failed = false;
@@ -70,7 +83,13 @@
     wanted = !(!video.paused || (pending && wanted));
     syncPlayback();
   });
-  ['playing', 'pause'].forEach(event => video.addEventListener(event, updateButton));
+  video.addEventListener('play', () => { if (narrated) wanted = true; });
+  video.addEventListener('playing', updateButton);
+  video.addEventListener('pause', () => {
+    if (narrated && visible && !document.hidden && !pending) wanted = false;
+    updateButton();
+  });
+  video.addEventListener('ended', () => { wanted = false; updateButton(); });
   soundButton?.addEventListener('click', () => { video.muted = !video.muted; updateButton(); });
   video.addEventListener('volumechange', updateButton);
   function onError() {
@@ -94,8 +113,8 @@
   reducedMotion.addEventListener('change', respectPreferences);
   connection?.addEventListener('change', respectPreferences);
   new MutationObserver(translate).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
-  video.muted = true;
-  video.controls = false;
+  video.muted = !narrated;
+  video.controls = narrated;
   button.hidden = false;
   if (soundButton) soundButton.hidden = false;
   translate();
