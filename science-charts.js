@@ -1,7 +1,9 @@
 /* Native SVG charts: all curves are supplied measurements / fitted components. */
-(() => {
+function initEgyptChart() {
   const root=document.querySelector('#phase-story'), data=window.egyptData;
   if(!root||!data)return;
+  if(root.dataset.chartReady)return;
+  root.dataset.chartReady='true';
   const $=s=>root.querySelector(s), svg=$('#egypt-chart');
   const en=()=>document.documentElement.lang==='en';
   let range='full', selected=-1, background=true, inspected=1000;
@@ -67,7 +69,9 @@
   new MutationObserver(draw).observe($('.phase-story-board'),{attributes:true,attributeFilter:['data-step']});
   new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
   draw();
-})();
+}
+window.addEventListener('egyptdataready',initEgyptChart,{once:true});
+initEgyptChart();
 
 (() => {
   const root=document.querySelector('#benchmarks'),data=window.benchmarkData;if(!root||!data)return;

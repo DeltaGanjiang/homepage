@@ -1,5 +1,5 @@
 /* Reference credits from publisher/干将XRD功能积分与费用估算.md,
- * with the user-confirmed single/multiple-CIF rule: 100 per submitted task.
+ * with user-confirmed rates: simulations cost 100 per task, validations cost 20 each.
  * These are displayed reference units, not a payment or billing API.
  */
 (function (root) {
@@ -27,13 +27,13 @@
       if (task === 'element') add('元素条件检索', 300);
       if (matched) {
         add('物相匹配', 400);
-        add('候选校验', 100, count(input.candidates, 3));
-        add('峰位偏移校验', 100, count(input.shifts, 0));
+        add('候选校验', 20, count(input.candidates, 3));
+        add('峰位偏移校验', 20, count(input.shifts, 0));
       }
     } else if (task === 'multi') {
       add('多相匹配', 400);
       add('多相分解', 200);
-      add('组合校验', 100, count(input.combinations, 1));
+      add('组合校验', 20, count(input.combinations, 1));
       add('补查单相基线', 400, count(input.baselines, 0));
     } else if (task !== 'refinement') {
       throw new RangeError('Unknown analysis task');
@@ -44,14 +44,14 @@
     if (task === 'refinement' && refinement === 'none') refinement = 'gsas';
     if (refinement === 'gsas') {
       add('GSAS-II 计算', 1200);
-      add('精修最终校验', 100);
+      add('精修最终校验', 20);
     } else if (refinement === 'wpem') {
       add('WPEM 计算', 600, Number(input.wpemRuns) === 4 ? 4 : 3);
       if (input.wpemExtra === true) add('WPEM 补充试算', 600, 2);
-      add('精修最终校验', 100);
+      add('精修最终校验', 20);
     } else if (refinement === 'fullprof') {
       add('FullProf 计算（最多）', 1500, 3);
-      add('精修最终校验', 100);
+      add('精修最终校验', 20);
     } else if (refinement !== 'none') {
       throw new RangeError('Unknown refinement method');
     }

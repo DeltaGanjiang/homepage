@@ -7,6 +7,23 @@
   const narrated = video.hasAttribute('data-narrated');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const connection = navigator.connection;
+  const limitedConnection = () => connection?.saveData || ['slow-2g', '2g', '3g'].includes(connection?.effectiveType);
+  // Also defer the cover in browsers that do not support native video lazy loading.
+  function loadPoster() {
+    if (!video.dataset.poster) return;
+    video.poster = video.dataset.poster;
+    delete video.dataset.poster;
+  }
+  if (video.dataset.poster) {
+    const posterObserver = new IntersectionObserver(entries => {
+      if (document.documentElement.classList.contains('intro-scene')) return;
+      if (entries.some(entry => entry.isIntersecting && entry.boundingClientRect.width > 0)) {
+        loadPoster();
+        posterObserver.disconnect();
+      }
+    }, { rootMargin: '600px 0px' });
+    posterObserver.observe(video);
+  }
   const copy = {
     zh: {
       eyebrow: 'GanJiang Agent · 材料智能', title: '读懂图谱，<br />看清材料。',
@@ -38,7 +55,7 @@
     });
   }
   let visible = false;
-  let wanted = !narrated && !reducedMotion.matches && !connection?.saveData;
+  let wanted = !narrated && !reducedMotion.matches && !limitedConnection();
   let pending = false;
   let resyncAfterPlay = false;
   let failed = false;
@@ -80,6 +97,7 @@
     }
   }
   button.addEventListener('click', () => {
+    loadPoster();
     wanted = !(!video.paused || (pending && wanted));
     syncPlayback();
   });
@@ -108,7 +126,7 @@
   }, { threshold: 0 }).observe(video);
   document.addEventListener('visibilitychange', syncPlayback);
   function respectPreferences() {
-    if (reducedMotion.matches || connection?.saveData) { wanted = false; syncPlayback(); }
+    if (reducedMotion.matches || limitedConnection()) { wanted = false; syncPlayback(); }
   }
   reducedMotion.addEventListener('change', respectPreferences);
   connection?.addEventListener('change', respectPreferences);

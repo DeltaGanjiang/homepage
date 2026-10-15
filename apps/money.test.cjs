@@ -15,18 +15,18 @@ test('converts the confirmed RMB recharge rate to USD using the checked exchange
 
 test('converts the full workflow before rounding instead of summing rounded dollar lines', () => {
   const result = calculate({ task: 'single', candidates: 3 });
-  assert.equal(result.total, 1100);
-  assert.equal(formatUsd(result.total), 'US$1.64');
-  assert.deepEqual(result.steps.map(step => formatUsd(step.credits)), ['US$0.60', 'US$0.60', 'US$0.45']);
+  assert.equal(result.total, 860);
+  assert.equal(formatUsd(result.total), 'US$1.29');
+  assert.deepEqual(result.steps.map(step => formatUsd(step.credits)), ['US$0.60', 'US$0.60', 'US$0.09']);
   const repeated = calculate({ task: 'single', candidates: 3, quantity: 2 });
-  assert.equal(formatUsd(repeated.total), 'US$3.29');
+  assert.equal(formatUsd(repeated.total), 'US$2.57');
 });
 
 test('prices all tool references and refinement range endpoints consistently', () => {
-  const expected = new Map([[100, 'US$0.15'], [400, 'US$0.60'], [600, 'US$0.90'], [700, 'US$1.05'], [800, 'US$1.20'], [1100, 'US$1.64'], [1200, 'US$1.79'], [1300, 'US$1.94'], [1900, 'US$2.84'], [2500, 'US$3.74'], [4600, 'US$6.87']]);
+  const expected = new Map([[20, 'US$0.03'], [100, 'US$0.15'], [400, 'US$0.60'], [600, 'US$0.90'], [700, 'US$1.05'], [800, 'US$1.20'], [1100, 'US$1.64'], [1200, 'US$1.79'], [1220, 'US$1.82'], [1820, 'US$2.72'], [2420, 'US$3.62'], [4520, 'US$6.75']]);
   expected.forEach((label, credits) => assert.equal(formatUsd(credits), label));
-  assert.equal(formatUsd(calculate({ task: 'refinement', refinement: 'fullprof' }).total), 'US$6.87');
-  assert.equal(formatUsd(calculate({ task: 'refinement', refinement: 'wpem', wpemRuns: 4 }).total), 'US$3.74');
+  assert.equal(formatUsd(calculate({ task: 'refinement', refinement: 'fullprof' }).total), 'US$6.75');
+  assert.equal(formatUsd(calculate({ task: 'refinement', refinement: 'wpem', wpemRuns: 4 }).total), 'US$3.62');
 });
 
 test('handles free amounts and fractions without reporting a positive cost as zero', () => {

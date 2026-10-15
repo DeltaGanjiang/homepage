@@ -51,6 +51,8 @@ ignored by the parent repository.
   final validation.
 - Single- and multiple-CIF simulation both cost 100 credits per submitted task,
   regardless of the number of CIFs in that task.
+- Candidate, peak-shift, combination and final refinement validations cost 20
+  credits each.
 - Counts describe repeated submissions/validations, not internal iterations.
 
 ## USD cost reference

@@ -21,14 +21,18 @@
     <title>了解干将 — 完整视频</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <link rel="preload" as="image" href="assets/video/ganjiang-full-film-poster.webp" type="image/webp" fetchpriority="high" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="design-system.css" />
     <link rel="stylesheet" href="film-page.css" />
+    <script defer src="script.js"></script>
+    <script defer src="design.js"></script>
+    <script defer src="film-page.js"></script>
   </head>
   <body class="site-v2 film-page">
     <a class="skip-link" href="#film-main" data-design-copy="skip">跳到主要内容</a>
     <header class="site-header">
-      <a class="brand" href="index.html#home" aria-label="GanJiang Home"><img class="brand-logo" src="assets/images/logo-small.webp" alt="" /> GanJiang</a>
+      <a class="brand" href="index.html#home" aria-label="GanJiang Home"><img class="brand-logo" width="30" height="30" decoding="async" src="assets/images/logo-small.webp" alt="" /> GanJiang</a>
       <div class="header-actions"><button class="language-toggle" type="button" aria-label="Switch to English">EN</button><button aria-controls="site-nav" class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false">菜单</button></div>
       <nav id="site-nav" class="nav" aria-label="Main navigation"><a href="index.html#egypt-story" data-design-copy="navCase">研究案例</a><a href="index.html#benchmarks" data-design-copy="navPerformance">性能表现</a><a href="index.html#can-do" data-design-copy="navApproach">分析方法</a><a class="is-current" href="film.html" aria-current="page" data-design-copy="navFilm">干将视频介绍</a><a href="team.html" data-i18n="navTeam">项目团队</a><a class="nav-cta" href="apps/index.html" data-design-copy="navDownload">下载干将</a></nav>
       <div class="reading-progress" aria-hidden="true"><i></i></div>
@@ -40,7 +44,7 @@
         <p class="full-film-description" data-full-film-copy="intro">从一张衍射图谱，到材料的结构与变化。用一部完整短片，了解干将的分析流程、研究案例与评测结果。</p>
       </header>
       <figure class="full-film-player">
-        <video id="full-film-video" width="1920" height="1080" controls playsinline preload="metadata" poster="assets/video/ganjiang-full-film-poster.jpg" aria-label="Gan Jiang — full project film, with English narration and subtitles" aria-describedby="full-film-caption">
+        <video id="full-film-video" width="1920" height="1080" controls playsinline preload="none" poster="assets/video/ganjiang-full-film-poster.webp" aria-label="Gan Jiang — full project film, with English narration and subtitles" aria-describedby="full-film-caption">
           <source src="assets/video/ganjiang-full-film.mp4" type="video/mp4" />
           <a href="assets/video/ganjiang-full-film.mp4" data-full-film-copy="openVideo">打开完整视频</a>
         </video>
@@ -54,9 +58,6 @@
         <a href="index.html#beta"><span data-full-film-copy="try">体验干将</span></a>
       </section>
     </main>
-    <footer class="footer section-shell"><p><img class="brand-logo" src="assets/images/logo-small.webp" alt="" /> GanJiang</p><p data-i18n="footerTagline">让材料研究的判断更清楚。</p><a href="index.html#home" data-i18n="backHome">返回主页</a></footer>
-    <script src="script.js"></script>
-    <script src="design.js"></script>
-    <script src="film-page.js"></script>
+    <footer class="footer section-shell"><p><img class="brand-logo" width="30" height="30" decoding="async" src="assets/images/logo-small.webp" alt="" /> GanJiang</p><p data-i18n="footerTagline">让材料研究的判断更清楚。</p><a href="index.html#home" data-i18n="backHome">返回主页</a></footer>
   </body>
 </html>

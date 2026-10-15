@@ -185,9 +185,9 @@
       hint = 'FullProf 轮数由云端决定，用户不能指定；这里按最多 3 次计算与 1 次最终校验估算。';
       disclaimer = '含 FullProf 的最高参考费用；云端可能提前停止，实际费用可能更低。';
     } else if (result.refinement === 'wpem') {
-      hint = '每次 WPEM 计算 600 积分，包含 1 次最终校验 100；内部迭代不按轮数单独计费。';
+      hint = '每次 WPEM 计算 600 积分，另加 1 次最终校验 20；内部迭代不按轮数单独计费。';
     } else if (result.refinement === 'gsas') {
-      hint = '按通常流程计：1 次 GSAS-II 计算 1,200＋1 次最终校验 100。';
+      hint = '按通常流程计：1 次 GSAS-II 计算 1,200＋1 次最终校验 20。';
     }
     byId('refinement-hint').textContent = t(hint);
     byId('estimate-disclaimer').textContent = t(disclaimer);

@@ -7,6 +7,10 @@
     const dialog = document.getElementById(button.dataset.communityOpen);
     if (!dialog) return;
     button.addEventListener('click', () => {
+      dialog.querySelectorAll('img[data-src]').forEach(image => {
+        image.src = image.dataset.src;
+        image.removeAttribute('data-src');
+      });
       openers.set(dialog, button);
       dialog.showModal();
       document.documentElement.classList.add('community-modal-open');

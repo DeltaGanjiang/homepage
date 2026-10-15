@@ -44,3 +44,4 @@ venv/
 !/assets/video/ganjiang-inside-matter-poster.jpg
 !/assets/video/ganjiang-full-film.mp4
 !/assets/video/ganjiang-full-film-poster.jpg
+!/assets/video/*-poster.webp

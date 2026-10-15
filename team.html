@@ -26,11 +26,15 @@
     <link rel="stylesheet" href="team-page.css" />
     <link rel="stylesheet" href="science-film.css" />
     <link rel="stylesheet" href="site-chrome.css" />
+    <script defer src="script.js"></script>
+    <script defer src="design.js"></script>
+    <script defer src="team-page.js"></script>
+    <script defer src="science-film.js"></script>
   </head>
   <body class="team-page site-v2">
     <a class="skip-link" href="#team-main" data-design-copy="skip">跳到主要内容</a>
     <header class="site-header shared-header">
-      <a class="brand" href="index.html#home" aria-label="返回官网 / Back to website"><img class="brand-logo" src="assets/images/logo-small.webp" alt="" /> GanJiang</a>
+      <a class="brand" href="index.html#home" aria-label="返回官网 / Back to website"><img class="brand-logo" width="30" height="30" decoding="async" src="assets/images/logo-small.webp" alt="" /> GanJiang</a>
       <div class="header-actions"><button class="language-toggle" type="button" aria-label="Switch to English">EN</button><button aria-controls="site-nav" class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false">菜单</button></div>
       <nav id="site-nav" class="nav" aria-label="Main navigation"><a href="index.html#home" data-design-copy="backWebsite">返回官网</a><a href="index.html#benchmarks" data-design-copy="navPerformance">性能表现</a><a href="index.html#can-do" data-design-copy="navApproach">分析方法</a><a href="film.html" data-design-copy="navFilm">干将视频介绍</a><a class="is-current" href="team.html" aria-current="page" data-i18n="navTeam">项目团队</a><a class="nav-cta" href="apps/index.html" data-design-copy="navDownload">下载干将</a></nav>
       <div class="reading-progress" aria-hidden="true"><i></i></div>
@@ -46,7 +50,7 @@
         </div>
         <figure class="people-cover science-film-player">
           <div class="people-cover-art people-cover-film">
-            <video id="science-film-video" width="1920" height="1080" muted loop playsinline controls preload="none" poster="assets/video/ganjiang-agent-promo-poster.jpg" aria-label="GanJiang Agent 英文宣传片：从 XRD 图谱到材料分析" aria-describedby="science-film-note">
+            <video id="science-film-video" width="1920" height="1080" muted loop playsinline controls preload="none" loading="lazy" poster="assets/video/ganjiang-agent-promo-poster.webp" aria-label="GanJiang Agent 英文宣传片：从 XRD 图谱到材料分析" aria-describedby="science-film-note">
               <source src="assets/video/ganjiang-agent-promo.mp4" type="video/mp4" />
               <a href="assets/video/ganjiang-agent-promo.mp4" data-film-copy="download">下载宣传片</a>
             </video>
@@ -187,10 +191,8 @@
       </section>
     </main>
     <footer class="shared-footer">
-      <div class="footer-identity"><a class="brand" href="index.html#home" aria-label="返回官网"><img class="brand-logo" src="assets/images/logo-small.webp" width="30" height="30" alt="" /> GanJiang</a><p data-i18n="footerTagline">让材料研究的判断更清楚。</p></div>
+      <div class="footer-identity"><a class="brand" href="index.html#home" aria-label="返回官网"><img class="brand-logo" width="30" height="30" decoding="async" src="assets/images/logo-small.webp" alt="" /> GanJiang</a><p data-i18n="footerTagline">让材料研究的判断更清楚。</p></div>
       <div class="footer-links" aria-label="页脚链接"><a href="https://github.com/DeltaGanjiang" target="_blank" rel="noreferrer"><img src="assets/images/github.webp" width="16" height="16" alt="" />GitHub</a><a href="team.html" data-i18n="navTeam">项目团队</a><a href="index.html#beta" data-design-copy="footerCommunity">用户社区</a><a href="mailto:ganjiang@yzailab.com" data-i18n="projectEmail">联系我们</a><a href="index.html#home" data-design-copy="backWebsite">返回官网</a><a href="#team-main" data-i18n="backToTop">回到顶部</a></div>
     </footer>
-    <script src="script.js"></script><script src="design.js"></script><script src="team-page.js"></script>
-    <script src="science-film.js"></script>
   </body>
 </html>

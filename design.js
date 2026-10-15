@@ -18,11 +18,14 @@
   const progress=document.querySelector('.reading-progress');
   function updateReading(){scheduled=false;if(!progress)return;const total=document.documentElement.scrollHeight-innerHeight;progress.style.setProperty('--read-progress',`${total>0?Math.min(100,scrollY/total*100):0}%`);}
   addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(updateReading);}},{passive:true});addEventListener('resize',updateReading,{passive:true});updateReading();
-  const target=document.querySelector('#hero-data-paths'),data=window.egyptData;
-  if(target&&data){
+  function drawHeroData(){
+    const target=document.querySelector('#hero-data-paths'),data=window.egyptData;
+    if(!target||!data||target.hasChildNodes())return;
     const max=Math.max(...data.rows.map(r=>r[1])),svgNS='http://www.w3.org/2000/svg';
     const path=column=>data.rows.map((r,i)=>`${i?'L':'M'}${(35+(r[0]-5)/69.99*575).toFixed(1)},${(270-r[column]/max*220).toFixed(1)}`).join('');
     data.phases.forEach((phase,i)=>{const line=document.createElementNS(svgNS,'path');line.setAttribute('d',path(i+4));line.setAttribute('fill','none');line.setAttribute('stroke',phase.color);line.setAttribute('stroke-width','1');line.setAttribute('opacity','.55');target.append(line);});
     const observed=document.createElementNS(svgNS,'path');observed.setAttribute('d',path(1));observed.setAttribute('fill','none');observed.setAttribute('stroke','#dce6fa');observed.setAttribute('stroke-width','.85');observed.setAttribute('opacity','.85');target.append(observed);
   }
+  window.addEventListener('egyptdataready',drawHeroData,{once:true});
+  drawHeroData();
 })();

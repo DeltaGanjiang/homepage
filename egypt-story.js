@@ -56,9 +56,10 @@
   };
 
   // Reuse the supplied measurements. The illustrated lattice makes no structural claim.
-  const data = window.egyptData;
-  const traces = root.querySelector('#egypt-feature-traces');
-  if (data?.rows?.length) {
+  function drawTraces() {
+    const data = window.egyptData;
+    const traces = root.querySelector('#egypt-feature-traces');
+    if (!data?.rows?.length || traces.hasChildNodes()) return;
     const rows = data.rows;
     const start = rows[0][0], span = rows.at(-1)[0] - start;
     const max = Math.max(...rows.map(row => row[1]));
@@ -75,6 +76,8 @@
     data.phases.forEach((phase, i) => addTrace(i + 4, phase.color, 'egypt-component', '.5'));
     addTrace(1, '#ead3a0', 'egypt-measured', '.95');
   }
+  window.addEventListener('egyptdataready', drawTraces, { once: true });
+  drawTraces();
 
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const play = root.querySelector('#egypt-motion');

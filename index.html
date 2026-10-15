@@ -21,6 +21,7 @@
     <title>干将 — X 射线衍射科学智能体</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <link rel="preload" as="image" href="assets/images/ganjiang-logo-small.webp" fetchpriority="high" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="phase-story.css" />
     <link rel="stylesheet" href="design-system.css" />
@@ -28,11 +29,22 @@
     <link rel="stylesheet" href="science-film.css" />
     <link rel="stylesheet" href="community.css" />
     <link rel="stylesheet" href="site-chrome.css" />
+    <script defer src="intro-scene.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="science-data.js"></script>
+    <script defer src="assets/science/benchmark-data.js"></script>
+    <script defer src="phase-story.js"></script>
+    <script defer src="science-charts.js"></script>
+    <script defer src="design.js"></script>
+    <script defer src="system-story.js"></script>
+    <script defer src="egypt-story.js"></script>
+    <script defer src="science-film.js"></script>
+    <script defer src="community.js"></script>
   </head>
   <body class="site-v2">
     <a class="skip-link" href="#home" data-design-copy="skip">跳到主要内容</a>
     <header class="site-header shared-header">
-      <a class="brand" href="#top" aria-label="Gan Jiang 首页"><img class="brand-logo" src="assets/images/logo-small.webp" alt="" /> GanJiang</a>
+      <a class="brand" href="#top" aria-label="Gan Jiang 首页"><img class="brand-logo" width="30" height="30" decoding="async" src="assets/images/logo-small.webp" alt="" /> GanJiang</a>
       <div class="header-actions"><div class="social-links header-social" aria-label="社交链接"><a class="social-link github-link" href="https://github.com/DeltaGanjiang" target="_blank" rel="noreferrer" aria-label="GitHub: DeltaGanjiang"><img src="assets/images/github.webp" alt="" /><span>GitHub</span></a><span class="social-link xiaohongshu-link" aria-label="小红书：95614037352"><img src="assets/images/xaiohongshu.webp" alt="" /><span>95614037352</span></span></div><button class="language-toggle" type="button" aria-label="Switch to English">EN</button><button aria-controls="site-nav" class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false">菜单</button></div>
       <nav id="site-nav" class="nav" aria-label="Main navigation"><a href="#egypt-story" data-design-copy="navCase">研究案例</a><a href="#benchmarks" data-design-copy="navPerformance">性能表现</a><a href="#can-do" data-design-copy="navApproach">分析方法</a><a href="https://arxiv.org/abs/2610.07862" target="_blank" rel="noopener noreferrer">Paper</a><a href="film.html" data-design-copy="navFilm">干将视频介绍</a><a href="team.html" data-i18n="navTeam">项目团队</a><a class="nav-cta" href="apps/index.html" data-design-copy="navDownload">下载干将</a></nav>
     <div class="reading-progress" aria-hidden="true"><i></i></div></header>
@@ -40,7 +52,7 @@
       <section class="orb-intro" aria-labelledby="orb-intro-title">
         <canvas id="orb-canvas" aria-hidden="true"></canvas>
         <div class="orb-intro-copy">
-          <img class="orb-intro-logo" src="assets/images/ganjiang-logo-small.webp" alt="" />
+          <img class="orb-intro-logo" width="256" height="256" fetchpriority="high" decoding="async" src="assets/images/ganjiang-logo-small.webp" alt="" />
           <p class="orb-intro-kicker">GANJIANG / XRD SCIENCE AGENT</p>
           <div class="orb-intro-message">
             <h1 id="orb-intro-title"><span class="orb-copy-frame" data-i18n="orbTitle">干将</span><span class="orb-copy-frame" data-i18n="orbTitleTwo" aria-hidden="true">图谱</span><span class="orb-copy-frame" data-i18n="orbTitleThree" aria-hidden="true">决策</span></h1>
@@ -73,7 +85,8 @@
           <span class="science-film-meta">GANJIANG AGENT · 58 SEC · ENGLISH VOICE</span>
         </div>
         <figure class="science-film-player">
-          <video id="science-film-video" width="1920" height="1080" data-narrated playsinline controls preload="metadata" poster="assets/video/ganjiang-inside-matter-poster.jpg" aria-label="干将 58 秒说明短片：晶体结构的意义与干将的贡献，含英文配音和字幕" aria-describedby="science-film-note">
+          <noscript><style>#science-film-video { background: url('assets/video/ganjiang-inside-matter-poster.webp') center / contain no-repeat; }</style></noscript>
+          <video id="science-film-video" width="1920" height="1080" data-narrated playsinline controls preload="none" loading="lazy" data-poster="assets/video/ganjiang-inside-matter-poster.webp" aria-label="干将 58 秒说明短片：晶体结构的意义与干将的贡献，含英文配音和字幕" aria-describedby="science-film-note">
             <source src="assets/video/ganjiang-inside-matter-58s-en.mp4" type="video/mp4" />
             <a href="assets/video/ganjiang-inside-matter-58s-en.mp4" data-film-copy="download">下载宣传片</a>
           </video>
@@ -407,7 +420,7 @@
       </div>
       <p class="community-instructions" id="community-wechat-instructions" data-i18n="groupWechatInstructions">使用微信扫一扫，或保存二维码后在微信中识别，即可加入用户交流群。</p>
       <a class="community-qr" href="assets/images/user-group-c.jpg" target="_blank" rel="noopener noreferrer">
-        <img src="assets/images/user-group-c.jpg" width="930" height="1446" decoding="async" alt="微信用户交流群二维码 / Wechat user group QR code" />
+        <img data-src="assets/images/user-group-c.jpg" width="930" height="1446" decoding="async" alt="微信用户交流群二维码 / Wechat user group QR code" />
       </a>
       <a class="community-dialog-action" href="assets/images/user-group-c.jpg" download><span data-i18n="groupSaveQr">保存二维码</span></a>
     </dialog>
@@ -419,7 +432,7 @@
       </div>
       <p class="community-instructions" id="community-whatsapp-instructions" data-i18n="groupWhatsappInstructions">使用 WhatsApp 扫描下方二维码，按提示加入国际用户交流群。也可以先保存二维码，在手机中打开。</p>
       <a class="community-qr" href="assets/images/user-group-i.png" target="_blank" rel="noopener noreferrer">
-        <img src="assets/images/user-group-i.png" width="560" height="724" decoding="async" alt="WhatsApp 用户交流群二维码 / Whatsapp user group QR code" />
+        <img data-src="assets/images/user-group-i.png" width="560" height="724" decoding="async" alt="WhatsApp 用户交流群二维码 / Whatsapp user group QR code" />
       </a>
       <a class="community-dialog-action" href="assets/images/user-group-i.png" download><span data-i18n="groupSaveQr">保存二维码</span></a>
     </dialog>
@@ -438,11 +451,8 @@
       <a class="community-dialog-action" href="https://discord.gg/dhjPzQhkD" target="_blank" rel="noopener noreferrer"><span data-i18n="groupDiscordJoin">加入 Discord</span></a>
     </dialog>
     <footer class="shared-footer">
-      <div class="footer-identity"><a class="brand" href="#home" aria-label="返回官网"><img class="brand-logo" src="assets/images/logo-small.webp" width="30" height="30" alt="" /> GanJiang</a><p data-i18n="footerTagline">让材料研究的判断更清楚。</p></div>
+      <div class="footer-identity"><a class="brand" href="#home" aria-label="返回官网"><img class="brand-logo" width="30" height="30" decoding="async" src="assets/images/logo-small.webp" alt="" /> GanJiang</a><p data-i18n="footerTagline">让材料研究的判断更清楚。</p></div>
       <div class="footer-links" aria-label="页脚链接"><a href="https://github.com/DeltaGanjiang" target="_blank" rel="noreferrer"><img src="assets/images/github.webp" width="16" height="16" alt="" />GitHub</a><a href="team.html" data-i18n="navTeam">项目团队</a><a href="index.html#beta" data-design-copy="footerCommunity">用户社区</a><a href="mailto:ganjiang@yzailab.com" data-i18n="projectEmail">联系我们</a><a href="#top" data-i18n="backToTop">回到顶部</a></div>
-    </footer><script src="intro-scene.js"></script><script src="script.js"></script><script src="assets/science/egypt-data.js"></script><script src="assets/science/benchmark-data.js"></script><script src="phase-story.js"></script><script src="science-charts.js"></script><script src="design.js"></script><script src="system-story.js"></script>
-    <script src="egypt-story.js"></script>
-    <script src="science-film.js"></script>
-    <script src="community.js"></script>
+    </footer>
   </body>
 </html>
