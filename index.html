@@ -419,9 +419,18 @@
         <div><p>GANJIANG COMMUNITY</p><h2 id="community-wechat-title" data-i18n="groupWechatCaption">微信用户交流群</h2></div>
       </div>
       <p class="community-instructions" id="community-wechat-instructions" data-i18n="groupWechatInstructions">使用微信扫一扫，或保存二维码后在微信中识别，即可加入用户交流群。</p>
-      <a class="community-qr" href="assets/images/user-group-c.jpg" target="_blank" rel="noopener noreferrer">
-        <img data-src="assets/images/user-group-c.jpg" width="930" height="1446" decoding="async" alt="微信用户交流群二维码 / Wechat user group QR code" />
-      </a>
+      <div class="community-qr" data-qr-state="idle" style="--qr-ratio:930 / 1446">
+        <a class="community-qr-image" href="assets/images/user-group-c.jpg" target="_blank" rel="noopener noreferrer">
+          <img data-src="assets/images/user-group-c.jpg" width="930" height="1446" decoding="async" alt="微信用户交流群二维码 / Wechat user group QR code" />
+        </a>
+        <div class="community-qr-status">
+          <div role="status" aria-live="polite">
+            <span data-qr-loading data-i18n="groupQrLoading" hidden>二维码加载中…</span>
+            <span data-qr-error data-i18n="groupQrError" hidden>二维码加载失败，请重试。</span>
+          </div>
+          <button type="button" data-qr-retry hidden><span data-i18n="groupQrRetry">重新加载</span></button>
+        </div>
+      </div>
       <a class="community-dialog-action" href="assets/images/user-group-c.jpg" download><span data-i18n="groupSaveQr">保存二维码</span></a>
     </dialog>
     <dialog class="community-dialog community-whatsapp" id="community-whatsapp-dialog" aria-labelledby="community-whatsapp-title" aria-describedby="community-whatsapp-instructions">
@@ -431,9 +440,18 @@
         <div><p>GANJIANG COMMUNITY</p><h2 id="community-whatsapp-title" data-i18n="groupWhatsappCaption">WhatsApp 用户交流群</h2></div>
       </div>
       <p class="community-instructions" id="community-whatsapp-instructions" data-i18n="groupWhatsappInstructions">使用 WhatsApp 扫描下方二维码，按提示加入国际用户交流群。也可以先保存二维码，在手机中打开。</p>
-      <a class="community-qr" href="assets/images/user-group-i.png" target="_blank" rel="noopener noreferrer">
-        <img data-src="assets/images/user-group-i.png" width="560" height="724" decoding="async" alt="WhatsApp 用户交流群二维码 / Whatsapp user group QR code" />
-      </a>
+      <div class="community-qr" data-qr-state="idle" style="--qr-ratio:560 / 724">
+        <a class="community-qr-image" href="assets/images/user-group-i.png" target="_blank" rel="noopener noreferrer">
+          <img data-src="assets/images/user-group-i.png" width="560" height="724" decoding="async" alt="WhatsApp 用户交流群二维码 / Whatsapp user group QR code" />
+        </a>
+        <div class="community-qr-status">
+          <div role="status" aria-live="polite">
+            <span data-qr-loading data-i18n="groupQrLoading" hidden>二维码加载中…</span>
+            <span data-qr-error data-i18n="groupQrError" hidden>二维码加载失败，请重试。</span>
+          </div>
+          <button type="button" data-qr-retry hidden><span data-i18n="groupQrRetry">重新加载</span></button>
+        </div>
+      </div>
       <a class="community-dialog-action" href="assets/images/user-group-i.png" download><span data-i18n="groupSaveQr">保存二维码</span></a>
     </dialog>
     <dialog class="community-dialog community-discord" id="community-discord-dialog" aria-labelledby="community-discord-title" aria-describedby="community-discord-instructions">
