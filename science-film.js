@@ -8,22 +8,6 @@
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const connection = navigator.connection;
   const limitedConnection = () => connection?.saveData || ['slow-2g', '2g', '3g'].includes(connection?.effectiveType);
-  // Also defer the cover in browsers that do not support native video lazy loading.
-  function loadPoster() {
-    if (!video.dataset.poster) return;
-    video.poster = video.dataset.poster;
-    delete video.dataset.poster;
-  }
-  if (video.dataset.poster) {
-    const posterObserver = new IntersectionObserver(entries => {
-      if (document.documentElement.classList.contains('intro-scene')) return;
-      if (entries.some(entry => entry.isIntersecting && entry.boundingClientRect.width > 0)) {
-        loadPoster();
-        posterObserver.disconnect();
-      }
-    }, { rootMargin: '600px 0px' });
-    posterObserver.observe(video);
-  }
   const copy = {
     zh: {
       eyebrow: 'GanJiang Agent · 材料智能', title: '读懂图谱，<br />看清材料。',
@@ -45,13 +29,13 @@
   if (narrated) {
     Object.assign(copy.zh, {
       body: '用 58 秒了解原子排列如何影响材料，XRD 如何揭示结构，以及干将如何连接分析工具、检验结果并积累经验。',
-      note: '英文 AI 配音 · 英文字幕 · 真实晶体与案例数据。',
-      label: '干将 58 秒说明短片：晶体结构的意义与干将的贡献，含英文配音和字幕'
+      note: '',
+      label: '干将 58 秒说明短片：晶体结构的意义与干将的贡献'
     });
     Object.assign(copy.en, {
       body: 'In 58 seconds, discover how atomic arrangements shape materials, how XRD reveals structure, and how Gan Jiang connects tools, checks evidence and learns from experience.',
-      note: 'English AI narration and captions · Real crystal and case data.',
-      label: 'Gan Jiang: a 58-second introduction to crystal structures and our contribution, with English narration and captions'
+      note: '',
+      label: 'Gan Jiang: a 58-second introduction to crystal structures and our contribution'
     });
   }
   let visible = false;
@@ -72,7 +56,9 @@
     const text = language();
     document.querySelectorAll('[data-film-copy]').forEach(el => { el.innerHTML = text[el.dataset.filmCopy]; });
     video.setAttribute('aria-label', text.label);
-    if (failed) document.getElementById('science-film-note').textContent = text.error;
+    const note = document.getElementById('science-film-note');
+    note.textContent = failed ? text.error : text.note;
+    note.hidden = !note.textContent;
     updateButton();
   }
   async function syncPlayback() {
@@ -97,7 +83,6 @@
     }
   }
   button.addEventListener('click', () => {
-    loadPoster();
     wanted = !(!video.paused || (pending && wanted));
     syncPlayback();
   });

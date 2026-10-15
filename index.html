@@ -22,6 +22,7 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
     <link rel="preload" as="image" href="assets/images/ganjiang-logo-small.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="assets/video/ganjiang-inside-matter-poster.webp" type="image/webp" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="phase-story.css" />
     <link rel="stylesheet" href="design-system.css" />
@@ -82,16 +83,15 @@
           <p class="eyebrow" data-film-copy="eyebrow">GanJiang Agent · 材料智能</p>
           <h2 id="science-film-title" data-film-copy="title">读懂图谱，<br />看清材料。</h2>
           <p data-film-copy="body">用 58 秒了解原子排列如何影响材料，XRD 如何揭示结构，以及干将如何连接分析工具、检验结果并积累经验。</p>
-          <span class="science-film-meta">GANJIANG AGENT · 58 SEC · ENGLISH VOICE</span>
+          <span class="science-film-meta">GANJIANG AGENT · 58 SEC</span>
         </div>
         <figure class="science-film-player">
-          <noscript><style>#science-film-video { background: url('assets/video/ganjiang-inside-matter-poster.webp') center / contain no-repeat; }</style></noscript>
-          <video id="science-film-video" width="1920" height="1080" data-narrated playsinline controls preload="none" loading="lazy" data-poster="assets/video/ganjiang-inside-matter-poster.webp" aria-label="干将 58 秒说明短片：晶体结构的意义与干将的贡献，含英文配音和字幕" aria-describedby="science-film-note">
+          <video id="science-film-video" width="1920" height="1080" data-narrated playsinline controls preload="none" poster="assets/video/ganjiang-inside-matter-poster.webp" aria-label="干将 58 秒说明短片：晶体结构的意义与干将的贡献" aria-describedby="science-film-note">
             <source src="assets/video/ganjiang-inside-matter-58s-en.mp4" type="video/mp4" />
             <a href="assets/video/ganjiang-inside-matter-58s-en.mp4" data-film-copy="download">下载宣传片</a>
           </video>
           <figcaption>
-            <span id="science-film-note" data-film-copy="note">英文 AI 配音 · 英文字幕 · 真实晶体与案例数据。</span>
+            <span id="science-film-note" data-film-copy="note" role="status" hidden></span>
             <div class="science-film-actions"><button id="science-film-sound" type="button" aria-controls="science-film-video" aria-pressed="false" hidden>开启声音</button><button id="science-film-toggle" type="button" aria-controls="science-film-video" hidden>播放短片 ▷</button></div>
           </figcaption>
           <a class="science-film-download" href="assets/video/ganjiang-inside-matter-58s-en.mp4" download data-film-copy="download">下载宣传片</a>

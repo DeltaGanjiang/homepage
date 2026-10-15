@@ -53,7 +53,7 @@
 }
 .science-film-player button:hover { border-color: #77f6d2; color: #9ff9e2; }
 .science-film-player button[hidden] { display: none; }
-.science-film-actions { display: flex; flex-shrink: 0; align-items: center; gap: 6px; }
+.science-film-actions { display: flex; flex-shrink: 0; align-items: center; gap: 6px; margin-left: auto; }
 .science-film-download { color: #a9d5c9; font-size: 11px; text-underline-offset: 4px; }
 .people-cover-art.people-cover-film { aspect-ratio: 16 / 9; border: 0; }
 .people-cover-art.people-cover-film::after { display: none; }
