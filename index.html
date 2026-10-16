@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="science-film.css" />
     <link rel="stylesheet" href="community.css" />
     <link rel="stylesheet" href="site-chrome.css" />
+    <link rel="stylesheet" href="presentation.css" />
+    <noscript><style>#presentation[data-reveal]{opacity:1;transform:none}</style></noscript>
     <script defer src="intro-scene.js"></script>
     <script defer src="script.js"></script>
     <script defer src="science-data.js"></script>
@@ -42,6 +44,7 @@
     <script defer src="science-film.js"></script>
     <script defer src="community.js"></script>
     <script defer src="partners.js"></script>
+    <script defer src="presentation.js"></script>
   </head>
   <body class="site-v2">
     <a class="skip-link" href="#home" data-design-copy="skip">跳到主要内容</a>
@@ -291,7 +294,36 @@
         </div>
       </section>
       <section class="future" data-reveal><div class="section-shell future-grid"><div><p class="eyebrow" data-i18n="futureEyebrow">面向未来实验室</p><h2 data-i18n="futureTitle">从报告，走向“实验—表征—决策”的材料发现闭环。</h2></div><div class="future-body"><p data-i18n="futureTextOne">干将连接机器人实验室、计算筛选与 XRD 表征：回答目标相是否形成、杂相从何而来、是否需要补测，以及下一轮应调整哪些测试参数。</p><p data-i18n="futureTextTwo">它不会把未经验证的经验直接写进系统；只有被证据、专家与后续实验共同确认的策略，才会成为可版本化、可评估、可回滚的分析技能。</p><a class="button" href="apps/index.html" data-i18n="futureCta">下载和体验</a></div></div></section>
-      <section id="presentation" class="presentation section-shell" data-reveal><div class="presentation-copy"><p class="eyebrow" data-i18n="presentationEyebrow">项目介绍</p><h2 data-i18n="presentationTitle">用一份演示，快速了解干将。</h2><p data-i18n="presentationText">查看干将的项目介绍，了解平台愿景、核心能力与应用场景。</p><a class="button" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FDeltaGanjiang%2Fhomepage%2Fmain%2Fassets%2Fganjiang-presentation-20260916.pptx" target="_blank" rel="noreferrer" data-i18n="presentationCta">在线查看介绍 PPT</a></div><div class="presentation-viewer"><iframe title="干将项目介绍" src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FDeltaGanjiang%2Fhomepage%2Fmain%2Fassets%2Fganjiang-presentation-20260916.pptx" allowfullscreen loading="lazy"></iframe></div></section>
+      <section id="presentation" class="presentation section-shell" data-reveal aria-labelledby="presentation-title">
+        <div class="presentation-copy">
+          <p class="eyebrow" data-i18n="presentationEyebrow">项目介绍</p>
+          <h2 id="presentation-title" data-i18n="presentationTitle">用一份演示，快速了解干将。</h2>
+          <p data-i18n="presentationText">查看干将的项目介绍，了解平台愿景、核心能力与应用场景。</p>
+          <a class="button" href="assets/ganjiang-presentation-20260916.pptx" download data-i18n="presentationCta">下载介绍 PPT</a>
+        </div>
+        <div class="presentation-mount">
+          <div class="presentation-viewer" data-presentation data-slide-count="22" data-slide-base="assets/presentation/20260916/" role="region" aria-label="项目介绍幻灯片" tabindex="0">
+            <a class="presentation-stage" href="assets/presentation/20260916/slide-01.webp" target="_blank" rel="noopener" aria-label="查看幻灯片大图">
+              <img id="presentation-slide" src="assets/presentation/20260916/slide-01.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="干将项目介绍，第 1 页，共 22 页" />
+            </a>
+            <div class="presentation-feedback" hidden>
+              <p role="status" aria-live="polite"></p>
+              <button type="button" data-presentation-retry data-presentation-copy="retry" hidden>重新加载</button>
+            </div>
+            <div class="presentation-toolbar" hidden>
+              <div class="presentation-pagination">
+                <button type="button" data-presentation-prev aria-controls="presentation-slide" disabled><span aria-hidden="true">←</span><span data-presentation-copy="previous">上一页</span></button>
+                <span class="presentation-counter" aria-live="polite" aria-atomic="true">1 / 22</span>
+                <button type="button" data-presentation-next aria-controls="presentation-slide"><span data-presentation-copy="next">下一页</span><span aria-hidden="true">→</span></button>
+              </div>
+              <button type="button" data-presentation-expand aria-haspopup="dialog" aria-controls="presentation-dialog" data-presentation-copy="expand">放大查看</button>
+              <button type="button" data-presentation-close data-presentation-copy="close" hidden>关闭</button>
+            </div>
+          </div>
+          <noscript><p class="presentation-noscript">可下载 PPT 查看全部 22 页，或启用 JavaScript 在线翻页。</p></noscript>
+        </div>
+      </section>
+      <dialog id="presentation-dialog" class="presentation-dialog" aria-label="项目介绍幻灯片大图"></dialog>
       <section id="news" class="news section-shell" data-reveal aria-labelledby="news-title">
         <header class="news-heading"><div><p class="eyebrow" data-i18n="newsEyebrow">媒体关注</p><h2 id="news-title" data-i18n="newsTitle">新闻报道</h2></div><p data-i18n="newsIntro">来自媒体与行业的项目报道，记录干将在材料科研场景中的实践与进展。</p></header>
         <div class="news-list">

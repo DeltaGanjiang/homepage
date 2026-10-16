@@ -2,6 +2,15 @@
 
 GanJiang agent [homepage](https://ganjiang.asia/) [https://ganjiang.asia/](https://ganjiang.asia/).
 
+## 全球合作伙伴
+
+首页 `index.html`、团队页 `team.html` 和下载页 `apps/index.html` 在页脚上方共用合作伙伴展示，样式位于 `site-chrome.css`，滚动与语言切换逻辑位于 `partners.js`。
+
+- 收录 [Yangtze AI Lab 官网](https://www.yangtzeailab.com/)“全球合作伙伴”中的全部 10 个 Logo：6 家学术机构、4 家产业伙伴。原始图片与来源记录保存在 `assets/partners/`。
+- 两行反向循环滚动，悬停、键盘聚焦或暂停按钮可暂停；离开可见区域或切到后台时停止动画。
+- 跟随网站切换中英文。开启“减少动态效果”或禁用 JavaScript 时，展示可横向浏览的静态列表；循环副本对辅助技术隐藏。
+- Logo 使用本地图片并延迟加载，不依赖第三方图片请求。
+
 ## 加载与媒体优化（2026-10-15）
 
 网站继续直接使用静态 HTML/CSS/JS；`.nojekyll` 跳过 GitHub Pages 的 Jekyll 处理。
