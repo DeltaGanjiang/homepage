@@ -30,15 +30,26 @@ test('multiphase validation counts combinations, with optional single-phase base
   assert.equal(calculate({ task: 'multi', combinations: 3, baselines: 2 }).total, 1460);
 });
 
-test('refinement references include exactly one final validation per workflow', () => {
+test('GSAS-II and WPEM references include exactly one final validation per workflow', () => {
   assert.equal(calculate({ task: 'refinement', refinement: 'gsas' }).total, 1220);
   assert.equal(calculate({ task: 'refinement', refinement: 'wpem', wpemRuns: 3 }).total, 1820);
   assert.equal(calculate({ task: 'refinement', refinement: 'wpem', wpemRuns: 4 }).total, 2420);
   assert.equal(calculate({ task: 'refinement', refinement: 'wpem', wpemRuns: 3, wpemExtra: true }).total, 3020);
   assert.equal(calculate({ task: 'refinement', refinement: 'wpem', wpemRuns: 4, wpemExtra: true }).total, 3620);
+});
+
+test('FullProf caps each workflow at 30 rounds and 4900 credits without extra validation fees', () => {
   const fullprof = calculate({ task: 'refinement', refinement: 'fullprof' });
-  assert.equal(fullprof.total, 4520);
+  assert.equal(fullprof.total, 4900);
   assert.equal(fullprof.isUpperBound, true);
+  assert.equal(fullprof.steps.reduce((sum, step) => sum + step.count, 0), 30);
+  assert.equal(fullprof.steps[0].unit, 2000);
+  assert.equal(fullprof.steps[0].count, 1);
+  assert.equal(fullprof.steps[1].unit, 100);
+  assert.equal(fullprof.steps[1].count, 29);
+  assert.equal(fullprof.steps.some(step => step.label === '精修最终校验'), false);
+  assert.equal(calculate({ task: 'refinement', refinement: 'fullprof', quantity: 2 }).total, 9800);
+  assert.equal(calculate({ task: 'single', candidates: 3, refinement: 'fullprof' }).total, 5760);
 });
 
 test('identification and refinement accumulate, and repeating the workflow scales all submitted steps', () => {

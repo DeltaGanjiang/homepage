@@ -182,7 +182,7 @@
     var hint = '识别与精修连续执行时，两部分费用相加。';
     var disclaimer = '各次流程按相同配置估算，实际扣费以账单明细为准。';
     if (result.refinement === 'fullprof') {
-      hint = 'FullProf 轮数由云端决定，用户不能指定；这里按最多 3 次计算与 1 次最终校验估算。';
+      hint = 'FullProf 首轮 2,000 积分，后续每轮 100，最多 30 轮，共 4,900 积分。轮数由云端决定，用户不能指定。';
       disclaimer = '含 FullProf 的最高参考费用；云端可能提前停止，实际费用可能更低。';
     } else if (result.refinement === 'wpem') {
       hint = '每次 WPEM 计算 600 积分，另加 1 次最终校验 20；内部迭代不按轮数单独计费。';

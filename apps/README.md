@@ -46,13 +46,15 @@ ignored by the parent repository.
 - Figures are reference estimates, not live account balances or billing data.
 - Tool credits and model usage are separate. RMB can purchase credits; credits
   can only be consumed within the account and cannot be converted back to RMB.
-- FullProf is estimated at its maximum; users do not choose its cloud run count.
+- FullProf costs 2,000 credits for the first round and 100 per additional round,
+  up to 30 rounds and 4,900 credits total, with no additional validation fee.
+  It is estimated at its maximum; users do not choose its cloud round count.
 - WPEM uses 3 or 4 submitted computations, optionally 2 extra trials, plus one
   final validation.
 - Single- and multiple-CIF simulation both cost 100 credits per submitted task,
   regardless of the number of CIFs in that task.
-- Candidate, peak-shift, combination and final refinement validations cost 20
-  credits each.
+- Candidate, peak-shift, combination and WPEM / GSAS-II final refinement
+  validations cost 20 credits each.
 - Counts describe repeated submissions/validations, not internal iterations.
 
 ## USD cost reference
