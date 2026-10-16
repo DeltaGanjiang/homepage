@@ -18,6 +18,7 @@
     <script defer src="./locales.en.js"></script>
     <script defer src="./i18n.js"></script>
     <script defer src="./apps.js"></script>
+    <script defer src="../partners.js"></script>
   </head>
   <body class="download-page">
     <a class="skip-link" href="#main">跳到主要内容</a>
@@ -169,6 +170,36 @@
 
       <section class="closing shell"><div><p class="eyebrow">YOUR NEXT DISCOVERY STARTS HERE</p><h2>让下一张图谱<br class="mobile-break" />成为新的发现</h2></div><div><a class="button button-primary" href="#downloads" data-download-jump>前往下载中心</a><a class="text-link" href="../team.html#sales-contact">联系团队</a></div></section>
     </main>
+    <section class="global-partners" id="global-partners" data-partners aria-labelledby="partners-title">
+      <div class="partners-heading">
+        <div><p class="partners-kicker">RESEARCH &amp; INDUSTRY</p><h2 id="partners-title" data-partner-copy="title">全球合作伙伴</h2></div>
+        <button class="partners-toggle" type="button" data-partners-toggle aria-pressed="false" aria-controls="partners-academic partners-industry" hidden><svg viewBox="0 0 12 12" aria-hidden="true"><path class="partners-pause" d="M4 1v10M8 1v10"/><path class="partners-play" d="m3 1 7 5-7 5Z"/></svg><span>暂停滚动</span></button>
+      </div>
+      <div class="partners-row partners-row-academic">
+        <h3 class="partners-row-heading" id="partners-academic-title"><span data-partner-copy="academic">学术机构</span><small>ACADEMIC / 06</small></h3>
+        <div class="partners-viewport" id="partners-academic" role="region" aria-labelledby="partners-academic-title" tabindex="0">
+          <div class="partners-track"><ul class="partners-list">
+            <li class="partner-card"><span class="partner-logo"><img src="../assets/partners/cuhk-shenzhen.png" width="128" height="128" loading="lazy" decoding="async" alt="" /></span><span data-partner-copy="cuhk">香港中文大学（深圳）</span></li>
+            <li class="partner-card"><span class="partner-logo"><img src="../assets/partners/sjtu.png" width="128" height="128" loading="lazy" decoding="async" alt="" /></span><span data-partner-copy="sjtu">上海交通大学</span></li>
+            <li class="partner-card"><span class="partner-logo partner-logo-wide"><img src="../assets/partners/hkust.png" width="128" height="128" loading="lazy" decoding="async" alt="" /></span><span data-partner-copy="hkust">香港科技大学</span></li>
+            <li class="partner-card"><span class="partner-logo"><img src="../assets/partners/ustc.png" width="128" height="128" loading="lazy" decoding="async" alt="" /></span><span data-partner-copy="ustc">中国科学技术大学</span></li>
+            <li class="partner-card"><span class="partner-logo"><img src="../assets/partners/hkust-guangzhou.webp" width="128" height="128" loading="lazy" decoding="async" alt="" /></span><span data-partner-copy="hkustgz">香港科技大学（广州）</span></li>
+            <li class="partner-card"><span class="partner-logo"><img src="../assets/partners/cas.webp" width="128" height="128" loading="lazy" decoding="async" alt="" /></span><span data-partner-copy="cas">中国科学院</span></li>
+          </ul></div>
+        </div>
+      </div>
+      <div class="partners-row partners-row-industry">
+        <h3 class="partners-row-heading" id="partners-industry-title"><span data-partner-copy="industry">产业伙伴</span><small>INDUSTRY / 04</small></h3>
+        <div class="partners-viewport" id="partners-industry" role="region" aria-labelledby="partners-industry-title" tabindex="0">
+          <div class="partners-track"><ul class="partners-list">
+            <li class="partner-card"><span class="partner-logo partner-logo-industry"><img src="../assets/partners/bgi.png" width="128" height="128" loading="lazy" decoding="async" alt="" /></span><span data-partner-copy="bgi">华大基因</span></li>
+            <li class="partner-card"><span class="partner-logo partner-logo-industry"><img src="../assets/partners/li-auto.png" width="128" height="128" loading="lazy" decoding="async" alt="" /></span><span data-partner-copy="li">理想汽车</span></li>
+            <li class="partner-card"><span class="partner-logo partner-logo-industry"><img src="../assets/partners/vnet.png" width="128" height="128" loading="lazy" decoding="async" alt="" /></span><span data-partner-copy="vnet">世纪互联</span></li>
+            <li class="partner-card"><span class="partner-logo partner-logo-wide"><img src="../assets/partners/genequantum.png" width="128" height="128" loading="lazy" decoding="async" alt="" /></span><span data-partner-copy="genequantum">启德医药</span></li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
     <footer class="shared-footer">
       <div class="footer-identity"><a class="brand" href="../index.html#home" aria-label="返回官网"><img class="brand-logo" src="../assets/images/logo-small.webp" width="30" height="30" alt="" /> GanJiang</a><p data-i18n="footerTagline">让材料研究的判断更清楚。</p></div>
       <div class="footer-links" aria-label="页脚链接"><a href="https://github.com/DeltaGanjiang" target="_blank" rel="noreferrer"><img src="../assets/images/github.webp" width="16" height="16" alt="" />GitHub</a><a href="../team.html" data-i18n="navTeam">项目团队</a><a href="../index.html#beta" data-design-copy="footerCommunity">用户社区</a><a href="mailto:ganjiang@yzailab.com" data-i18n="projectEmail">联系我们</a><a href="../index.html#home" data-design-copy="backWebsite">返回官网</a><a href="#main" data-i18n="backToTop">回到顶部</a></div>

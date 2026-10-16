@@ -1,5 +1,18 @@
 /* English copy for the Chinese source page and its dynamic analysis states. */
 window.GanJiangEnglish = Object.freeze({
+  '全球合作伙伴': 'Global partners',
+  '学术机构': 'Academic institutions',
+  '产业伙伴': 'Industry partners',
+  '香港中文大学（深圳）': 'The Chinese University of Hong Kong, Shenzhen',
+  '上海交通大学': 'Shanghai Jiao Tong University',
+  '香港科技大学': 'Hong Kong University of Science and Technology',
+  '中国科学技术大学': 'University of Science and Technology of China',
+  '香港科技大学（广州）': 'Hong Kong University of Science and Technology (Guangzhou)',
+  '中国科学院': 'Chinese Academy of Sciences',
+  '华大基因': 'BGI',
+  '理想汽车': 'Li Auto',
+  '世纪互联': 'VNET',
+  '启德医药': 'GeneQuantum Healthcare',
   '美元参考': 'USD reference',
   '汇率参考': 'Exchange rate reference',
   '美元金额按积分充值比例折算，仅供费用比较，不代表积分可以兑换现金。': 'USD amounts reflect the cost of purchasing credits, for cost comparison only. Credits cannot be redeemed for cash.',
