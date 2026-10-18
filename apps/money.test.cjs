@@ -23,9 +23,9 @@ test('converts the full workflow before rounding instead of summing rounded doll
 });
 
 test('prices all tool references and refinement range endpoints consistently', () => {
-  const expected = new Map([[20, 'US$0.03'], [100, 'US$0.15'], [400, 'US$0.60'], [600, 'US$0.90'], [700, 'US$1.05'], [800, 'US$1.20'], [1100, 'US$1.64'], [1200, 'US$1.79'], [1220, 'US$1.82'], [1820, 'US$2.72'], [2420, 'US$3.62'], [4900, 'US$7.32']]);
+  const expected = new Map([[20, 'US$0.03'], [100, 'US$0.15'], [400, 'US$0.60'], [600, 'US$0.90'], [700, 'US$1.05'], [800, 'US$1.20'], [1100, 'US$1.64'], [1200, 'US$1.79'], [1220, 'US$1.82'], [1820, 'US$2.72'], [2420, 'US$3.62'], [4500, 'US$6.72']]);
   expected.forEach((label, credits) => assert.equal(formatUsd(credits), label));
-  assert.equal(formatUsd(calculate({ task: 'refinement', refinement: 'fullprof' }).total), 'US$7.32');
+  assert.equal(formatUsd(calculate({ task: 'refinement', refinement: 'fullprof' }).total), 'US$6.72');
   assert.equal(formatUsd(calculate({ task: 'refinement', refinement: 'wpem', wpemRuns: 4 }).total), 'US$3.62');
 });
 

@@ -38,18 +38,17 @@ test('GSAS-II and WPEM references include exactly one final validation per workf
   assert.equal(calculate({ task: 'refinement', refinement: 'wpem', wpemRuns: 4, wpemExtra: true }).total, 3620);
 });
 
-test('FullProf caps each workflow at 30 rounds and 4900 credits without extra validation fees', () => {
+test('FullProf costs 150 credits per round, capped at 30 rounds and 4500 credits without extra validation fees', () => {
   const fullprof = calculate({ task: 'refinement', refinement: 'fullprof' });
-  assert.equal(fullprof.total, 4900);
+  assert.equal(fullprof.total, 4500);
   assert.equal(fullprof.isUpperBound, true);
   assert.equal(fullprof.steps.reduce((sum, step) => sum + step.count, 0), 30);
-  assert.equal(fullprof.steps[0].unit, 2000);
-  assert.equal(fullprof.steps[0].count, 1);
-  assert.equal(fullprof.steps[1].unit, 100);
-  assert.equal(fullprof.steps[1].count, 29);
+  assert.equal(fullprof.steps.length, 1);
+  assert.equal(fullprof.steps[0].unit, 150);
+  assert.equal(fullprof.steps[0].count, 30);
   assert.equal(fullprof.steps.some(step => step.label === '精修最终校验'), false);
-  assert.equal(calculate({ task: 'refinement', refinement: 'fullprof', quantity: 2 }).total, 9800);
-  assert.equal(calculate({ task: 'single', candidates: 3, refinement: 'fullprof' }).total, 5760);
+  assert.equal(calculate({ task: 'refinement', refinement: 'fullprof', quantity: 2 }).total, 9000);
+  assert.equal(calculate({ task: 'single', candidates: 3, refinement: 'fullprof' }).total, 5360);
 });
 
 test('identification and refinement accumulate, and repeating the workflow scales all submitted steps', () => {

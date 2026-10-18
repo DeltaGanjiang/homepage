@@ -120,7 +120,7 @@ window.GanJiangEnglish = Object.freeze({
   '参与社区活动，获取更多积分。': 'Take part in community events to receive more credits. ',
   '关注用户社区': 'Follow the community',
   '计算工具积分': 'Tool credits',
-  '按功能与实际提交次数计费。一次计算内部的迭代，不按迭代次数重复收费。': 'Charged by tool and submitted calculation. Internal iterations within one calculation are not billed separately.',
+  '按功能与实际提交次数计费；FullProf 按实际轮数计费，每轮 150 积分，最多 30 轮。其他计算内部的迭代，不按迭代次数重复收费。': 'Charged by tool and submitted calculation. FullProf is billed at 150 credits per actual round, up to 30 rounds. Internal iterations within other calculations are not billed separately.',
   '模型调用费用': 'Model usage fees',
   '模型费用另计，不包含在工具积分中。默认模型按所用模型和实际 Token 用量计费；自定义模型由对应服务商计费。': 'Model fees are separate from tool credits. The default model is billed by model and actual token usage; custom models are billed by their provider.',
   '以下为当前流程的': 'The following are ',
@@ -146,7 +146,7 @@ window.GanJiangEnglish = Object.freeze({
   '不追加精修': 'No refinement',
   'GSAS-II · 通常 1,220 积分': 'GSAS-II · Typically 1,220 credits',
   'WPEM · 通常 1,820–2,420 积分': 'WPEM · Typically 1,820–2,420 credits',
-  'FullProf · 最多 4,900 积分': 'FullProf · Up to 4,900 credits',
+  'FullProf · 最多 4,500 积分': 'FullProf · Up to 4,500 credits',
   '预计 WPEM 提交次数': 'Expected WPEM submissions',
   '3 次 · 含最终校验共 1,820 积分': '3 runs · 1,820 credits with validation',
   '4 次 · 含最终校验共 2,420 积分': '4 runs · 2,420 credits with validation',
@@ -191,7 +191,7 @@ window.GanJiangEnglish = Object.freeze({
   '通常提交 3–4 次，每次 600；含一次最终校验。特殊情况补做两次试算，可再增加 1,200。': 'Usually 3–4 submissions at 600 each, plus one final validation. Two extra trial calculations, when needed, add 1,200.',
   'FullProf 精修': 'FullProf refinement',
   '最多': 'Up to',
-  '首轮 2,000 积分，后续每轮 100；最多 30 轮，共 4,900 积分。轮数由云端决定，可能提前停止。': 'The first round costs 2,000 credits, then 100 per additional round, up to 30 rounds and 4,900 credits total. The cloud determines the round count and may stop early.',
+  '每轮 150 积分，最多 30 轮，最高 4,500 积分。轮数由云端决定，可能提前停止。': 'Each round costs 150 credits, up to 30 rounds and a maximum of 4,500 credits. The cloud determines the round count and may stop early.',
   'GSAS-II 精修': 'GSAS-II refinement',
   '一次计算 1,200＋一次最终校验 20。': 'One calculation at 1,200 plus final validation at 20.',
   '校验费用单独累计': 'Validation fees are added separately',
@@ -230,7 +230,7 @@ window.GanJiangEnglish = Object.freeze({
   '用实测信号，检验结构解释': 'Test the structure against observed data',
   '对照计算曲线与残差，回到证据本身。指标仅对应此案例。': 'Compare the calculated pattern and residuals with the evidence. The metric applies only to this case.',
   '官网研究案例的实测图谱、计算图谱和差值曲线，案例 Rwp 为 13.08%，并非软件通用精度承诺。': 'Observed, calculated and difference patterns from the research case. Its Rwp is 13.08%; this is not a general software accuracy claim.',
-  'FullProf 首轮 2,000 积分，后续每轮 100，最多 30 轮，共 4,900 积分。轮数由云端决定，用户不能指定。': 'FullProf costs 2,000 credits for the first round, then 100 per additional round, up to 30 rounds and 4,900 credits total. The cloud determines the round count; users cannot set it.',
+  'FullProf 每轮 150 积分，最多 30 轮，最高 4,500 积分。轮数由云端决定，用户不能指定。': 'FullProf costs 150 credits per round, up to 30 rounds and a maximum of 4,500 credits. The cloud determines the round count; users cannot set it.',
   '含 FullProf 的最高参考费用；云端可能提前停止，实际费用可能更低。': 'Includes the FullProf upper-bound estimate. The cloud may stop early, resulting in a lower actual charge.',
   '每次 WPEM 计算 600 积分，另加 1 次最终校验 20；内部迭代不按轮数单独计费。': 'WPEM costs 600 credits per calculation, plus 20 for one final validation. Internal iterations are not billed separately.',
   '按通常流程计：1 次 GSAS-II 计算 1,200＋1 次最终校验 20。': 'Typical workflow: one GSAS-II calculation at 1,200 plus final validation at 20.',
@@ -245,6 +245,5 @@ window.GanJiangEnglish = Object.freeze({
   '精修最终校验': 'Final refinement validation',
   'WPEM 计算': 'WPEM calculation',
   'WPEM 补充试算': 'Additional WPEM trial',
-  'FullProf 首轮': 'FullProf first round',
-  'FullProf 后续轮次（最多）': 'FullProf additional rounds (maximum)'
+  'FullProf 计算轮次（最多）': 'FullProf rounds (maximum)'
 });

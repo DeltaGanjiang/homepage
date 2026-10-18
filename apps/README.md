@@ -46,8 +46,8 @@ ignored by the parent repository.
 - Figures are reference estimates, not live account balances or billing data.
 - Tool credits and model usage are separate. RMB can purchase credits; credits
   can only be consumed within the account and cannot be converted back to RMB.
-- FullProf costs 2,000 credits for the first round and 100 per additional round,
-  up to 30 rounds and 4,900 credits total, with no additional validation fee.
+- FullProf costs 150 credits per round,
+  up to 30 rounds and 4,500 credits total, with no additional validation fee.
   It is estimated at its maximum; users do not choose its cloud round count.
 - WPEM uses 3 or 4 submitted computations, optionally 2 extra trials, plus one
   final validation.

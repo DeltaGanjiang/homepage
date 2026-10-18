@@ -1,6 +1,6 @@
 /* Reference credits from publisher/干将XRD功能积分与费用估算.md,
  * with user-confirmed rates: simulations cost 100 per task, validations cost 20 each.
- * FullProf costs 2000 for the first round plus 100 for each of up to 29 more rounds,
+ * FullProf costs 150 per round for up to 30 rounds (4500 credits maximum),
  * with no additional validation fee.
  * These are displayed reference units, not a payment or billing API.
  */
@@ -52,8 +52,7 @@
       if (input.wpemExtra === true) add('WPEM 补充试算', 600, 2);
       add('精修最终校验', 20);
     } else if (refinement === 'fullprof') {
-      add('FullProf 首轮', 2000);
-      add('FullProf 后续轮次（最多）', 100, 29);
+      add('FullProf 计算轮次（最多）', 150, 30);
     } else if (refinement !== 'none') {
       throw new RangeError('Unknown refinement method');
     }
