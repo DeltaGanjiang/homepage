@@ -54,6 +54,20 @@
 .science-film-player button:hover { border-color: #77f6d2; color: #9ff9e2; }
 .science-film-player button[hidden] { display: none; }
 .science-film-actions { display: flex; flex-shrink: 0; align-items: center; gap: 6px; margin-left: auto; }
+.science-film-youtube {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  border-radius: 3px;
+  color: #dce6ff;
+  font-size: 12px;
+  text-decoration: none;
+}
+.science-film-youtube svg { display: block; flex-shrink: 0; }
+.science-film-youtube:hover { color: #9ff9e2; }
+.science-film-youtube:focus-visible { outline: 2px solid #77f6d2; outline-offset: 4px; }
 .science-film-download { color: #a9d5c9; font-size: 11px; text-underline-offset: 4px; }
 .people-cover-art.people-cover-film { aspect-ratio: 16 / 9; border: 0; }
 .people-cover-art.people-cover-film::after { display: none; }
