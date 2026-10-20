@@ -7,7 +7,7 @@
       eyebrow: '研究 · 工程 · 协作',
       title: '干将项目团队',
       mission: '连接材料科学、<br /><em>人工智能与工程实践。</em>',
-      intro: '团队依托通用决策智能研究所，汇聚产业研究机构与高校力量，围绕粉末 X 射线衍射，开展物相识别、多相分解与结构精修的科学智能体研究与工程实现。',
+      intro: '团队由<a href="https://www.caobin.asia/" target="_blank" rel="noopener noreferrer">曹斌博士</a>领衔，依托通用决策智能研究所，汇聚产业研究机构与高校的研究力量，聚焦粉末 X 射线衍射中的物相识别、多相分解与结构精修，推进科学智能体研究与工程实现。',
       meet: '认识团队', contactLink: '与我们联系',
       coverCaption: '从衍射信号，到结构洞察。', coverLink: '探索研究案例', basedAt: '依托研究机构',
       discipline1: '材料科学', discipline2: '人工智能', discipline3: '工程实践',
@@ -26,7 +26,7 @@
       eyebrow: 'Research · Engineering · Collaboration',
       title: 'Gan Jiang Project Team',
       mission: 'Connecting materials science,<br /><em>AI and engineering.</em>',
-      intro: 'Based at AI Lab, The Yangtze River Delta, we bring together researchers from industry labs and universities. Our work combines scientific-agent research and engineering for phase identification, multiphase decomposition and structural refinement in powder X-ray diffraction.',
+      intro: 'Led by <a href="https://www.caobin.asia/" target="_blank" rel="noopener noreferrer">Dr. Bin Cao</a> and based at AI Lab, The Yangtze River Delta, our team brings together researchers from industry labs and universities. We develop scientific agents for phase identification, multiphase decomposition and structural refinement in powder X-ray diffraction, combining research with engineering implementation.',
       meet: 'Meet the team', contactLink: 'Get in touch',
       coverCaption: 'From diffraction to structural insight.', coverLink: 'Explore the research', basedAt: 'Based at',
       discipline1: 'Materials science', discipline2: 'Artificial intelligence', discipline3: 'Engineering',
@@ -42,7 +42,7 @@
       tryLink: 'Explore access options'
     }
   };
-  const richCopy = new Set(['mission', 'contactTitle']);
+  const richCopy = new Set(['mission', 'intro', 'contactTitle']);
   function translate() {
     const c = copy[document.documentElement.lang === 'en' ? 'en' : 'zh'];
     root.querySelectorAll('[data-team-copy]').forEach(element => {

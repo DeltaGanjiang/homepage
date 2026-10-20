@@ -217,7 +217,7 @@ window.GanJiangEnglish = Object.freeze({
   '联系团队': 'Contact the team',
   '让材料研究的判断更清楚。': 'Make materials research easier to reason about.',
   '页脚链接': 'Footer links',
-  '项目团队': 'Team',
+  '团队成员': 'Team',
   '用户社区': 'Community',
   '联系我们': 'Contact us',
   '回到顶部': 'Back to top',
