@@ -199,6 +199,13 @@ html.intro-scene .site-v2 main>.orb-intro{height:calc(100svh - var(--header-h))}
 #paper-bibtex code{font:inherit}
 #paper-bibtex:focus-visible{outline:2px solid var(--lime);outline-offset:5px}
 .citation-status{min-height:1.7em;margin:10px 0 0;color:var(--lime);font-size:12px;line-height:1.7}
+.site-v2 .home-collaboration{display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center;padding:44px 0;border-top:1px solid #2d424b;border-bottom:1px solid #2d424b;background:radial-gradient(ellipse at 80% 50%,#b4edcf06,transparent 65%)}
+.home-collaboration-heading>p{margin:0 0 16px;color:#9ecab7;font:9px/1.6 var(--mono);letter-spacing:.13em}
+.site-v2 .home-collaboration h2{max-width:540px;margin:0;color:#e1ede9;font-size:clamp(26px,2.5vw,36px);font-weight:450;line-height:1.5;letter-spacing:-.035em}
+.home-collaboration-copy>p{max-width:520px;margin:0;color:#a0b3c3;font-size:13px;line-height:1.95}
+.home-collaboration-copy>a{display:inline-flex;align-items:center;min-height:44px;margin-top:22px;padding:11px 20px;border:1px solid #91b7a180;border-radius:5px;background:#b4edcf08;color:#c6e9d7;font-size:12px}
+.home-collaboration-copy>a:hover{border-color:#b4edcf;background:#b4edcf15}
+@media(max-width:800px){.site-v2 .home-collaboration{grid-template-columns:1fr;gap:22px;padding:34px 0}.site-v2 .home-collaboration h2{font-size:28px}.home-collaboration-copy>p{font-size:12px}}
 @media(max-width:800px){
  .site-v2 .paper-section{grid-template-columns:1fr;gap:32px;padding:65px 0}
  .paper-copy>p:not(.eyebrow){max-width:600px;font-size:13px}

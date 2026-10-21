@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="community.css" />
     <link rel="stylesheet" href="site-chrome.css" />
     <link rel="stylesheet" href="presentation.css" />
+    <link rel="stylesheet" href="global-users.css" />
     <noscript><style>#presentation[data-reveal]{opacity:1;transform:none}</style></noscript>
     <script defer src="intro-scene.js"></script>
     <script defer src="script.js"></script>
@@ -45,13 +46,15 @@
     <script defer src="community.js"></script>
     <script defer src="partners.js"></script>
     <script defer src="presentation.js"></script>
-  </head>
+    <script defer src="global-users.js"></script>
+    <script defer src="title-style.js"></script>
+</head>
   <body class="site-v2">
     <a class="skip-link" href="#home" data-design-copy="skip">跳到主要内容</a>
     <header class="site-header shared-header">
       <a class="brand" href="#top" aria-label="Gan Jiang 首页"><img class="brand-logo" width="30" height="30" decoding="async" src="assets/images/logo-small.webp" alt="" /> GanJiang</a>
       <div class="header-actions"><div class="social-links header-social" aria-label="社交链接"><a class="social-link github-link" href="https://github.com/DeltaGanjiang" target="_blank" rel="noreferrer" aria-label="GitHub: DeltaGanjiang"><img src="assets/images/github.webp" alt="" /><span>GitHub</span></a><span class="social-link xiaohongshu-link" aria-label="小红书：95614037352"><img src="assets/images/xaiohongshu.webp" alt="" /><span>95614037352</span></span></div><button class="language-toggle" type="button" aria-label="Switch to English">EN</button><button aria-controls="site-nav" class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false">菜单</button></div>
-      <nav id="site-nav" class="nav" aria-label="Main navigation"><a href="https://arxiv.org/abs/2610.07862" target="_blank" rel="noopener noreferrer" data-design-copy="navPaper">论文</a><a href="film.html" data-design-copy="navFilm">干将视频介绍</a><a href="team.html" data-i18n="navTeam">团队成员</a><a href="booklet/index.html" data-design-copy="navManual" data-booklet-link>使用说明书</a><a class="nav-cta" href="apps/index.html" data-design-copy="navDownload">下载干将</a></nav>
+      <nav id="site-nav" class="nav" aria-label="Main navigation"><a href="https://arxiv.org/abs/2610.07862" target="_blank" rel="noopener noreferrer" data-design-copy="navPaper">论文</a><a href="film.html" data-design-copy="navFilm">干将视频介绍</a><a href="team.html" data-i18n="navTeam">团队成员</a><a href="booklet/index.html" data-design-copy="navManual" data-booklet-link>使用说明书</a><a href="collaborate.html" data-design-copy="navCollaboration">生态合作</a><a class="nav-cta" href="apps/index.html" data-design-copy="navDownload">下载干将</a></nav>
     <div class="reading-progress" aria-hidden="true"><i></i></div></header>
     <main id="top">
       <section class="orb-intro" aria-labelledby="orb-intro-title">
@@ -69,7 +72,7 @@
       <section id="home" class="hero section-shell" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow hero-label"><span data-i18n="heroEyebrow">面向粉末 X 射线衍射的科学智能体</span></p>
-          <h2 id="hero-title" data-i18n="heroTitle"><span class="hero-title-line">从一张图谱，</span><span class="hero-title-line">到可信的<em>结构结论</em></span></h2>
+          <h2 id="hero-title" data-i18n="heroTitle"><span class="hero-title-line">从一张图谱</span><span class="hero-title-line">到可信的<em>结构结论</em></span></h2>
           <p class="hero-text" data-i18n="heroText">干将连接物相识别、多相分解与结构精修，让每一步判断都有证据可循。</p>
           <div class="hero-actions"><a class="button" href="#egypt-story" data-design-copy="explore">探索古埃及配方</a><a class="text-link" href="apps/index.html" data-design-copy="try">体验干将</a></div>
         </div>
@@ -85,7 +88,7 @@
       <section id="science-film" class="science-film section-shell" aria-labelledby="science-film-title">
         <div class="science-film-copy">
           <p class="eyebrow" data-film-copy="eyebrow">GanJiang Agent · 材料智能</p>
-          <h2 id="science-film-title" data-film-copy="title">读懂图谱，<br />看清材料。</h2>
+          <h2 id="science-film-title" data-film-copy="title">读懂图谱<br />看清材料</h2>
           <p data-film-copy="body">用 58 秒了解原子排列如何影响材料，XRD 如何揭示结构，以及干将如何连接分析工具、检验结果并积累经验。</p>
           <span class="science-film-meta">GANJIANG AGENT · 58 SEC</span>
         </div>
@@ -104,6 +107,49 @@
           </figcaption>
           <a class="science-film-download" href="assets/video/ganjiang-inside-matter-58s-en.mp4" download data-film-copy="download">下载宣传片</a>
           <a class="science-film-full-link" href="film.html"><span data-film-copy="playFull">播放完整视频</span><span class="science-film-full-meta">09:42 · ENGLISH</span></a>
+        </figure>
+      </section>
+      <section id="global-users" class="global-users section-shell" aria-labelledby="global-users-title">
+        <div class="global-users-copy">
+          <p class="eyebrow">GANJIANG / GLOBAL COMMUNITY</p>
+          <h2 id="global-users-title" data-globe-copy="title">用户来自全球</h2>
+          <p class="global-users-intro" data-globe-copy="intro">跨越时区与山海，让对材料的探索彼此连接。</p>
+          <div class="global-users-stat"><strong>500+</strong><div><span data-globe-copy="points">个地图展示点</span><small data-globe-copy="reach">连接世界的每一份好奇</small></div></div>
+          <div class="global-users-legend"><span><i class="globe-user-key"></i><span data-globe-copy="userKey">用户分布点位</span></span><span><i class="globe-place-key"></i><span data-globe-copy="placeKey">科研地标</span></span></div>
+          <div class="global-places-heading"><h3 data-globe-copy="places">探索高校与科研地标</h3><span data-globe-copy="select">点击定位</span></div>
+          <div class="global-places" role="group" aria-label="选择科研地标" data-globe-places>
+            <button type="button" data-globe-place="tsinghua" disabled><img class="global-place-logo" src="assets/globe/logos/tsinghua.svg" width="32" height="32" loading="lazy" decoding="async" alt="" /><span class="global-place-name">清华大学</span></button>
+            <button type="button" data-globe-place="sjtu" disabled><img class="global-place-logo" src="assets/globe/logos/sjtu-hd.png" width="32" height="32" loading="lazy" decoding="async" alt="" /><span class="global-place-name">上海交通大学</span></button>
+            <button type="button" data-globe-place="hkust" disabled><img class="global-place-logo" src="assets/globe/logos/hkust.png" width="32" height="32" loading="lazy" decoding="async" alt="" /><span class="global-place-name">香港科技大学</span></button>
+            <button type="button" data-globe-place="nus" disabled><img class="global-place-logo" src="assets/globe/logos/nus.svg" width="32" height="32" loading="lazy" decoding="async" alt="" /><span class="global-place-name">新加坡国立大学</span></button>
+            <button type="button" data-globe-place="tokyo" disabled><img class="global-place-logo" src="assets/globe/logos/tokyo.png" width="32" height="32" loading="lazy" decoding="async" alt="" /><span class="global-place-name">东京大学</span></button>
+            <button type="button" data-globe-place="sydney" disabled><img class="global-place-logo" src="assets/globe/logos/sydney.png" width="32" height="32" loading="lazy" decoding="async" alt="" /><span class="global-place-name">悉尼大学</span></button>
+            <button type="button" data-globe-place="mit" disabled><img class="global-place-logo" src="assets/globe/logos/mit.svg" width="32" height="32" loading="lazy" decoding="async" alt="" /><span class="global-place-name">麻省理工学院</span></button>
+            <button type="button" data-globe-place="stanford" disabled><img class="global-place-logo" src="assets/globe/logos/stanford.png" width="32" height="32" loading="lazy" decoding="async" alt="" /><span class="global-place-name">斯坦福大学</span></button>
+            <button type="button" data-globe-place="oxford" disabled><img class="global-place-logo" src="assets/globe/logos/oxford.png" width="32" height="32" loading="lazy" decoding="async" alt="" /><span class="global-place-name">牛津大学</span></button>
+            <button type="button" data-globe-place="eth" disabled><img class="global-place-logo" src="assets/globe/logos/eth.png" width="32" height="32" loading="lazy" decoding="async" alt="" /><span class="global-place-name">苏黎世联邦理工学院</span></button>
+            <button type="button" data-globe-place="usp" disabled><img class="global-place-logo" src="assets/globe/logos/usp.svg" width="32" height="32" loading="lazy" decoding="async" alt="" /><span class="global-place-name">圣保罗大学</span></button>
+            <button type="button" data-globe-place="ucl" disabled><img class="global-place-logo" src="assets/globe/logos/ucl.png" width="32" height="32" loading="lazy" decoding="async" alt="" /><span class="global-place-name">伦敦大学学院</span></button>
+          </div>
+          <p class="global-users-note" data-globe-copy="note">红点为用户位置示意图</p>
+        </div>
+        <figure class="global-globe">
+          <div class="globe-topline"><span>ONE PLANET. SHARED CURIOSITY.</span><span data-globe-copy="drag">拖动探索用户分布</span></div>
+          <div class="globe-stage">
+            <canvas id="global-users-canvas" width="800" height="800" tabindex="0" role="img" aria-label="可旋转的全球分布地球" aria-describedby="globe-help"></canvas>
+            <div class="globe-zoom" role="group" aria-label="地球缩放" data-globe-zoom-controls>
+              <button type="button" data-globe-zoom-out aria-label="缩小地球" aria-controls="global-users-canvas" disabled>−</button>
+              <output data-globe-zoom-level aria-live="polite" aria-label="缩放比例">1×</output>
+              <button type="button" data-globe-zoom-in aria-label="放大地球" aria-controls="global-users-canvas" disabled>+</button>
+            </div>
+            <div class="globe-feedback" role="status"><span data-globe-status>正在加载地球…</span><button type="button" data-globe-retry hidden>重新加载</button></div>
+            <noscript><p class="globe-noscript">启用 JavaScript 即可旋转地球与查看点位。<br />Enable JavaScript to explore the globe.</p></noscript>
+          </div>
+          <figcaption class="globe-caption">
+            <div class="globe-location" aria-live="polite"><span class="globe-location-icon" aria-hidden="true">⌖</span><div><strong data-globe-location data-globe-copy="location">探索全球科研地标</strong><span data-globe-city data-globe-copy="locationHint">选择单位，将地球转向它所在的城市</span></div></div>
+            <div class="globe-controls"><button type="button" data-globe-toggle disabled aria-controls="global-users-canvas" aria-pressed="false">暂停旋转</button><button type="button" data-globe-reset disabled aria-controls="global-users-canvas" data-globe-copy="reset">重置视角</button></div>
+          </figcaption>
+          <p id="globe-help" class="globe-help" data-globe-copy="help">拖动旋转 · 双击局部放大 · 点击地球后滚轮缩放 · 方向键旋转，+/− 缩放</p>
         </figure>
       </section>
       <section id="egypt-story" class="egypt-story section-shell" aria-labelledby="egypt-story-title">
@@ -176,7 +222,7 @@
           </figure>
           <div class="egypt-editorial">
             <p class="eyebrow" data-egypt-copy="eyebrow">古老的眼妆，今天的科学问题</p>
-            <h2 id="egypt-story-title" data-egypt-copy="title">一抹眼妆，<br />跨越三千年的<br /><em>材料科学。</em></h2>
+            <h2 id="egypt-story-title" data-egypt-copy="title">一抹眼妆<br />跨越三千年的<br /><em>材料科学</em></h2>
             <p class="egypt-lead" data-egypt-copy="lead">古埃及人留下了化妆粉，也留下了关于材料的谜题：用了什么矿物？如何配比？天然研磨，还是化学合成？</p>
             <div class="egypt-chapters" role="group" aria-label="埃及故事阶段 / Egyptian story chapters" hidden>
               <button type="button" data-egypt-stage="0" aria-pressed="true"><span>01</span><b data-egypt-copy="chapter0">一抹眼妆</b></button>
@@ -197,7 +243,7 @@
       </section>
       <section id="phase-story" class="phase-story section-shell" aria-labelledby="phase-story-title">
         <header class="phase-story-heading">
-          <div><p class="eyebrow" data-story-copy="eyebrow">从一份古老样品，读出五种矿物</p><h2 id="phase-story-title" data-story-copy="title">三千年的配方，<br />藏在重叠的峰里。</h2></div>
+          <div><p class="eyebrow" data-story-copy="eyebrow">从一份古老样品，读出五种矿物</p><h2 id="phase-story-title" data-story-copy="title">三千年的配方<br />藏在重叠的峰里</h2></div>
           <p data-story-copy="intro">一份古埃及化妆粉，一张复杂的衍射图谱。跟随报告中的真实案例，看干将如何分解五相、验证拟合，重建矿物配比。</p>
         </header>
         <div class="phase-story-board" data-step="0">
@@ -231,12 +277,12 @@
           <details class="benchmark-method"><summary data-bench-copy="methodTitle">数据来源与评测口径</summary><p id="benchmark-method-text"></p></details>
         </div>
       </section>
-      <section id="what" class="intro section-shell" data-reveal><p class="eyebrow" data-i18n="whatEyebrow">它是什么</p><div class="intro-grid"><h2 data-i18n="whatTitle">高通量材料研发的瓶颈，正在从合成转向判断。</h2><div><p data-i18n="whatText">合成、计算和机器人实验室能够快速产生大量候选样品，但 PXRD 表征仍常依赖专家逐张分析。物相识别、多相分解、结构精修、微结构参数提取与异常判断被不同软件和经验割裂，已成为材料发现的关键瓶颈。干将将它们统一为可审阅、可复用的自主分析过程。</p><p class="note" data-i18n="whatNote">它服务于研究者的判断，不取代研究者的判断。</p></div></div></section>
-      <section id="can-do" class="capabilities" data-reveal><div class="section-shell"><div class="section-heading"><p class="eyebrow" data-i18n="canDoEyebrow">它能做什么</p><h2 data-i18n="canDoTitle">像专家一样分析一张图谱，并决定下一步该做什么。</h2></div><div class="capability-grid"><article tabindex="0"><span>01 /</span><h3 data-i18n="capOneTitle">统一数据，先看清问题</h3><p data-i18n="capOneText">解析 .xy、.xrdml、.raw、.csv 等格式，检查元数据、噪声、背景、Kα₂ 与仪器域差异。</p></article><article tabindex="0"><span>02 /</span><h3 data-i18n="capTwoTitle">自主诊断分析任务</h3><p data-i18n="capTwoText">判断单相或多相、晶相或非晶、已知结构或未知结构，以及单张还是原位时间序列。</p></article><article tabindex="0"><span>03 /</span><h3 data-i18n="capThreeTitle">多路识别与定量验证</h3><p data-i18n="capThreeText">联合结构数据库、理论谱、XQueryer 与 XMatcher 输出候选；以 XDecomposer 和 Rietveld 精修共同验证。</p></article><article tabindex="0"><span>04 /</span><h3 data-i18n="capFourTitle">自主、分阶段地精修</h3><p data-i18n="capFourText">根据残差与物理合理性，在 PyWPEM、GSAS-II、FullProf 等引擎间动态选择并调整参数。</p></article><article tabindex="0"><span>05 /</span><h3 data-i18n="capFiveTitle">从失败到实验决策</h3><p data-i18n="capFiveText">记录失败原因、专家修正与后续验证，把可靠经验沉淀为技能，并指导下一轮实验条件。</p></article></div></div></section>
+      <section id="what" class="intro section-shell" data-reveal><p class="eyebrow" data-i18n="whatEyebrow">它是什么</p><div class="intro-grid"><h2 data-i18n="whatTitle">高通量材料研发的瓶颈，正在从合成转向判断</h2><div><p data-i18n="whatText">合成、计算和机器人实验室能够快速产生大量候选样品，但 PXRD 表征仍常依赖专家逐张分析。物相识别、多相分解、结构精修、微结构参数提取与异常判断被不同软件和经验割裂，已成为材料发现的关键瓶颈。干将将它们统一为可审阅、可复用的自主分析过程。</p><p class="note" data-i18n="whatNote">它服务于研究者的判断，不取代研究者的判断。</p></div></div></section>
+      <section id="can-do" class="capabilities" data-reveal><div class="section-shell"><div class="section-heading"><p class="eyebrow" data-i18n="canDoEyebrow">它能做什么</p><h2 data-i18n="canDoTitle">像专家一样分析一张图谱，并决定下一步该做什么</h2></div><div class="capability-grid"><article tabindex="0"><span>01 /</span><h3 data-i18n="capOneTitle">统一数据，先看清问题</h3><p data-i18n="capOneText">解析 .xy、.xrdml、.raw、.csv 等格式，检查元数据、噪声、背景、Kα₂ 与仪器域差异。</p></article><article tabindex="0"><span>02 /</span><h3 data-i18n="capTwoTitle">自主诊断分析任务</h3><p data-i18n="capTwoText">判断单相或多相、晶相或非晶、已知结构或未知结构，以及单张还是原位时间序列。</p></article><article tabindex="0"><span>03 /</span><h3 data-i18n="capThreeTitle">多路识别与定量验证</h3><p data-i18n="capThreeText">联合结构数据库、理论谱、XQueryer 与 XMatcher 输出候选；以 XDecomposer 和 Rietveld 精修共同验证。</p></article><article tabindex="0"><span>04 /</span><h3 data-i18n="capFourTitle">自主、分阶段地精修</h3><p data-i18n="capFourText">根据残差与物理合理性，在 PyWPEM、GSAS-II、FullProf 等引擎间动态选择并调整参数。</p></article><article tabindex="0"><span>05 /</span><h3 data-i18n="capFiveTitle">从失败到实验决策</h3><p data-i18n="capFiveText">记录失败原因、专家修正与后续验证，把可靠经验沉淀为技能，并指导下一轮实验条件。</p></article></div></div></section>
       <section id="system" class="xrd-analysis agent-system" data-reveal aria-labelledby="xrd-analysis-title">
         <div class="section-shell agent-system-shell">
           <header class="agent-system-heading">
-            <div><p class="eyebrow" data-i18n="systemEyebrow">自主材料表征系统</p><h2 id="xrd-analysis-title" data-i18n="systemTitle">干将，编排从图谱到下一次实验。</h2></div>
+            <div><p class="eyebrow" data-i18n="systemEyebrow">自主材料表征系统</p><h2 id="xrd-analysis-title" data-i18n="systemTitle">干将，编排从图谱到下一次实验</h2></div>
             <p data-i18n="systemIntro">以研究意图为起点，调度分析模型、结构数据库与实验仪器；把每次测量、验证和修正连成可审阅的科学闭环。</p>
           </header>
 
@@ -297,11 +343,11 @@
           </div>
         </div>
       </section>
-      <section class="future" data-reveal><div class="section-shell future-grid"><div><p class="eyebrow" data-i18n="futureEyebrow">面向未来实验室</p><h2 data-i18n="futureTitle">从报告，走向“实验—表征—决策”的材料发现闭环。</h2></div><div class="future-body"><p data-i18n="futureTextOne">干将连接机器人实验室、计算筛选与 XRD 表征：回答目标相是否形成、杂相从何而来、是否需要补测，以及下一轮应调整哪些测试参数。</p><p data-i18n="futureTextTwo">它不会把未经验证的经验直接写进系统；只有被证据、专家与后续实验共同确认的策略，才会成为可版本化、可评估、可回滚的分析技能。</p><a class="button" href="apps/index.html" data-i18n="futureCta">下载和体验</a></div></div></section>
+      <section class="future" data-reveal><div class="section-shell future-grid"><div><p class="eyebrow" data-i18n="futureEyebrow">面向未来实验室</p><h2 data-i18n="futureTitle">从报告，走向“实验—表征—决策”的材料发现闭环</h2></div><div class="future-body"><p data-i18n="futureTextOne">干将连接机器人实验室、计算筛选与 XRD 表征：回答目标相是否形成、杂相从何而来、是否需要补测，以及下一轮应调整哪些测试参数。</p><p data-i18n="futureTextTwo">它不会把未经验证的经验直接写进系统；只有被证据、专家与后续实验共同确认的策略，才会成为可版本化、可评估、可回滚的分析技能。</p><a class="button" href="apps/index.html" data-i18n="futureCta">下载和体验</a></div></div></section>
       <section id="presentation" class="presentation section-shell" data-reveal aria-labelledby="presentation-title">
         <div class="presentation-copy">
           <p class="eyebrow" data-i18n="presentationEyebrow">项目介绍</p>
-          <h2 id="presentation-title" data-i18n="presentationTitle">用一份演示，快速了解干将。</h2>
+          <h2 id="presentation-title" data-i18n="presentationTitle">用一份演示，快速了解干将</h2>
           <p data-i18n="presentationText">查看干将的项目介绍，了解平台愿景、核心能力与应用场景。</p>
           <a class="button" href="assets/ganjiang-presentation-20260916.pptx" download data-i18n="presentationCta">下载介绍 PPT</a>
         </div>
@@ -344,7 +390,7 @@
         </div>
       </section>
       <section class="name-story section-shell" data-reveal><div class="name-image"><img width="1254" height="1254" loading="lazy" decoding="async" src="assets/images/ganjiang-transparent.webp" alt="Gan Jiang ink-wash motif" /></div><div class="name-copy"><p class="eyebrow" data-i18n="nameEyebrow">为什么叫“干将”</p><h2 class="title-no-wrap" data-i18n="nameTitle">取意于淬炼，也取意于判断</h2><p data-i18n="nameTextOne">“干将”是中国古代铸剑文化中的名字。材料发现同样是一场漫长的淬炼：并非只追求制造更多样品，而是要在复杂的证据中分辨结构、剔除误判，并把每一次验证锻造成下一次更可靠的判断。</p><p data-i18n="nameTextTwo">干将希望成为研究者与未来机器人实验室之间，那位持续学习、谨慎求证的人工智能分析科学家。</p></div></section>
-      <section class="why section-shell" data-reveal><div class="why-copy"><p class="eyebrow" data-i18n="whyEyebrow">为什么是它</p><h2 data-i18n="whyTitle">好的分析，不止是一次拟合。</h2><p data-i18n="whyText">干将关心的不只是数字是否更好看，也关心结论是否合理、是否经得起复查、能否帮助你决定下一步。每一次经过确认的分析与专家反馈，都会成为它继续演化的基础。</p></div><ol class="principles"><li><span data-i18n="principleOneLabel">证据先行</span><p data-i18n="principleOne">每个建议都应能回到图谱、模型或实验条件。</p></li><li><span data-i18n="principleTwoLabel">多路验证</span><p data-i18n="principleTwo">重要结论用互补的方法交叉检查，而非依赖单一指标。</p></li><li><span data-i18n="principleThreeLabel">持续积累</span><p data-i18n="principleThree">可确认的经验被整理为可复用的分析能力，服务下一次研究。</p></li></ol></section>
+      <section class="why section-shell" data-reveal><div class="why-copy"><p class="eyebrow" data-i18n="whyEyebrow">为什么是它</p><h2 data-i18n="whyTitle">好的分析，不止是一次拟合</h2><p data-i18n="whyText">干将关心的不只是数字是否更好看，也关心结论是否合理、是否经得起复查、能否帮助你决定下一步。每一次经过确认的分析与专家反馈，都会成为它继续演化的基础。</p></div><ol class="principles"><li><span data-i18n="principleOneLabel">证据先行</span><p data-i18n="principleOne">每个建议都应能回到图谱、模型或实验条件。</p></li><li><span data-i18n="principleTwoLabel">多路验证</span><p data-i18n="principleTwo">重要结论用互补的方法交叉检查，而非依赖单一指标。</p></li><li><span data-i18n="principleThreeLabel">持续积累</span><p data-i18n="principleThree">可确认的经验被整理为可复用的分析能力，服务下一次研究。</p></li></ol></section>
       <section id="roadmap" class="roadmap" data-reveal aria-labelledby="roadmap-title">
         <div class="section-shell roadmap-shell">
           <header class="roadmap-heading">
@@ -383,6 +429,10 @@
           </div>
         </div>
       </section>
+      <section class="home-collaboration section-shell" id="ecosystem" aria-labelledby="ecosystem-title">
+        <div class="home-collaboration-heading"><p>GANJIANG ECOSYSTEM / OPEN CALL</p><h2 id="ecosystem-title" data-design-copy="collaborationTitle">从软件共建到学术研究，一起拓展干将生态</h2></div>
+        <div class="home-collaboration-copy"><p data-design-copy="collaborationIntro">欢迎开源与闭源软件共建，也支持学术研究、测试与对比分析。提交研究 proposal，审核通过后可在获批额度内免费调用 GanJiang API。</p><a href="collaborate.html" data-design-copy="collaborationLink">了解合作与申报</a></div>
+      </section>
       <section id="beta" class="beta section-shell" data-reveal aria-labelledby="home-download-title">
         <div class="home-download">
           <div class="home-download-logo" aria-hidden="true"><img src="assets/images/logo-small.webp" width="68" height="82" alt="" /></div>
@@ -397,7 +447,7 @@
         <div class="user-community">
           <div class="community-copy">
             <p class="community-eyebrow">GANJIANG COMMUNITY</p>
-            <h3 class="community-heading" data-i18n="groupHeading">一起交流，让研究更进一步。</h3>
+            <h3 class="community-heading" data-i18n="groupHeading">一起交流，让研究更进一步</h3>
             <p class="community-intro" data-i18n="groupIntro">选择你常用的平台，与用户和开发者交流。点击卡片，查看加入方式。</p>
           </div>
           <div class="community-cards">
@@ -537,7 +587,7 @@
     </section>
     <footer class="shared-footer">
       <div class="footer-identity"><a class="brand" href="#home" aria-label="返回官网"><img class="brand-logo" width="30" height="30" decoding="async" src="assets/images/logo-small.webp" alt="" /> GanJiang</a><p data-i18n="footerTagline">让材料研究的判断更清楚。</p></div>
-      <div class="footer-links" aria-label="页脚链接"><a href="https://github.com/DeltaGanjiang" target="_blank" rel="noreferrer"><img src="assets/images/github.webp" width="16" height="16" alt="" />GitHub</a><a href="team.html" data-i18n="navTeam">团队成员</a><a href="index.html#beta" data-design-copy="footerCommunity">用户社区</a><a href="mailto:ganjiang@yzailab.com" data-i18n="projectEmail">联系我们</a><a href="#top" data-i18n="backToTop">回到顶部</a></div>
+      <div class="footer-links" aria-label="页脚链接"><a href="https://github.com/DeltaGanjiang" target="_blank" rel="noreferrer"><img src="assets/images/github.webp" width="16" height="16" alt="" />GitHub</a><a href="team.html" data-i18n="navTeam">团队成员</a><a href="index.html#beta" data-design-copy="footerCommunity">用户社区</a><a href="mailto:ganjiang@yzailab.com" data-i18n="projectEmail">联系我们</a><a href="collaborate.html" data-design-copy="navCollaboration">生态合作</a><a href="#top" data-i18n="backToTop">回到顶部</a></div>
     </footer>
   </body>
 </html>

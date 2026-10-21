@@ -130,7 +130,7 @@ h1, h2, h3, p { margin: 0; }
 .portal-capabilities li::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: #91bba4; }
 .portal-action { display: flex; flex-direction: column; justify-content: center; align-items: stretch; min-width: 0; padding: 25px; border: 1px solid #b4edcf1c; border-radius: 10px; background: #07130d50; }
 .portal-action-label { font-size: 11px; color: #a7bfb2; letter-spacing: .08em; }
-.portal-welcome { font-size: 12px; color: #c7dccf; line-height: 1.8; margin-top: 18px; }
+.portal-welcome { font-size: 12px; color: #c7dccf; line-height: 1.8; margin-top: 18px; text-align: center; }
 .portal-welcome strong { display: inline-block; margin: 5px 8px 0 0; color: #d5f5e2; font-size: 40px; font-weight: 500; line-height: 1.2; letter-spacing: -.045em; font-variant-numeric: tabular-nums; }
 .portal-welcome>span { color: #abcdb9; font-size: 12px; }
 .download-button { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 48px; margin-top: 24px; padding: 13px; border: 1px solid transparent; border-radius: 6px; background: var(--mint); color: #15281e; font-size: 13px; font-weight: 550; text-align: center; transition: background .2s, border-color .2s; }

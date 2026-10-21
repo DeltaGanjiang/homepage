@@ -1,5 +1,7 @@
 /* English copy for the Chinese source page and its dynamic analysis states. */
 window.GanJiangEnglish = Object.freeze({
+  'macOS：前往客户端下载区': 'macOS: go to desktop downloads',
+  'Windows：前往客户端下载区': 'Windows: go to desktop downloads',
   '全球合作伙伴': 'Global partners',
   '学术机构': 'Academic institutions',
   '产业伙伴': 'Industry partners',
@@ -36,6 +38,7 @@ window.GanJiangEnglish = Object.freeze({
   '积分与费用': 'Credits & pricing',
   '让 XRD 分析，': 'Bring XRD analysis',
   '让 XRD 分析': 'Bring XRD analysis',
+  '进入你的工作台': 'to your desktop',
   '进入你的': 'to your ',
   '工作台': 'desktop',
   '从一张衍射图谱，到有证据的结构判断。': 'From a diffraction pattern to an evidence-based structural assessment. ',

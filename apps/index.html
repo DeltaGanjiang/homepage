@@ -12,6 +12,7 @@
     <link rel="icon" href="../assets/images/favicon.png" />
     <link rel="stylesheet" href="./apps.css" />
     <link rel="stylesheet" href="../site-chrome.css" />
+    <link rel="stylesheet" href="./hero.css" />
     <script defer src="./downloads.js"></script>
     <script defer src="./credits.js"></script>
     <script defer src="./money.js"></script>
@@ -19,7 +20,8 @@
     <script defer src="./i18n.js"></script>
     <script defer src="./apps.js"></script>
     <script defer src="../partners.js"></script>
-  </head>
+    <script defer src="../title-style.js"></script>
+</head>
   <body class="download-page">
     <a class="skip-link" href="#main">跳到主要内容</a>
     <header class="site-header shared-header">
@@ -28,27 +30,35 @@
         <nav class="nav" id="navigation" aria-label="页面导航"><a href="#downloads">客户端下载</a><a href="#reviewer-support">审稿支持</a><a href="#capabilities">功能介绍</a><a href="#pricing">积分与费用</a><a class="nav-home" href="../index.html#home">返回官网</a></nav>
     </header>
     <main id="main">
-      <section class="hero shell" aria-labelledby="hero-title">
+      <section class="hero desktop-hero shell" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> GANJIANG FOR DESKTOP</p>
-          <h1 id="hero-title">让 XRD 分析<br />进入你的<span class="accent">工作台</span></h1>
-          <p class="hero-description">从一张衍射图谱，到有证据的结构判断。<br class="desktop-break" />干将连接物相识别、多相分解与结构精修，<br class="desktop-break" />陪你走完每一步分析。</p>
-          <div class="hero-actions"><a class="button button-primary" href="#downloads" data-download-jump>获取桌面客户端</a><a class="text-link" href="#pricing">了解收费方式</a></div>
-          <p class="platform-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.8c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7s-1.5-.7-2.5-.7c-1.3 0-2.5.8-3.2 1.9-1.4 2.4-.4 6 1 8 .7.9 1.4 1.8 2.4 1.7 1 0 1.4-.6 2.6-.6s1.6.6 2.6.6 1.7-.9 2.3-1.8c.8-1.1 1.1-2.2 1.1-2.3-.1 0-2.1-.8-2.1-2.8ZM14.5 6.8c.5-.7.9-1.6.8-2.5-.8 0-1.8.5-2.4 1.2-.5.5-1 1.5-.8 2.4.9.1 1.8-.4 2.4-1.1Z"/></svg> macOS <span class="note-divider"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 5 8-1v7H3Zm10-1 8-1v8h-8ZM3 13h8v7l-8-1Zm10 0h8v8l-8-1Z"/></svg> Windows <span class="platform-note-end">为材料研究而构建</span></p>
+          <div class="desktop-product"><span class="desktop-product-icon" aria-hidden="true"><img src="../assets/images/logo-small.webp" width="42" height="42" alt="" /></span><div><p class="eyebrow">GANJIANG FOR DESKTOP</p><p class="desktop-product-note">为材料研究而构建</p></div></div>
+          <h1 id="hero-title"><span class="hero-title-line">让 XRD 分析</span><span class="hero-title-line">进入你的工作台</span></h1>
+          <div class="hero-description"><p class="hero-description-lead">从一张衍射图谱，到有证据的结构判断。</p><p>干将连接物相识别、多相分解与结构精修，<br class="desktop-break" />陪你走完每一步分析。</p></div>
+          <div class="platform-downloads">
+            <a class="platform-download platform-download-macos" href="#downloads" data-download-jump aria-label="macOS：前往客户端下载区"><img src="./assets/platforms/apple.svg" width="30" height="36" alt="" /><span>macOS</span></a>
+            <a class="platform-download platform-download-windows" href="#downloads" data-download-jump aria-label="Windows：前往客户端下载区"><img src="./assets/platforms/windows.svg" width="32" height="32" alt="" /><span>Windows</span></a>
+          </div>
         </div>
         <div class="hero-visual">
-          <div class="workbench">
-            <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>GanJiang · XRD Workspace</span><span class="window-demo">案例演示</span></div>
+          <div class="workbench" data-analysis-view="identify">
+            <div class="window-bar"><div class="window-identity"><span class="window-app-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m12 2 9 5v10l-9 5-9-5V7Zm0 0v10m-9-5 9 5 9-5m-9 5v10"/></svg></span><span>GanJiang <span class="window-title-divider">/</span> XRD Workspace</span></div><span class="window-demo">案例演示</span></div>
+            <div class="workbench-layout">
+              <div class="workbench-rail" aria-hidden="true"><span class="rail-home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M4 4h6v6H4Zm10 0h6v6h-6ZM4 14h6v6H4Zm10 0h6v6h-6Z"/></svg></span><span class="rail-divider"></span><span data-rail-view="identify"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h3l3-12 3 14 3-10 3 8h3"/></svg></span><span data-rail-view="decompose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 9-5 9 5-9 5Zm0 5 9 5 9-5M3 18l9 5 9-5"/></svg></span><span data-rail-view="refine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 3v18M12 3v18M18 3v18"/><path d="M3 8h6m0 8h6m0-10h6" stroke-width="3"/></svg></span><span class="rail-bottom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></span></div>
             <div class="workbench-body">
               <div class="workbench-title"><div><p>ANALYSIS / 001</p><h2>从信号，找到结构</h2></div><span class="sample-tag">粉末 XRD</span></div>
-              <div class="analysis-tabs" role="tablist" aria-label="切换分析案例视图"><button id="tab-identify" role="tab" type="button" aria-selected="true" aria-controls="analysis-panel" data-view="identify">物相识别</button><button id="tab-decompose" role="tab" type="button" aria-selected="false" aria-controls="analysis-panel" tabindex="-1" data-view="decompose">多相分解</button><button id="tab-refine" role="tab" type="button" aria-selected="false" aria-controls="analysis-panel" tabindex="-1" data-view="refine">结构精修</button></div>
+              <div class="analysis-tabs" role="tablist" aria-label="切换分析案例视图"><button id="tab-identify" role="tab" type="button" aria-selected="true" aria-controls="analysis-panel" data-view="identify"><span class="analysis-tab-number" aria-hidden="true">01</span><span>物相识别</span></button><button id="tab-decompose" role="tab" type="button" aria-selected="false" aria-controls="analysis-panel" tabindex="-1" data-view="decompose"><span class="analysis-tab-number" aria-hidden="true">02</span><span>多相分解</span></button><button id="tab-refine" role="tab" type="button" aria-selected="false" aria-controls="analysis-panel" tabindex="-1" data-view="refine"><span class="analysis-tab-number" aria-hidden="true">03</span><span>结构精修</span></button></div>
               <div id="analysis-panel" role="tabpanel" aria-labelledby="tab-identify" tabindex="0">
+                <div class="analysis-chart">
                 <div class="plot-meta"><span id="plot-title">古埃及化妆粉 · 实测图谱</span><span id="plot-legend"><i></i>Observed</span></div>
                 <img id="analysis-plot" src="./assets/identify.svg" width="720" height="280" alt="古埃及化妆粉的实测 XRD 图谱，以衍射角为横轴、相对强度为纵轴。" fetchpriority="high" />
-                <div class="analysis-insight"><div><strong id="insight-title">让每一个候选，都有图谱依据</strong><p id="insight-copy">从衍射信号出发，逐步识别与校验候选物相。</p></div><span id="insight-value">XRD / CIF</span></div>
+                </div>
+                <div class="analysis-insight"><span class="insight-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4v6c0 4-8 8-8 8s-8-4-8-8V7Z"/><path d="m8 12 3 3 5-6"/></svg></span><div><strong id="insight-title">让每一个候选，都有图谱依据</strong><p id="insight-copy">从衍射信号出发，逐步识别与校验候选物相。</p></div><span id="insight-value">XRD / CIF</span></div>
               </div>
               <div class="phase-strip" aria-label="案例中的五种物相"><span>CaSO₄·2H₂O</span><span>Pb₂Cl₂CO₃</span><span>PbCO₃</span><span>PbS</span><span>PbOHCl</span></div>
             </div>
+            </div>
+            <div class="workbench-status" aria-hidden="true"><span><i></i> XRD / CIF</span><span>SIGNAL <b>→</b> STRUCTURE</span></div>
           </div>
           <div class="visual-caption"><span><span class="caption-cross" aria-hidden="true">＋</span> 官网研究案例数据 · 分析流程示意，非软件截图</span><a href="../index.html#egypt-story">查看案例</a></div>
         </div>
@@ -83,7 +93,7 @@
           <div class="portal-action">
             <p class="portal-action-label">从这里开始</p>
             <p class="portal-welcome">每个账户赠送<br /><strong>20,000</strong><span>积分</span></p>
-            <a class="download-button is-pending" data-download aria-disabled="true" aria-describedby="download-help"><span>下载入口即将开放</span></a>
+            <a class="download-button" href="https://ganjiang.yangtzeailab.com/" data-download aria-describedby="download-help"><span>前往下载中心</span></a>
             <p class="portal-action-note" id="download-help">统一前往下载中心获取安装包</p>
           </div>
         </article>

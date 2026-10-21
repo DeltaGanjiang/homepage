@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#060918" />
+  <meta name="description" content="干将生态合作：欢迎开源与闭源软件接入，也支持学术项目提交 proposal，经审核后获得限额免费 GanJiang API，用于研究、测试与对比分析。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="生态合作申报计划 · GanJiang" />
+  <meta property="og:description" content="从软件共建到学术研究，加入干将生态。提交研究 proposal，审核通过后可在获批额度内免费调用 GanJiang API。" />
+  <title>生态合作申报计划 · GanJiang</title>
+  <link rel="icon" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="collaborate.css" />
+  <link rel="stylesheet" href="site-chrome.css" />
+  <script defer src="collaborate.en.js"></script>
+  <script defer src="apps/i18n.js"></script>
+  <script defer src="collaborate.js"></script>
+  <script defer src="title-style.js"></script>
+</head>
+<body class="collaborate-page">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header shared-header">
+    <a class="brand" href="index.html#home" aria-label="返回官网"><img class="brand-logo" src="assets/images/logo-small.webp" width="30" height="30" alt="" /> GanJiang</a>
+    <div class="header-actions"><button class="language-toggle" type="button" aria-label="Switch to English">EN</button><button class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="site-nav">菜单</button></div>
+    <nav class="nav" id="site-nav" aria-label="页面导航"><a href="index.html#home">返回官网</a><a href="#collaboration">合作方式</a><a href="#evaluation">评测与流程</a><a href="#apply" class="is-current">合作申报</a><a href="apps/index.html" class="nav-cta">下载干将</a></nav>
+  </header>
+  <main id="main">
+    <section class="co-hero co-shell" aria-labelledby="hero-title">
+      <div class="co-hero-copy">
+        <p class="co-eyebrow"><span class="co-status-dot" aria-hidden="true"></span>GANJIANG ECOSYSTEM / OPEN CALL</p>
+        <p class="co-overline">干将生态合作申报计划</p>
+        <h1 id="hero-title"><span>让工具与研究</span><em>在干将生态中相遇</em></h1>
+        <p class="co-lead">从科研工具到学术项目，一起拓展材料研究的可能。</p>
+        <p class="co-intro">我们邀请同行研究者参与开源或闭源软件共建，也欢迎围绕干将开展学术研究、测试与对比分析。软件合作可提交评测结果；学术项目可提交研究 proposal，经审核通过后，在获批额度内免费调用 GanJiang API。</p>
+        <div class="co-actions"><a class="co-button co-primary" href="#apply"><span>发起合作申报</span></a><a class="co-text-link" href="https://github.com/DeltaGanjiang/deltaxrdbench" target="_blank" rel="noopener noreferrer"><span>了解评测基准</span></a></div>
+        <div class="co-hero-note"><span>软件生态共建</span><i aria-hidden="true"></i><span>学术项目 API 支持</span></div>
+      </div>
+      <div class="co-ecosystem" aria-label="软件共建与学术项目经评估后参与干将生态合作">
+        <div class="co-diagram-heading"><span>FROM YOUR LAB</span><span>TO A SHARED WORKSPACE</span></div>
+        <div class="co-sources"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></svg><span>软件共建</span><small>SOFTWARE</small></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 3h8M10 3v7L4 19a1.3 1.3 0 0 0 1 2h14a1.3 1.3 0 0 0 1-2l-6-9V3M7 15h10"/></svg><span>学术项目</span><small>RESEARCH</small></div></div>
+        <div class="co-connector co-connector-merge" aria-hidden="true"><i></i></div>
+        <div class="co-benchmark-node"><span class="co-node-icon" aria-hidden="true">✓</span><div><strong>合作评估</strong><span>软件评测 · Proposal 审核</span></div><span class="co-node-index">01 → 02</span></div>
+        <div class="co-connector" aria-hidden="true"><i></i></div>
+        <div class="co-destination"><img src="assets/images/logo-small.webp" width="54" height="54" alt="" /><div><strong>GanJiang</strong><span>共同建设，持续演进</span></div><span class="co-destination-star" aria-hidden="true">✳</span></div>
+        <div class="co-diagram-footer"><span>提交申请</span><span aria-hidden="true">→</span><span>评估审核</span><span aria-hidden="true">→</span><span>生态共建</span></div>
+      </div>
+    </section>
+
+    <section class="co-section co-shell" id="collaboration" aria-labelledby="collaboration-title">
+      <div class="co-section-heading"><div><p class="co-eyebrow">01 / COLLABORATION</p><h2 id="collaboration-title">从软件共建<br />到学术项目合作</h2></div><p>带上你的工具，或提出一个研究问题，<br />找到适合彼此的合作方式。</p></div>
+      <div class="co-paths">
+        <article class="co-path"><span class="co-card-number">01 / OPEN SOURCE</span><h3>开源共建</h3><p>带上代码仓库、软件版本、开源许可证与评测结果。我们一起评估工具能力、复现表现和接入方式，在遵循原有许可证的基础上推进集成与联合开发。</p><ul><li>尊重原作者署名与开源许可证</li><li>共同完善接口、文档与研究场景</li><li>让工具在真实分析流程中持续改进</li></ul></article>
+        <article class="co-path co-path-private"><span class="co-card-number">02 / CLOSED SOURCE</span><h3>闭源合作</h3><p>无需公开源代码，也可以提交评测结果与接口说明。通过评估后，我们可讨论商业采购、软件授权或联合研发，并通过 API、可执行程序或私有服务接入。</p><ul><li>按约定在干将中闭源调用</li><li>不向外部披露或分发源代码及未公开技术资料</li><li>采购、授权范围与保密安排由双方书面确认</li></ul></article>
+        <article class="co-path co-path-research" id="academic"><span class="co-card-number">03 / ACADEMIC RESEARCH</span><h3>学术项目合作</h3><p>如果你希望使用干将开展学术研究、功能测试或与其他方法进行对比分析，欢迎提交研究 proposal。我们将审核项目，通过后开放限额免费的 GanJiang API，支持你的分析工作。</p><ul><li>说明研究目标、数据与实验或对比方案</li><li>提交预计调用量与项目周期，供额度评估</li><li>审核通过后，在获批额度内免费调用 API</li></ul><a class="co-text-link" href="#apply" data-application-type="academic"><span>提交研究 Proposal</span></a></article>
+      </div>
+      <div class="co-contribution"><div><p class="co-eyebrow">BUILD TOGETHER</p><h3>从工具接入，到共同研究</h3></div><p><span>通过评估并完成接入后，开发者将作为干将外部合作成员参与生态共建。</span><span class="co-credit-note">共同产出的论文、技术文章及项目贡献记录，将根据实际研究、开发与写作贡献协商署名。</span></p></div>
+    </section>
+
+    <section class="co-section co-shell" id="evaluation" aria-labelledby="evaluation-title">
+      <div class="co-section-heading"><div><p class="co-eyebrow">02 / SOFTWARE EVALUATION</p><h2 id="evaluation-title">用可复现的结果<br />介绍你的工具</h2></div><p>以下评测流程适用于软件生态共建。<br />学术项目请在申报表中提交研究 proposal，供我们审核。</p></div>
+      <div class="co-evaluation-grid">
+        <div class="co-benchmark-card"><p class="co-card-number">BENCHMARK REFERENCE</p><h3>DeltaXRDbench</h3><p>请注明基准版本、数据集与评测设置，提供结果报告及复现说明。评测方法与指标定义以仓库文档为准。</p><a class="co-text-link" href="https://github.com/DeltaGanjiang/deltaxrdbench" target="_blank" rel="noopener noreferrer"><span>查看评测仓库与说明</span></a></div>
+        <dl class="co-metrics"><div><dt>单相识别</dt><dd>Top-1 · Top-3 · Top-5 · MRR@5</dd></div><div><dt>多相识别</dt><dd>Coverage · Exact · Macro P / R / F1</dd></div><div><dt>结构精修</dt><dd>Rp · Rwp · Correlation · XRDinspector</dd></div></dl>
+      </div>
+      <ol class="co-steps"><li><span>01</span><h3>完成评测</h3><p>运行适用任务，整理结果、版本与复现材料。</p></li><li><span>02</span><h3>邮件申报</h3><p>填写下方表单，检查材料后发送给曹斌博士。</p></li><li><span>03</span><h3>共同评估</h3><p>交流工具价值、复现表现及技术接入方案。</p></li><li><span>04</span><h3>接入共建</h3><p>确认授权与合作安排，推进集成和共同研究。</p></li></ol>
+    </section>
+
+    <section class="co-section co-shell co-application" id="apply" aria-labelledby="apply-title">
+      <aside class="co-apply-intro"><p class="co-eyebrow">03 / YOUR CONTRIBUTION</p><h2 id="apply-title">下一次合作<br /><em>从你开始</em></h2><p>介绍你的软件，或分享研究计划，<br />一起探索干将生态中的可能。</p><div class="co-contact"><img src="assets/images/bin-cao.webp" width="48" height="48" loading="lazy" alt="" /><div><span>合作联系人</span><strong>曹斌博士</strong><a href="mailto:bincao@hkust-gz.edu.cn">bincao@hkust-gz.edu.cn</a></div></div><div class="co-preparation"><h3>填写前准备</h3><ul data-preparation="software"><li>软件介绍、版本及授权信息</li><li>DeltaXRDbench 评测结果</li><li>评测配置与复现说明</li><li>期望的接入与合作方式</li></ul><ul data-preparation="academic" hidden><li>项目名称与研究目标</li><li>研究数据与实验 / 对比方案</li><li>预计 API 调用量与项目周期</li><li>预期成果与完整 proposal（如有）</li></ul></div><p class="co-local-note">表单在本页整理材料，不自动上传或发送。生成后请检查内容，并在邮件客户端中完成发送。</p></aside>
+      <div class="co-form-column">
+        <form id="collaboration-form">
+          <fieldset id="application-fields" disabled>
+            <legend class="co-sr-only">生态合作申报表</legend>
+            <div class="co-form-heading"><h3>合作申报表</h3><span>带 * 的项目为必填</span></div>
+            <fieldset class="co-choices co-application-choice"><legend>申报类型 *</legend><label><input name="applicationType" type="radio" value="software" checked /><span>软件生态共建</span></label><label><input name="applicationType" type="radio" value="academic" /><span>学术项目合作</span></label></fieldset>
+            <section class="co-form-section" aria-labelledby="contact-fields"><h4 id="contact-fields"><span>01</span><span>联系人信息</span></h4><div class="co-field-grid">
+              <label><span>联系人姓名 *</span><input name="contactName" autocomplete="name" required maxlength="100" /></label>
+              <label><span>联系邮箱 *</span><input name="email" type="email" autocomplete="email" required maxlength="200" /></label>
+              <label class="co-full"><span>单位 / 团队</span><input name="affiliation" autocomplete="organization" maxlength="200" /></label>
+            </div></section>
+            <fieldset data-application-fields="software"><legend class="co-sr-only">软件生态共建</legend>
+            <section class="co-form-section" aria-labelledby="software-intro-fields"><h4 id="software-intro-fields"><span>02</span><span>关于你的软件</span></h4><div class="co-field-grid">
+              <label><span>软件名称 *</span><input name="software" required maxlength="100" /></label>
+              <label><span>软件版本 *</span><input name="softwareVersion" required maxlength="100" /></label>
+              <label class="co-full"><span>软件主页 / 仓库 / 演示链接</span><input name="softwareUrl" type="url" inputmode="url" placeholder="https://" maxlength="1000" /><small>闭源软件可填写产品页或接口文档，无需公开源代码。</small></label>
+              <label class="co-full"><span>软件简介 *</span><textarea name="summary" rows="3" maxlength="2000" required aria-describedby="summary-help"></textarea><small id="summary-help">介绍解决的问题、核心能力，以及相较现有方法的特点。</small></label>
+            </div></section>
+            <section class="co-form-section" aria-labelledby="software-fields"><h4 id="software-fields"><span>03</span><span>授权与接入</span></h4>
+              <fieldset class="co-choices"><legend>软件授权方式 *</legend><label><input name="licenseType" type="radio" value="open" checked /><span>开源软件</span></label><label><input name="licenseType" type="radio" value="closed" /><span>闭源软件</span></label></fieldset>
+              <p id="license-help" class="co-field-note">请注明开源许可证及接入时需要遵循的条件。</p>
+              <div class="co-field-grid"><label class="co-full"><span>许可证 / 授权条件 *</span><textarea name="licenseTerms" rows="2" required maxlength="1500" aria-describedby="license-help"></textarea></label><label><span>计划接入方式 *</span><select name="integration" required><option value="">请选择</option><option value="api">API / 私有服务</option><option value="cli">命令行工具</option><option value="python">Python 包 / SDK</option><option value="binary">可执行程序</option><option value="discuss">希望共同讨论</option></select></label><label><span>期望的合作方式 *</span><select name="collaboration" required><option value="">请选择</option><option value="joint">联合研发与生态共建</option><option value="research">共同研究</option><option value="license">商业授权</option><option value="purchase">商业采购</option><option value="discuss">希望共同讨论</option></select></label></div>
+              <label class="co-check co-nda" id="nda-field" hidden><input type="checkbox" name="nda" /><span>希望先沟通保密安排，再提供未公开技术材料。</span></label>
+            </section>
+            <section class="co-form-section" aria-labelledby="benchmark-fields"><h4 id="benchmark-fields"><span>04</span><span>DeltaXRDbench 评测</span></h4><div class="co-field-grid">
+              <label><span>评测任务 *</span><select name="track" required aria-describedby="metrics-help"><option value="">请选择</option><option value="single">单相识别</option><option value="multi">多相识别</option><option value="refine">结构精修</option><option value="multiple">多个任务</option></select></label>
+              <label><span>基准版本 / Commit *</span><input name="benchmarkVersion" required maxlength="150" /></label>
+              <label class="co-full"><span>数据集、版本与评测范围 *</span><input name="dataset" required maxlength="600" aria-describedby="dataset-help" /><small id="dataset-help">例如 MP500、RRUFF 或 opXRD；注明数据版本、子集及样本数。</small></label>
+              <label class="co-full"><span>主要评测结果 *</span><textarea name="metrics" rows="4" required maxlength="2500" aria-describedby="metrics-help"></textarea><small id="metrics-help">填写对应任务的指标、数值与单位；多个任务请分别列出。</small></label>
+              <label class="co-full"><span>评测设置与复现说明 *</span><textarea name="reproduction" rows="3" required maxlength="3000" aria-describedby="reproduction-help"></textarea><small id="reproduction-help">注明输入条件、配置、随机种子、运行环境及复现步骤，或提供说明文档链接。</small></label>
+              </div><fieldset class="co-choices co-report-choice"><legend>评测报告提供方式 *</legend><label><input type="radio" name="reportMode" value="link" checked /><span>报告链接</span></label><label><input type="radio" name="reportMode" value="attachment" /><span>邮件附件</span></label></fieldset>
+              <label id="report-url-field"><span>评测报告链接 *</span><input name="reportUrl" type="url" inputmode="url" placeholder="https://" maxlength="1500" required /></label>
+              <p class="co-field-note" id="attachment-note" hidden>请在发送邮件时手动附上评测报告和相关复现材料。本页不会上传附件。</p>
+            </section>
+            </fieldset>
+            <fieldset data-application-fields="academic" hidden disabled><legend class="co-sr-only">学术项目合作</legend>
+            <section class="co-form-section" aria-labelledby="research-fields"><h4 id="research-fields"><span>02</span><span>研究 Proposal</span></h4><p class="co-field-note co-quota-note">提交 proposal 后，我们会审核研究计划与 API 需求。审核通过后可在获批额度内免费调用 GanJiang API；具体额度与使用期限以审核结果为准。</p><div class="co-field-grid">
+              <label class="co-full"><span>项目名称 *</span><input name="projectTitle" required maxlength="150" /></label>
+              <label class="co-full"><span>研究目标与问题 *</span><textarea name="researchGoals" rows="3" required maxlength="3000" aria-describedby="research-goals-help"></textarea><small id="research-goals-help">说明研究背景、希望解决的问题，以及干将在项目中的作用。</small></label>
+              <label class="co-full"><span>数据与样本规模 *</span><textarea name="researchData" rows="2" required maxlength="2000" aria-describedby="research-data-help"></textarea><small id="research-data-help">说明数据来源、类型、预计样本数与分析任务。</small></label>
+              <label class="co-full"><span>实验 / 测试 / 对比方案 *</span><textarea name="researchPlan" rows="4" required maxlength="4000" aria-describedby="research-plan-help"></textarea><small id="research-plan-help">说明如何使用 API 开展分析；如涉及方法对比，请列出对比方法、评测指标与实验设置。</small></label>
+              <label><span>预计 API 调用量 *</span><input name="apiUsage" required maxlength="300" aria-describedby="api-usage-help" /><small id="api-usage-help">请估算总调用量或按月用量，并简述估算依据。</small></label>
+              <label><span>项目周期 *</span><input name="projectPeriod" required maxlength="200" aria-describedby="project-period-help" /><small id="project-period-help">计划起止时间或预计持续时长。</small></label>
+              <label class="co-full"><span>预期成果 *</span><textarea name="researchOutcomes" rows="2" required maxlength="2000"></textarea></label>
+              <label class="co-full"><span>完整 Proposal 链接（选填）</span><input name="proposalUrl" type="url" inputmode="url" placeholder="https://" maxlength="1500" /><small>可提供完整研究计划的链接，或在发送邮件时自行添加附件。</small></label>
+            </div></section>
+            </fieldset>
+            <section class="co-form-section" aria-labelledby="more-fields"><h4 id="more-fields"><span id="more-fields-number">05</span><span>合作想法</span></h4><label><span>补充说明</span><textarea name="notes" rows="3" maxlength="2500" aria-describedby="notes-help"></textarea><small id="notes-help">可补充合作预期或需要提前沟通的问题。</small></label><label class="co-check"><input type="checkbox" name="consent" required /><span>我有权提交上述申报材料，并愿意就评估与合作接受邮件联系。</span></label></section>
+            <div class="co-form-submit"><button class="co-button co-primary" type="submit"><span>生成申报材料</span></button><p>下一步：检查内容，选择邮件发送方式。</p></div>
+          </fieldset>
+        </form>
+        <noscript><p class="co-noscript">请启用 JavaScript 使用申报表，或将软件合作材料、学术项目 proposal 与 API 额度需求发送至 <a href="mailto:bincao@hkust-gz.edu.cn">bincao@hkust-gz.edu.cn</a>。</p></noscript>
+        <section class="co-preview" id="application-preview" hidden aria-labelledby="preview-title"><p class="co-eyebrow">READY FOR YOUR REVIEW</p><h3 id="preview-title" tabindex="-1">检查并发送申报材料</h3><p>收件人：曹斌博士 · bincao@hkust-gz.edu.cn</p><label><span>邮件主题</span><input id="application-subject" readonly /></label><label><span>申报内容</span><textarea id="application-body" rows="14" readonly spellcheck="false"></textarea></label><p class="co-field-note" id="delivery-note"></p><div class="co-preview-actions"><a class="co-button co-primary" id="open-application-email"><span>打开邮件客户端</span></a><button class="co-button co-secondary" id="download-application" type="button">下载申报材料 .txt</button><button class="co-text-button" id="copy-application" type="button">复制内容</button></div><p class="co-preview-reminder">材料尚未发送。请在邮件客户端中确认收件人、内容和附件后发送。</p></section>
+        <p class="co-form-status" id="form-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+  <footer class="shared-footer"><div class="footer-identity"><a class="brand" href="index.html#home"><img class="brand-logo" src="assets/images/logo-small.webp" width="30" height="30" alt="" /> GanJiang</a><p>让材料研究的判断更清楚。</p></div><div class="footer-links"><a href="https://github.com/DeltaGanjiang" target="_blank" rel="noopener noreferrer">GitHub</a><a href="team.html">团队成员</a><a href="apps/index.html">下载干将</a><a href="index.html#home">返回官网</a><a href="#main">回到顶部</a></div></footer>
+</body>
+</html>

@@ -20,16 +20,16 @@
     byId('exchange-rate').textContent = '1 USD = ' + money.reference.cnyPerUsd + ' CNY';
   }
 
-  // All download actions lead to the same external download center.
+  // Only the download-section button opens the external download center.
   var downloadCenter = window.GANJIANG_DOWNLOADS || {};
   var downloadUrl;
-  try { downloadUrl = new URL(downloadCenter.url); } catch (_) { /* Keep the pending state. */ }
+  try { downloadUrl = new URL(downloadCenter.url); } catch (_) { /* Keep the HTML fallback. */ }
   if (downloadUrl && ['https:', 'http:'].includes(downloadUrl.protocol) && !downloadUrl.username && !downloadUrl.password) {
-    document.querySelectorAll('[data-download], [data-download-jump]').forEach(function (link) {
+    document.querySelectorAll('[data-download]').forEach(function (link) {
       link.href = downloadUrl.href;
       link.removeAttribute('aria-disabled');
       link.classList.remove('is-pending');
-      if (link.hasAttribute('data-download')) link.querySelector('span').textContent = t('前往下载中心');
+      link.querySelector('span').textContent = t('前往下载中心');
     });
   }
 
@@ -114,6 +114,7 @@
       item.tabIndex = selected ? 0 : -1;
     });
     byId('analysis-panel').setAttribute('aria-labelledby', tab.id);
+    document.querySelector('.workbench').dataset.analysisView = tab.dataset.view;
     byId('analysis-plot').src = './assets/' + tab.dataset.view + '.svg';
     byId('analysis-plot').alt = t(view.alt);
     byId('plot-title').textContent = t(view.title);

@@ -20,9 +20,12 @@ or private browsing contexts. Keep English copy in sync with Chinese edits.
 ## Set the download center URL
 
 Edit `downloads.js` and set `window.GANJIANG_DOWNLOADS.url` to the public HTTPS URL
-of the download center on the other domain. The single download button and the
-hero/footer download actions then navigate to that same destination in the current
-tab. The URL is initially empty, keeping the main entry visibly pending.
+of the download center on the other domain. Only the `data-download` button in the
+download section opens that destination in the current tab. The hero and closing
+`data-download-jump` links stay on the page and navigate to `#downloads`.
+The download center is open at `https://ganjiang.yangtzeailab.com/`.
+Keep the `data-download` fallback link in `index.html` in sync so the download
+button also works without JavaScript.
 
 The other site owns Mac/Windows selection, package versions, system requirements,
 and installer links. This page deliberately does not duplicate those controls or
@@ -32,7 +35,8 @@ links use `../index.html#home` to show the homepage content rather than its entr
 
 The configuration is public client-side code. Use public package URLs, never
 access keys, private credentials, or temporary secrets. An unsupported URL scheme
-or a URL containing an embedded username/password keeps the button disabled.
+or a URL containing an embedded username/password is ignored, leaving the HTML
+fallback link unchanged.
 
 ## Credits
 
@@ -82,6 +86,14 @@ asks users to preserve anonymity throughout registration, login, and contact.
 The email link opens the user's mail client; it does not submit or send anything.
 
 ## Case visual
+
+The opening desktop-product section uses `hero.css`, scoped to `.desktop-hero`,
+with a responsive editorial heading, download controls, and an interactive XRD
+workspace illustration. The hero has two platform links, macOS and Windows,
+both navigating to `#downloads`. Local vector platform marks replace the earlier
+decorative icons; only the links respond to hover, with movement disabled for
+reduced-motion preferences. Asset sources are in `assets/platforms/README.md`. The three analysis
+tabs support keyboard navigation and update the matching workspace rail state.
 
 The three SVGs in `assets/` use the existing `assets/science/egypt-data.js` dataset.
 Observed and calculated curves come from that dataset; phase curves were already

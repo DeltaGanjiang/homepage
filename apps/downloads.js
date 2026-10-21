@@ -1,5 +1,5 @@
 // Public URL of the download center on the other domain.
-// Users choose macOS or Windows there. Leave blank until that address is ready.
+// Users choose macOS or Windows there. Keep the HTML fallback link in sync.
 window.GANJIANG_DOWNLOADS = {
-  url: ''
+  url: 'https://ganjiang.yangtzeailab.com/'
 };
