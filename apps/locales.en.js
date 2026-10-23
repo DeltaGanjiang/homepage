@@ -1,5 +1,10 @@
 /* English copy for the Chinese source page and its dynamic analysis states. */
 window.GanJiangEnglish = Object.freeze({
+  '最新消息': 'NEWS',
+  '首充优惠': 'First top-up offer',
+  '一折': '90% OFF',
+  '人民币 0.99 元': 'RMB 0.99',
+  '990 积分': '990 credits',
   'macOS：前往客户端下载区': 'macOS: go to desktop downloads',
   'Windows：前往客户端下载区': 'Windows: go to desktop downloads',
   '全球合作伙伴': 'Global partners',
