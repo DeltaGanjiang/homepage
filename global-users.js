@@ -70,6 +70,37 @@
   let paused = motion.matches, drag = null, flight = null, selected = null, hovered = null;
   let land = [], coast = [], users = [], hitAreas = [];
   let camera = {};
+  // Canvas colours follow the page theme, including when rotation is paused.
+  let lightTheme = document.documentElement.dataset.theme === 'light';
+  const lightColors = {
+    '#ff64782a': '#bd46551a',
+    '#b7ddff12': '#507d9912',
+    '#ff8d96': '#b34252',
+    '#a8cee37a': '#507d997a',
+    '#fff0f1': '#b34252',
+    '#d2ecff': '#507d99',
+    '#ff8d96aa': '#b34252aa',
+    '#8cb6d361': '#6d8c9e80',
+    '#251b2aeb': '#fff4f4f2',
+    '#091323db': '#ffffffed',
+    '#ff8d9666': '#c2717a88',
+    '#47617c55': '#a9bccb88',
+    '#ffe3e6': '#9d3443',
+    '#c1d8ee': '#34576d',
+    '#3e83c520': '#97b7cf14',
+    '#346faf10': '#97b7cf08',
+    '#1d426600': '#97b7cf00',
+    '#132a44': '#fcfefe',
+    '#0c1c32': '#f0f6fa',
+    '#060e1d': '#e4eef4',
+    '#527a9a70': '#afc6d580',
+    '#789bbb16': '#94afc331',
+    '#7baedc48': '#638cae80',
+    '#6797ba99': '#759cbaa6',
+    '#ff4e6427': '#c34f5c20',
+    '#ff6875': '#c34f5c'
+  };
+  function globeColor(color) { return lightTheme ? (lightColors[color] || color) : color; }
 
   function vector([longitude, latitude]) {
     const a = longitude * radians, b = latitude * radians, c = Math.cos(b);
@@ -121,11 +152,11 @@
     for (const { place, p } of projected) {
       const active = place === selected || place === hovered;
       ctx.beginPath(); circle(p.x, p.y, active ? 11 : 7);
-      ctx.fillStyle = active ? '#ff64782a' : '#b7ddff12'; ctx.fill();
-      ctx.strokeStyle = active ? '#ff8d96' : '#a8cee37a'; ctx.lineWidth = .8; ctx.stroke();
+      ctx.fillStyle = active ? globeColor('#ff64782a') : globeColor('#b7ddff12'); ctx.fill();
+      ctx.strokeStyle = active ? globeColor('#ff8d96') : globeColor('#a8cee37a'); ctx.lineWidth = .8; ctx.stroke();
       ctx.beginPath();
       ctx.moveTo(p.x, p.y - 3); ctx.lineTo(p.x + 3, p.y); ctx.lineTo(p.x, p.y + 3); ctx.lineTo(p.x - 3, p.y); ctx.closePath();
-      ctx.fillStyle = active ? '#fff0f1' : '#d2ecff'; ctx.fill();
+      ctx.fillStyle = active ? globeColor('#fff0f1') : globeColor('#d2ecff'); ctx.fill();
       hitAreas.push({ place, x: p.x - 12, y: p.y - 12, w: 24, h: 24 });
       const label = place[locale];
       const w = ctx.measureText(label).width + 12, h = 21;
@@ -138,10 +169,10 @@
       if (!box) continue;
       boxes.push(box);
       ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(right ? box.x : box.x + w, box.y + h / 2);
-      ctx.strokeStyle = active ? '#ff8d96aa' : '#8cb6d361'; ctx.lineWidth = .7; ctx.stroke();
-      ctx.fillStyle = active ? '#251b2aeb' : '#091323db'; ctx.fillRect(box.x, box.y, w, h);
-      ctx.strokeStyle = active ? '#ff8d9666' : '#47617c55'; ctx.strokeRect(box.x, box.y, w, h);
-      ctx.fillStyle = active ? '#ffe3e6' : '#c1d8ee'; ctx.fillText(label, box.x + 6, box.y + h / 2);
+      ctx.strokeStyle = active ? globeColor('#ff8d96aa') : globeColor('#8cb6d361'); ctx.lineWidth = .7; ctx.stroke();
+      ctx.fillStyle = active ? globeColor('#251b2aeb') : globeColor('#091323db'); ctx.fillRect(box.x, box.y, w, h);
+      ctx.strokeStyle = active ? globeColor('#ff8d9666') : globeColor('#47617c55'); ctx.strokeRect(box.x, box.y, w, h);
+      ctx.fillStyle = active ? globeColor('#ffe3e6') : globeColor('#c1d8ee'); ctx.fillText(label, box.x + 6, box.y + h / 2);
       hitAreas.unshift({ place, ...box });
     }
   }
@@ -153,28 +184,28 @@
     ctx.clearRect(0, 0, width, height);
     const cx = width / 2, cy = height / 2;
     const glow = ctx.createRadialGradient(cx, cy, radius * .95, cx, cy, radius * 1.15);
-    glow.addColorStop(0, '#3e83c520'); glow.addColorStop(.36, '#346faf10'); glow.addColorStop(1, '#1d426600');
+    glow.addColorStop(0, globeColor('#3e83c520')); glow.addColorStop(.36, globeColor('#346faf10')); glow.addColorStop(1, globeColor('#1d426600'));
     ctx.fillStyle = glow; ctx.fillRect(0, 0, width, height);
     const ocean = ctx.createRadialGradient(cx - radius * .42, cy - radius * .45, radius * .08, cx, cy, radius);
-    ocean.addColorStop(0, '#132a44'); ocean.addColorStop(.55, '#0c1c32'); ocean.addColorStop(1, '#060e1d');
+    ocean.addColorStop(0, globeColor('#132a44')); ocean.addColorStop(.55, globeColor('#0c1c32')); ocean.addColorStop(1, globeColor('#060e1d'));
     ctx.beginPath(); circle(cx, cy, radius); ctx.fillStyle = ocean; ctx.fill();
-    ctx.strokeStyle = '#527a9a70'; ctx.lineWidth = 1; ctx.stroke();
+    ctx.strokeStyle = globeColor('#527a9a70'); ctx.lineWidth = 1; ctx.stroke();
     ctx.save(); ctx.clip();
-    trace(grid, '#789bbb16', .65);
-    trace(coast, '#7baedc48', .7);
+    trace(grid, globeColor('#789bbb16'), .65);
+    trace(coast, globeColor('#7baedc48'), .7);
     ctx.beginPath();
     for (const point of land) {
       const p = project(point);
       if (p.z > .015) circle(p.x, p.y, Math.max(.5, (width < 420 ? .8 : 1.1) * Math.sqrt(zoom) * (.65 + p.z * .35)));
     }
-    ctx.fillStyle = '#6797ba99'; ctx.fill();
+    ctx.fillStyle = globeColor('#6797ba99'); ctx.fill();
     const front = users.map(project).filter(p => p.z > .025);
     ctx.beginPath();
     for (const p of front) circle(p.x, p.y, (width < 420 ? 2.5 : 3.4) * Math.sqrt(zoom) * (.55 + p.z * .45));
-    ctx.fillStyle = '#ff4e6427'; ctx.fill();
+    ctx.fillStyle = globeColor('#ff4e6427'); ctx.fill();
     ctx.beginPath();
     for (const p of front) circle(p.x, p.y, (width < 420 ? 1.1 : 1.55) * Math.sqrt(zoom) * (.55 + p.z * .45));
-    ctx.fillStyle = '#ff6875'; ctx.fill();
+    ctx.fillStyle = globeColor('#ff6875'); ctx.fill();
     ctx.restore();
     drawPlaces();
   }
@@ -368,6 +399,10 @@
     translate(); schedule();
   });
   document.addEventListener('visibilitychange', schedule);
+  window.addEventListener('ganjiang:themechange', () => {
+    lightTheme = document.documentElement.dataset.theme === 'light';
+    draw();
+  });
   new MutationObserver(translate).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
   if ('ResizeObserver' in window) new ResizeObserver(resize).observe(stage);
   else window.addEventListener('resize', resize);

@@ -1,22 +1,22 @@
 /* Self-hosted slide preview; images keep their original 16:9 proportions. */
-.site-v2 .presentation-viewer{position:relative;min-width:0;min-height:0;height:auto;background:#0d1527;border-color:#35455e}
+.site-v2 .presentation-viewer{position:relative;min-width:0;min-height:0;height:auto;background:var(--theme-surface, #0d1527);border-color:var(--theme-border-strong, #35455e)}
 .presentation-mount{min-width:0}
 .site-v2 #presentation-title{white-space:normal}
 .presentation-stage{display:block;aspect-ratio:16/9;background:#f7fbff;touch-action:pan-y pinch-zoom}
 .presentation-stage img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
-.presentation-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:10px 12px;border-top:1px solid #35455e;background:#0d1527;color:#dce6ff}
+.presentation-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:10px 12px;border-top:1px solid var(--theme-border-strong, #35455e);background:var(--theme-surface, #0d1527);color:var(--theme-text, #dce6ff)}
 .presentation-pagination{display:flex;align-items:center;gap:8px}
-.presentation-toolbar button,.presentation-feedback button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 10px;border:1px solid #35455e;border-radius:3px;background:transparent;color:#dce6ff;font:500 12px/1.4 var(--sans);cursor:pointer}
-.presentation-toolbar button:hover:not(:disabled),.presentation-feedback button:hover{border-color:#77f6d2;color:#9ff9e2;background:#16263a}
+.presentation-toolbar button,.presentation-feedback button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 10px;border:1px solid var(--theme-border-strong, #35455e);border-radius:3px;background:transparent;color:var(--theme-text, #dce6ff);font:500 12px/1.4 var(--sans);cursor:pointer}
+.presentation-toolbar button:hover:not(:disabled),.presentation-feedback button:hover{border-color:var(--theme-border-accent, #77f6d2);color:var(--theme-green, #9ff9e2);background:var(--theme-surface, #16263a)}
 .presentation-toolbar button:disabled{opacity:.35;cursor:default}
-.presentation-counter{min-width:54px;color:#a7b6d4;font:12px/1.5 var(--mono);text-align:center;font-variant-numeric:tabular-nums}
-.presentation-viewer:focus-visible,.presentation-stage:focus-visible,.presentation-toolbar button:focus-visible,.presentation-feedback button:focus-visible{outline:2px solid #77f6d2;outline-offset:3px}
+.presentation-counter{min-width:54px;color:var(--theme-muted, #a7b6d4);font:12px/1.5 var(--mono);text-align:center;font-variant-numeric:tabular-nums}
+.presentation-viewer:focus-visible,.presentation-stage:focus-visible,.presentation-toolbar button:focus-visible,.presentation-feedback button:focus-visible{outline:2px solid var(--theme-border-accent, #77f6d2);outline-offset:3px}
 .presentation-stage:focus-visible{outline-offset:-3px}
-.presentation-feedback{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:10px 12px;background:#162238;color:#dce6ff}
+.presentation-feedback{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:10px 12px;background:var(--theme-surface, #162238);color:var(--theme-text, #dce6ff)}
 .presentation-feedback p{margin:0;font:12px/1.6 var(--sans)}
 .presentation-viewer [hidden]{display:none!important}
-.presentation-noscript{color:#a7b6d4;font-size:12px;line-height:1.6}
-.presentation-dialog{width:min(1500px,calc(100vw - 32px),calc((100dvh - 120px)*16/9));max-width:none;max-height:calc(100dvh - 24px);margin:auto;padding:0;border:1px solid #435577;border-radius:4px;background:#0d1527;color:#dce6ff;overflow:auto;overscroll-behavior:contain}
+.presentation-noscript{color:var(--theme-muted, #a7b6d4);font-size:12px;line-height:1.6}
+.presentation-dialog{width:min(1500px,calc(100vw - 32px),calc((100dvh - 120px)*16/9));max-width:none;max-height:calc(100dvh - 24px);margin:auto;padding:0;border:1px solid var(--theme-border-strong, #435577);border-radius:4px;background:var(--theme-surface, #0d1527);color:var(--theme-text, #dce6ff);overflow:auto;overscroll-behavior:contain}
 .presentation-dialog::backdrop{background:rgba(2,5,15,.88)}
 .presentation-dialog .presentation-viewer{border:0;border-radius:0}
 html.presentation-modal-open,html.presentation-modal-open body{overflow:hidden}

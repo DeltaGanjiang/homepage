@@ -1,0 +1,161 @@
+/* Light-only semantic tokens. Each component keeps its original dark fallback. */
+:root { color-scheme: dark; }
+:root[data-theme="light"] {
+  color-scheme: light;
+  --theme-page: #ffffff;
+  --theme-surface: #f7f9f9;
+  --theme-surface-strong: #edf2f1;
+  --theme-text: #243746;
+  --theme-muted: #526570;
+  --theme-subtle: #62737c;
+  --theme-green: #176b52;
+  --theme-blue: #285eaf;
+  --theme-purple: #7050a0;
+  --theme-gold: #87612a;
+  --theme-red: #b13a4b;
+  --theme-border: #dfe6e6;
+  --theme-border-strong: #c5d2d4;
+  --theme-border-accent: #b3cfc3;
+}
+
+.site-header .theme-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 7px;
+  border: 1px solid var(--theme-border-strong, #35435b);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--theme-muted, #a7b6d4);
+  cursor: pointer;
+}
+.site-header .theme-toggle:hover {
+  color: var(--theme-green, #b4edcf);
+  border-color: currentColor;
+  background: var(--theme-surface, #111b32);
+}
+.site-header .theme-toggle:focus-visible {
+  outline: 2px solid var(--theme-green, #b4edcf);
+  outline-offset: 4px;
+}
+.theme-toggle svg { display: block; width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.theme-toggle .theme-moon,
+[data-theme="light"] .theme-toggle .theme-sun { display: none; }
+[data-theme="light"] .theme-toggle .theme-moon { display: block; }
+
+/* White page and chrome; media keep their original artwork and colours. */
+html[data-theme="light"] body,
+html[data-theme="light"] body.team-page.site-v2 { background: #fff; }
+[data-theme="light"] .site-header,
+[data-theme="light"] .team-page.site-v2 .shared-header { background: #fff; }
+[data-theme="light"] .skip-link { color: #192c40; }
+[data-theme="light"] :is(input, select, textarea) { color-scheme: light; }
+[data-theme="light"] .footer-links a[href*="github.com"] img { filter: none; mix-blend-mode: multiply; }
+[data-theme="light"] :is(.shared-header, .shared-footer) :focus-visible { outline-color: #176b52; }
+[data-theme="light"] ::selection { background: #cdebdc; color: #192c40; }
+[data-theme="light"] .platform-download-macos img { filter: brightness(.2); }
+[data-theme="light"] .desktop-hero :is(.workbench-rail, .analysis-tabs, .workbench-status) { background: #f0f4f3; border-color: var(--theme-border); }
+[data-theme="light"] .desktop-hero .workbench,
+[data-theme="light"] .download-portal { box-shadow: 0 14px 40px #2437460c; }
+[data-theme="light"] .desktop-hero .workbench { background: #fff; }
+[data-theme="light"] .desktop-hero .hero-visual::before { background: #f2f6f4; border-color: #e4ece8; }
+[data-theme="light"] .desktop-hero .window-bar { background: #fbfcfc; border-color: var(--theme-border); }
+[data-theme="light"] .desktop-hero .analysis-tabs button[aria-selected="true"] { background: #fff; color: var(--theme-green); border-color: var(--theme-border-accent); box-shadow: 0 1px 3px #24374608; }
+[data-theme="light"] .desktop-hero .analysis-tabs button:hover { background: #e5eeea; }
+[data-theme="light"] .workbench[data-analysis-view="identify"] [data-rail-view="identify"],
+[data-theme="light"] .workbench[data-analysis-view="decompose"] [data-rail-view="decompose"],
+[data-theme="light"] .workbench[data-analysis-view="refine"] [data-rail-view="refine"] { background: #deece5; color: var(--theme-green); box-shadow: none; }
+[data-theme="light"] #plot-legend i { background: var(--theme-green); }
+
+/* A single, restrained green for primary actions throughout the site. */
+[data-theme="light"] .site-v2 .button,
+[data-theme="light"] :is(.button-primary, .home-download-primary, .download-button:not(.is-pending), .co-primary, .people-primary-link) { background: #246b56; border-color: #246b56; color: #fff; }
+[data-theme="light"] .site-v2 .button:hover,
+[data-theme="light"] :is(.button-primary, .home-download-primary, .download-button:not(.is-pending), .co-primary, .people-primary-link):hover { background: #195440; border-color: #195440; color: #fff; }
+[data-theme="light"] .shared-header .language-toggle:hover { background: #edf5f0; color: var(--theme-green); }
+[data-theme="light"] .download-portal { background: linear-gradient(120deg, #f0f7f2, #f8faf9 75%); }
+[data-theme="light"] .portal-action { background: #ffffffc7; border-color: #dce8e1; }
+[data-theme="light"] .agent-system::before { background: none; }
+
+/* The entrance remains animated, with a white canvas and a quieter glow. */
+[data-theme="light"] .orb-intro { background: radial-gradient(ellipse at 50% 48%, #edf4ff, transparent 60%), #fff; }
+[data-theme="light"] .orb-intro::before { background: linear-gradient(180deg, #ffffff10, #ffffff55); }
+[data-theme="light"] .orb-intro::after { background: radial-gradient(circle, transparent 36%, #ffffff99 100%); }
+[data-theme="light"] .orb-intro-copy { text-shadow: none; }
+[data-theme="light"] .orb-intro-logo { box-shadow: 0 0 0 7px #176b5208, 0 12px 36px #283e6a18; }
+[data-theme="light"] .orb-intro-enter { background: #ffffffd9; border-color: #b8c6d6; color: #192c40; }
+[data-theme="light"] .orb-intro-enter:hover { background: #eaf4ef; border-color: #176b52; }
+[data-theme="light"] #orb-canvas { opacity: .55; }
+
+/* Dark strokes are necessary for measured data on a light plotting surface. */
+[data-theme="light"] #hero-data-paths > path:last-child { stroke: #304a64; }
+[data-theme="light"] #xrd-traces path[stroke="#dce6fa"],
+[data-theme="light"] #xrd-traces path[stroke="#e2edff"] { stroke: #304a64; }
+[data-theme="light"] :is(#hero-data-paths, #xrd-traces) path[stroke="#76a9ff"] { stroke: #3975c6; }
+[data-theme="light"] :is(#hero-data-paths, #xrd-traces) path[stroke="#77f6d2"] { stroke: #16876f; }
+[data-theme="light"] :is(#hero-data-paths, #xrd-traces) path[stroke="#ffab91"] { stroke: #b75a39; }
+[data-theme="light"] :is(#hero-data-paths, #xrd-traces) path[stroke="#c7df8d"] { stroke: #7a741e; }
+[data-theme="light"] :is(#hero-data-paths, #xrd-traces) path[stroke="#b889ff"] { stroke: #8053ae; }
+[data-theme="light"] #xrd-traces path[stroke="#ffca88"] { stroke: #a37525; }
+[data-theme="light"] #xrd-grid line { stroke: #c5d1df; }
+[data-theme="light"] .phase-data-name b { color: color-mix(in srgb, var(--phase-color) 55%, #192c40); }
+[data-theme="light"] .phase-data-track i { background: color-mix(in srgb, var(--phase-color) 65%, #192c40); }
+[data-theme="light"] .hero-phase-key span::before { background: #3975c6; }
+[data-theme="light"] .hero-phase-key span:nth-child(2)::before { background: #16876f; }
+[data-theme="light"] .hero-phase-key span:nth-child(3)::before { background: #b75a39; }
+[data-theme="light"] .hero-phase-key span:nth-child(4)::before { background: #7a741e; }
+[data-theme="light"] .hero-phase-key span:nth-child(5)::before { background: #8053ae; }
+[data-theme="light"] .benchmark-row.is-ours .benchmark-track i { background: linear-gradient(90deg, #197963, #47a58b); }
+[data-theme="light"] .benchmark-track i { background: linear-gradient(90deg, #7d91ac, #a9b9ce); }
+
+/* Warm paper, muted mineral colours, and crisp linework on the light artboard. */
+[data-theme="light"] .egypt-artwork {
+  background: radial-gradient(ellipse at 30% 30%, #f5eddd80, transparent 65%), #fcfbf8;
+  border-color: #e4dfd4;
+}
+[data-theme="light"] .egypt-story { --egypt-gold: #87612a; }
+[data-theme="light"] #egypt-gold stop { stop-color: #9b743b; }
+[data-theme="light"] #egypt-gold stop[offset=".5"] { stop-color: #765425; }
+[data-theme="light"] #egypt-stone stop { stop-color: #e8dfcd; }
+[data-theme="light"] #egypt-stone stop[offset=".5"] { stop-color: #f8f2e6; }
+[data-theme="light"] #egypt-stone stop[offset="1"] { stop-color: #d4c7ad; }
+[data-theme="light"] #egypt-beam stop { stop-color: #368f80; }
+[data-theme="light"] .egypt-landscape { stroke: #9b835e; opacity: .24; }
+[data-theme="light"] .egypt-vessel [fill="#10212b"] { fill: #c7b899; }
+[data-theme="light"] .egypt-vessel [fill="#080f19"] { fill: #a18d69; }
+[data-theme="light"] .egypt-eye [fill="#dabb7c"],
+[data-theme="light"] .egypt-grains { fill: #a37b3d; }
+[data-theme="light"] .egypt-crystal [stroke="#70b1c1"],
+[data-theme="light"] .egypt-crystal [stroke="#75b9c6"] { stroke: #538c96; }
+[data-theme="light"] .egypt-crystal [fill="#88c9d3"] { fill: #6eaaa9; stroke: #fcfbf8; }
+[data-theme="light"] .egypt-crystal [fill="#e3c181"] { fill: #b79252; }
+[data-theme="light"] .egypt-scan [stroke="#90e4d2"] { stroke: #368f80; }
+[data-theme="light"] .egypt-trace [stroke="#253340"] { stroke: #dce2df; }
+[data-theme="light"] .egypt-trace [stroke="#44504e"] { stroke: #a4b2ae; }
+[data-theme="light"] .egypt-measured { stroke: #536678; }
+[data-theme="light"] #egypt-feature-traces [stroke="#76a9ff"] { stroke: #3975c6; }
+[data-theme="light"] #egypt-feature-traces [stroke="#77f6d2"] { stroke: #16876f; }
+[data-theme="light"] #egypt-feature-traces [stroke="#ffab91"] { stroke: #b75a39; }
+[data-theme="light"] #egypt-feature-traces [stroke="#c7df8d"] { stroke: #7a741e; }
+[data-theme="light"] #egypt-feature-traces [stroke="#b889ff"] { stroke: #8053ae; }
+[data-theme="light"] .globe-user-key { background: #c34f5c; box-shadow: 0 0 0 3px #c34f5c12; }
+[data-theme="light"] .globe-place-key { background: #507d99; }
+[data-theme="light"] .global-places button[aria-pressed="true"] { background: #edf5f0; border-color: #b3cfc3; }
+[data-theme="light"] .community-wechat { --community-accent: #18703c; }
+[data-theme="light"] .community-whatsapp { --community-accent: #176b52; }
+[data-theme="light"] .community-discord { --community-accent: #5952a1; }
+[data-theme="light"] :is(.community-dialog, .presentation-dialog) { box-shadow: 0 24px 80px #192c4026; }
+[data-theme="light"] :is(.community-dialog, .presentation-dialog)::backdrop { background: #24374655; }
+
+@media (max-width: 480px) {
+  .site-header .header-actions { gap: 12px; }
+  .site-header .theme-toggle { width: 32px; height: 32px; padding: 6px; }
+}
+
+@media print {
+  :root { color-scheme: light; }
+  .site-header .theme-toggle { display: none; }
+}

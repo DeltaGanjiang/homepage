@@ -115,7 +115,8 @@
     });
     byId('analysis-panel').setAttribute('aria-labelledby', tab.id);
     document.querySelector('.workbench').dataset.analysisView = tab.dataset.view;
-    byId('analysis-plot').src = './assets/' + tab.dataset.view + '.svg';
+    var themeSuffix = document.documentElement.dataset.theme === 'light' ? '-light' : '';
+    byId('analysis-plot').src = './assets/' + tab.dataset.view + themeSuffix + '.svg';
     byId('analysis-plot').alt = t(view.alt);
     byId('plot-title').textContent = t(view.title);
     byId('plot-legend').replaceChildren();
@@ -216,5 +217,8 @@
     updateEstimate();
   }
   window.addEventListener('ganjiang:languagechange', renderLanguage);
+  window.addEventListener('ganjiang:themechange', function () {
+    selectView(tabs.find(function (tab) { return tab.getAttribute('aria-selected') === 'true'; }) || tabs[0]);
+  });
   renderLanguage();
 })();
