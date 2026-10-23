@@ -144,6 +144,10 @@ html[data-theme="light"] body.team-page.site-v2 { background: #fff; }
 [data-theme="light"] .globe-user-key { background: #c34f5c; box-shadow: 0 0 0 3px #c34f5c12; }
 [data-theme="light"] .globe-place-key { background: #507d99; }
 [data-theme="light"] .global-places button[aria-pressed="true"] { background: #edf5f0; border-color: #b3cfc3; }
+/* Partner assets are white silhouettes on transparency; give them dark ink. */
+[data-theme="light"] .global-partners .partner-logo img { filter: brightness(.22); opacity: 1; }
+[data-theme="light"] .global-partners .partner-card > span:last-child { color: var(--theme-text); }
+[data-theme="light"] .partners-viewport { scrollbar-color: var(--theme-border-strong) var(--theme-surface); }
 [data-theme="light"] .community-wechat { --community-accent: #18703c; }
 [data-theme="light"] .community-whatsapp { --community-accent: #176b52; }
 [data-theme="light"] .community-discord { --community-accent: #5952a1; }
