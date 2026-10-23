@@ -78,6 +78,11 @@ html[data-theme="light"] body.team-page.site-v2 { background: #fff; }
 [data-theme="light"] .shared-header .language-toggle:hover { background: #edf5f0; color: var(--theme-green); }
 [data-theme="light"] .download-portal { background: linear-gradient(120deg, #f0f7f2, #f8faf9 75%); }
 [data-theme="light"] .portal-action { background: #ffffffc7; border-color: #dce8e1; }
+[data-theme="light"] .reviewer-contact { background: #edf3f0; border-color: #d6e2dc; }
+[data-theme="light"] .reviewer-contact > p { color: #344d43; font-size: 13px; }
+[data-theme="light"] .reviewer-contact span { color: #243746; font-size: 12px; font-weight: 500; }
+[data-theme="light"] .reviewer-contact a { color: #176b52; text-decoration-color: #7ba393; }
+[data-theme="light"] .reviewer-contact a:hover { color: #195440; text-decoration-color: currentColor; }
 [data-theme="light"] .agent-system::before { background: none; }
 
 /* The entrance remains animated, with a white canvas and a quieter glow. */
