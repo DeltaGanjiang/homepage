@@ -22,6 +22,7 @@
 .education-page .edu-signoff{margin-inline:auto;display:flex;gap:20px;padding:0 0 45px;color:var(--edu-muted);font-size:12px}.education-page .shared-footer{font-family:var(--sans)}
 [data-theme="light"] .edu-button{background:#246b56;border-color:#246b56;color:#fff!important}[data-theme="light"] .edu-button:hover{background:#195440;border-color:#195440}
 @media(max-width:1100px){:is(.site-v2,.download-page) .education-home,.edu-hero{gap:6%}.edu-stats>div+div{padding-left:22px}.edu-plan,.edu-apply{gap:7%;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr)}}
+@media(min-width:801px) and (max-width:900px){:is(.site-v2,.download-page) .shared-header .nav{gap:12px}}
 @media(max-width:800px){:is(.site-v2,.download-page) .education-home,.edu-hero,.edu-plan,.edu-apply{grid-template-columns:1fr;gap:36px;padding-block:52px}.edu-hero{padding-top:62px}.edu-hero h1{font-size:clamp(37px,7vw,54px)}.edu-offer{max-width:590px;width:100%;padding-block:26px}.edu-stats dd{font-size:72px}.edu-section-intro>p:not(.edu-eyebrow){max-width:600px}.edu-terms article{gap:10px}.edu-apply{gap:30px}}
 @media(max-width:420px){.edu-stats{gap:12px}.edu-stats>div+div{padding-left:20px}.edu-stats dt{font-size:11px}.edu-stats dd{font-size:62px}.edu-stats dd span{font-size:15px}.edu-offer-title{font-size:13px}.edu-actions{gap:16px}.edu-action-note{width:100%}.edu-terms article{grid-template-columns:25px minmax(0,1fr)}.edu-terms h3{font-size:19px}.edu-signoff{padding-bottom:30px}}
 @media(prefers-reduced-motion:reduce){.edu-button{transition:none}}
