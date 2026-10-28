@@ -6,7 +6,7 @@
   const nodes = [...document.querySelectorAll('[data-education-copy]')];
   const chinese = Object.fromEntries(nodes.map(node => [node.dataset.educationCopy, node.innerHTML]));
   const english = {
-    navEducation: 'Education',
+    navEducation: 'Education Support',
     homeEyebrow: 'FOR DEPARTMENTS AND INSTITUTIONAL UNITS',
     homeTitle: 'GanJiang Education<br /><em>Support Program</em>',
     homeIntro: 'Bring GanJiang into real teaching and research. Schools, departments and other second-level units within universities and research institutions can apply for free access for a limited period.',
