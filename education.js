@@ -17,26 +17,38 @@
     quotaNote: 'User count, designated features and usage quotas are subject to approval. Free access does not mean unlimited usage.',
     skip: 'Skip to content', backHome: 'Back to website', planNav: 'The program', applyNav: 'Apply',
     collaborateNav: 'Collaborate', downloadNav: 'Download', contactNav: 'Contact us',
-    launch: 'INTRODUCING THE GANJIANG EDUCATION SUPPORT PROGRAM',
-    heroTitle: 'More possibilities<br /><em>for learning & research</em>',
-    heroLead: 'For the classroom. For every thoughtful exploration.',
-    heroIntro: 'To support teaching, researcher training and academic research, GanJiang offers eligible schools, departments and other second-level units within universities and research institutions free access for a limited period. We want more teachers, researchers and students to explore better ways of learning and working in real settings.',
+    notice: 'FOR UNIVERSITY AND RESEARCH DEPARTMENTS OR SECOND-LEVEL UNITS',
+    eligibilityLink: 'Check eligibility',
+    peopleNote: 'User count based on actual needs',
+    periodNote: 'Starts when accounts are activated',
+    accessLabel: 'Designated features and usage quotas',
+    freeAccess: 'Free',
+    accessNote: 'For approved, non-commercial teaching and research.',
+    eligibleLabel: 'ELIGIBLE', eligibleTitle: 'Departments & institutional units',
+    eligibleText: 'Within universities and research institutions',
+    ineligibleLabel: 'NOT ELIGIBLE', ineligibleTitle: 'Research groups, labs or individuals',
+    ineligibleText: 'Please apply through your department or second-level unit',
+    applyUnit: 'One application from your institutional unit',
+    stepPrepare: 'Send application details', stepReview: 'Receive a review outcome', stepActivate: 'Activate approved access',
+    launch: 'GANJIANG EDUCATION SUPPORT · NOW OPEN',
+    pageTitle: 'GanJiang Education Support Program',
+    heroIntro: 'Free access for a limited time for departments and second-level units within universities and research institutions, supporting teaching, researcher training and academic research.',
     applyCta: 'Apply for education support', readPlan: 'Read the program details',
-    planTitle: 'About the support',
+    planTitle: 'Program details',
     planIntro: 'Only applications submitted by departments or second-level institutional units are accepted, based on real teaching and research needs.',
     whoTitle: 'Who can apply',
-    whoBody: 'Only schools, departments or other second-level units within universities and research institutions may apply, through their head or an authorized teacher or researcher. Applications from research groups, laboratories or individuals are not accepted. The applicant manages approved accounts and users and ensures use stays within the program’s scope.',
+    whoBody: 'Applications must be submitted by the head of the unit or an authorized teacher or researcher. The applicant manages approved accounts and users and ensures use stays within the program’s scope.',
     supportTitle: 'What is included',
     supportBody: 'Approved units receive free access for up to 50 users for three months from activation, covering designated features and usage quotas. The user count depends on actual needs. Approved features, quotas and start and end dates will be confirmed after review.',
     useTitle: 'Supported uses',
     useBody: 'The program supports non-commercial education and research, including courses, student training, academic research and research practice. Eligibility and accounts are for authorized users of the approved unit only. They may not be resold, transferred or used to provide commercial services to others. Any violation may result in immediate termination of support by the GanJiang team.',
-    publicityTitle: 'Sharing the collaboration',
+    publicityTitle: 'Collaboration publicity',
     publicityBody: 'We will publicize collaborations with participating units and share teaching and research use cases. We will confirm the institutional information and case content with the applicant unit before publication, helping others understand how GanJiang is used in practice.',
     endTitle: 'Expiry, renewal and termination',
     endBody: 'Free access ends automatically and does not convert to a paid service. Units with continuing needs may request a renewal before expiry. Renewal and the scope of support depend on usage and available resources.',
     creditExpiry: 'When support expires or ends early, all credits in the supported accounts will be reset to zero.',
     termination: 'The GanJiang team may terminate the program or support for an individual unit at any time, depending on the circumstances.',
-    applyTitle: 'Apply as an institutional unit',
+    applyTitle: 'Apply for education support',
     applyIntro: 'Email your application to the team. We review applications in batches, considering the intended use, institutional needs and available resources, and reply using the contact details you provide.',
     welcome: 'We welcome eligible departments and second-level institutional units, and value your suggestions as we improve GanJiang’s education support.',
     prepareTitle: 'Tell us about',
@@ -99,6 +111,47 @@ I am authorized to apply on behalf of the above department or second-level unit,
     status.textContent = '';
   }
 
+  function setupMotion() {
+    const preference = matchMedia('(prefers-reduced-motion: reduce)');
+    if (preference.matches || !('IntersectionObserver' in window)) return;
+    const sections = [...document.querySelectorAll('.edu-benefits, .edu-term-card, .edu-apply > .edu-section-intro, .edu-application')];
+    const counters = [...document.querySelectorAll('[data-edu-count]')];
+    const frames = new Map();
+    let counted = false;
+    const countUp = () => {
+      if (counted) return;
+      counted = true;
+      counters.forEach(node => {
+        const total = Number(node.dataset.eduCount);
+        const start = performance.now();
+        const tick = now => {
+          const progress = Math.min((now - start) / 900, 1);
+          node.textContent = String(Math.round(total * (1 - (1 - progress) ** 3)));
+          if (progress < 1) frames.set(node, requestAnimationFrame(tick));
+          else frames.delete(node);
+        };
+        frames.set(node, requestAnimationFrame(tick));
+      });
+    };
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        if (entry.target.classList.contains('edu-benefits')) countUp();
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
+    sections.forEach(section => { section.classList.add('edu-motion-ready'); observer.observe(section); });
+    preference.addEventListener('change', event => {
+      if (!event.matches) return;
+      observer.disconnect();
+      sections.forEach(section => section.classList.add('is-visible'));
+      frames.forEach(frame => cancelAnimationFrame(frame));
+      frames.clear();
+      counters.forEach(node => { node.textContent = node.dataset.eduCount; });
+    });
+  }
+
   if (isPage) {
     let saved = 'en';
     try { saved = localStorage.getItem('gan-jiang-language') === 'zh' ? 'zh' : 'en'; } catch (_) { /* Use the shared default. */ }
@@ -129,4 +182,5 @@ I am authorized to apply on behalf of the above department or second-level unit,
   }
   new MutationObserver(translate).observe(root, {attributes:true, attributeFilter:['lang']});
   translate();
+  if (isPage) setupMotion();
 })();

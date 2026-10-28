@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="education-document">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="education.css" />
   <link rel="stylesheet" href="site-chrome.css" />
   <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="education-page.css" />
   <script defer src="education.js"></script>
 </head>
 <body class="education-page">
@@ -25,33 +26,36 @@
     <nav id="site-nav" class="nav" aria-label="Main navigation"><a href="index.html#home" data-education-copy="backHome">返回官网</a><a href="#plan" data-education-copy="planNav">计划说明</a><a href="#apply" data-education-copy="applyNav">申请支持</a><a href="collaborate.html" data-education-copy="collaborateNav">生态合作</a><a class="nav-cta" href="apps/index.html" data-education-copy="downloadNav">下载干将</a></nav>
   </header>
   <main id="main">
+    <div class="edu-notice"><span data-education-copy="notice">面向高校与科研机构的院系或二级机构</span><a href="#eligibility" data-education-copy="eligibilityLink">查看申请资格</a></div>
     <section class="edu-hero edu-shell" aria-labelledby="education-title">
-      <div>
-        <p class="edu-eyebrow" data-education-copy="launch">干将教育支持计划正式启动</p>
-        <h1 id="education-title" data-education-copy="heroTitle">让课堂与科研<br /><em>多一种可能</em></h1>
-        <p class="edu-lead" data-education-copy="heroLead">支持教学，也支持每一次认真的探索。</p>
-        <p class="edu-intro" data-education-copy="heroIntro">为支持高校与科研机构开展教学、人才培养和学术研究，干将面向符合条件的院系或二级机构，提供限期免费使用支持。我们希望，让更多教师、研究人员和学生有机会将干将用于真实场景，探索更高效的学习与科研方式。</p>
+      <div class="edu-hero-copy">
+        <p class="edu-eyebrow edu-launch"><span class="edu-launch-dot" aria-hidden="true"></span><span data-education-copy="launch">干将教育支持计划 · 正式启动</span></p>
+        <h1 id="education-title" class="edu-sr-only" data-education-copy="pageTitle">干将教育支持计划</h1>
+        <p class="edu-intro" data-education-copy="heroIntro">为高校、科研机构所属的院系或二级机构提供限期免费支持，用于课程教学、人才培养和学术研究。</p>
         <div class="edu-actions"><a class="edu-button" href="#apply" data-education-copy="applyCta">申请教育支持</a><a class="edu-text-link" href="#plan" data-education-copy="readPlan">查看计划说明</a></div>
       </div>
-      <div class="edu-offer">
-        <p class="edu-offer-title" data-education-copy="offerTitle">为教学与科研，留一份探索空间</p>
-        <dl class="edu-stats"><div><dt data-education-copy="peopleLabel">每个获批单位最多支持</dt><dd>50 <span data-education-copy="peopleUnit">人</span></dd></div><div><dt data-education-copy="periodLabel">自开通之日起</dt><dd>3 <span data-education-copy="monthUnit">个月</span></dd></div></dl>
-        <p class="edu-offer-note" data-education-copy="quotaNote">具体人数、指定功能及使用额度以审核结果为准，免费支持不等于无限量使用。</p>
-        <p class="edu-offer-end" data-education-copy="noCharge">到期自动结束，账户积分清零，不自动转付费</p>
+      <div class="edu-benefits" aria-labelledby="benefits-title">
+        <h2 class="edu-sr-only" id="benefits-title" data-education-copy="offerTitle">为教学与科研，留一份探索空间</h2>
+        <dl class="edu-benefit-grid">
+          <div class="edu-benefit edu-benefit-people"><dt data-education-copy="peopleLabel">每个获批单位最多支持</dt><dd><span class="edu-stat-value" data-edu-count="50" aria-hidden="true">50</span><span class="edu-sr-only">50 </span><span class="edu-stat-unit" data-education-copy="peopleUnit">人</span></dd><dd class="edu-benefit-note" data-education-copy="peopleNote">具体人数按实际需求核定</dd></div>
+          <div class="edu-benefit edu-benefit-time"><dt data-education-copy="periodLabel">自开通之日起</dt><dd><span class="edu-stat-value" data-edu-count="3" aria-hidden="true">3</span><span class="edu-sr-only">3 </span><span class="edu-stat-unit" data-education-copy="monthUnit">个月</span></dd><dd class="edu-benefit-note" data-education-copy="periodNote">支持期自账户开通之日起计算</dd></div>
+          <div class="edu-benefit edu-benefit-access"><dt data-education-copy="accessLabel">指定功能与使用额度</dt><dd class="edu-benefit-word" data-education-copy="freeAccess">免费</dd><dd class="edu-benefit-note" data-education-copy="accessNote">获批后开通，支持非商业教学与科研。</dd></div>
+        </dl>
+        <p class="edu-benefits-note" data-education-copy="quotaNote">具体人数、指定功能及使用额度以审核结果为准，免费支持不等于无限量使用。</p>
       </div>
     </section>
     <section id="plan" class="edu-plan edu-shell" aria-labelledby="plan-title">
-      <div class="edu-section-intro"><p class="edu-eyebrow">THE PROGRAM</p><h2 id="plan-title" data-education-copy="planTitle">关于这份支持</h2><p data-education-copy="planIntro">仅受理院系或二级机构统一申请，围绕真实的教学与科研需求开展。</p></div>
+      <div class="edu-section-intro edu-plan-heading"><h2 id="plan-title" data-education-copy="planTitle">计划说明</h2><p class="edu-plan-one-line" data-education-copy="planIntro">仅受理院系或二级机构统一申请，围绕真实的教学与科研需求开展。</p></div>
       <div class="edu-terms">
-        <article><span class="edu-number" aria-hidden="true">01</span><div><h3 data-education-copy="whoTitle">谁可以申请</h3><p data-education-copy="whoBody">本计划仅接受高校、科研机构所属的院系或二级机构申请，由负责人或经申请单位授权的教师、研究人员统一提交。不接受课题组、实验室或个人申请。申请人须负责获批账号及用户管理，并确保相关使用符合本计划的支持范围。</p></div></article>
-        <article><span class="edu-number" aria-hidden="true">02</span><div><h3 data-education-copy="supportTitle">提供哪些支持</h3><p data-education-copy="supportBody">审核通过后，申请单位可获得最多50名用户、自开通之日起3个月的免费使用支持，包含指定功能及相应使用额度。具体人数根据实际需求核定，功能范围、使用额度与起止时间将在获批后告知。</p></div></article>
-        <article><span class="edu-number" aria-hidden="true">03</span><div><h3 data-education-copy="useTitle">支持哪些用途</h3><p data-education-copy="useBody">适用于课程教学、学生培养、学术研究、科研训练等非商业教育与科研活动。支持资格及账号仅限获批单位的授权用户使用，不得转售、转让，或用于对外提供商业服务。如有违反，干将团队可立即终止支持。</p></div></article>
-        <article><span class="edu-number" aria-hidden="true">04</span><div><h3 data-education-copy="publicityTitle">让合作被更多人看见</h3><p data-education-copy="publicityBody">我们会宣传参与本计划的单位合作，分享教学与科研应用案例。具体公开的单位信息与案例内容，将与申请单位沟通确认，让更多人了解干将在真实场景中的使用。</p></div></article>
-        <article><span class="edu-number" aria-hidden="true">05</span><div><h3 data-education-copy="endTitle">到期、续期与支持终止</h3><p data-education-copy="endBody">免费支持到期后自动结束，不会自动转为付费服务。仍有需求的单位可在到期前申请续期，是否续期及支持范围，将结合使用情况和资源安排评估确定。</p><p class="edu-termination" data-education-copy="creditExpiry">支持期届满或提前终止后，相关支持账户的积分将全部清零。</p><p class="edu-termination" data-education-copy="termination">干将团队可根据实际情况，随时终止本计划或个别单位的支持。</p></div></article>
+        <article class="edu-term-card edu-eligibility" id="eligibility"><span class="edu-number" aria-hidden="true">01 /</span><div><h3 data-education-copy="whoTitle">谁可以申请</h3><div class="edu-eligibility-grid"><div class="edu-eligible"><span class="edu-eligibility-label" data-education-copy="eligibleLabel">可以申请</span><h4 data-education-copy="eligibleTitle">院系或二级机构</h4><p data-education-copy="eligibleText">高校、科研机构所属单位</p></div><div class="edu-ineligible"><span class="edu-eligibility-label" data-education-copy="ineligibleLabel">不予受理</span><h4 data-education-copy="ineligibleTitle">课题组、实验室或个人</h4><p data-education-copy="ineligibleText">请由所属院系或二级机构统一申请</p></div></div><p data-education-copy="whoBody">由负责人或经申请单位授权的教师、研究人员统一提交。申请人须负责获批账号及用户管理，并确保相关使用符合本计划的支持范围。</p></div></article>
+        <article class="edu-term-card edu-support-details"><span class="edu-number" aria-hidden="true">02 /</span><div><h3 data-education-copy="supportTitle">提供哪些支持</h3><p data-education-copy="supportBody">审核通过后，申请单位可获得最多50名用户、自开通之日起3个月的免费使用支持，包含指定功能及相应使用额度。具体人数根据实际需求核定，功能范围、使用额度与起止时间将在获批后告知。</p></div></article>
+        <article class="edu-term-card edu-usage-details"><span class="edu-number" aria-hidden="true">03 /</span><div><h3 data-education-copy="useTitle">支持哪些用途</h3><p data-education-copy="useBody">适用于课程教学、学生培养、学术研究、科研训练等非商业教育与科研活动。支持资格及账号仅限获批单位的授权用户使用，不得转售、转让，或用于对外提供商业服务。如有违反，干将团队可立即终止支持。</p></div></article>
+        <article class="edu-term-card edu-publicity-details"><span class="edu-number" aria-hidden="true">04 /</span><div><h3 data-education-copy="publicityTitle">合作宣传</h3><p data-education-copy="publicityBody">我们会宣传参与本计划的单位合作，分享教学与科研应用案例。具体公开的单位信息与案例内容，将与申请单位沟通确认，让更多人了解干将在真实场景中的使用。</p></div></article>
+        <article class="edu-term-card edu-expiry-details"><span class="edu-number" aria-hidden="true">05 /</span><div><h3 data-education-copy="endTitle">到期、续期与支持终止</h3><p data-education-copy="endBody">免费支持到期后自动结束，不会自动转为付费服务。仍有需求的单位可在到期前申请续期，是否续期及支持范围，将结合使用情况和资源安排评估确定。</p><p class="edu-termination" data-education-copy="creditExpiry">支持期届满或提前终止后，相关支持账户的积分将全部清零。</p><p class="edu-termination" data-education-copy="termination">干将团队可根据实际情况，随时终止本计划或个别单位的支持。</p></div></article>
       </div>
     </section>
     <section id="apply" class="edu-apply edu-shell" aria-labelledby="apply-title">
-      <div class="edu-section-intro"><p class="edu-eyebrow">BRING YOUR IDEAS</p><h2 id="apply-title" data-education-copy="applyTitle">由申请单位统一提交</h2><p data-education-copy="applyIntro">请将申请信息发送至团队邮箱。我们将根据申请用途、单位需求及可用资源分批审核，并通过预留的联系方式反馈结果。</p><a class="edu-email" href="mailto:ganjiang@yzailab.com">ganjiang@yzailab.com</a><p class="edu-apply-welcome" data-education-copy="welcome">欢迎符合条件的院系或二级机构申请，也期待你的使用建议，一起完善干将的教育支持服务。</p></div>
+      <div class="edu-section-intro"><h2 id="apply-title" data-education-copy="applyTitle">申请教育支持</h2><p class="edu-apply-unit" data-education-copy="applyUnit">由申请单位统一提交</p><p data-education-copy="applyIntro">请将申请信息发送至团队邮箱。我们将根据申请用途、单位需求及可用资源分批审核，并通过预留的联系方式反馈结果。</p><a class="edu-email" href="mailto:ganjiang@yzailab.com">ganjiang@yzailab.com</a><ol class="edu-apply-steps"><li><span aria-hidden="true">1</span><span data-education-copy="stepPrepare">填写申请信息</span></li><li><span aria-hidden="true">2</span><span data-education-copy="stepReview">分批审核反馈</span></li><li><span aria-hidden="true">3</span><span data-education-copy="stepActivate">获批后开通支持</span></li></ol></div>
       <div class="edu-application">
         <h3 data-education-copy="prepareTitle">申请时，请介绍</h3>
         <ol class="edu-checklist"><li data-education-copy="infoOrg">所属高校或科研机构、院系或二级机构名称</li><li data-education-copy="infoContact">负责人或授权联系人姓名、职务及机构邮箱</li><li data-education-copy="infoPurpose">拟使用场景与支持需求</li><li data-education-copy="infoSize">预计使用人数及使用时间</li></ol>
@@ -73,8 +77,9 @@
 我代表上述院系或二级机构申请，已获得相应授权，已阅读计划说明，并负责获批账号及用户管理，可就申请与使用接受联系。</textarea></details>
       </div>
     </section>
+    <p class="edu-welcome edu-shell" data-education-copy="welcome">欢迎符合条件的院系或二级机构申请，也期待你的使用建议，一起完善干将的教育支持服务。</p>
     <p class="edu-signoff edu-shell"><span data-education-copy="teamName">干将团队</span><time datetime="2026-10-28">2026.10.28</time></p>
   </main>
-  <footer class="shared-footer"><div class="footer-identity"><a class="brand" href="index.html#home"><img class="brand-logo" src="assets/images/logo-small.webp" width="30" height="30" alt="" /> GanJiang</a><p data-education-copy="footerTagline">让材料研究的判断更清楚。</p></div><div class="footer-links"><a href="index.html#home" data-education-copy="backHome">返回官网</a><a href="collaborate.html" data-education-copy="collaborateNav">生态合作</a><a href="mailto:ganjiang@yzailab.com" data-education-copy="contactNav">联系我们</a></div></footer>
+  <footer class="shared-footer"><div class="edu-footer-inner edu-shell"><div class="footer-identity"><a class="brand" href="index.html#home"><img class="brand-logo" src="assets/images/logo-small.webp" width="30" height="30" alt="" /> GanJiang</a><p data-education-copy="footerTagline">让材料研究的判断更清楚。</p></div><div class="footer-links"><a href="index.html#home" data-education-copy="backHome">返回官网</a><a href="collaborate.html" data-education-copy="collaborateNav">生态合作</a><a href="mailto:ganjiang@yzailab.com" data-education-copy="contactNav">联系我们</a></div></div></footer>
 </body>
 </html>
