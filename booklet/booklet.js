@@ -8,6 +8,7 @@
   const contents = document.querySelector('.contents');
   const mobile = window.matchMedia('(max-width: 800px)');
   const chapterLinks = Array.from(document.querySelectorAll('[data-section]'));
+  const chapterGroups = Array.from(document.querySelectorAll('.contents-group'));
   const sections = chapterLinks.map(link => document.getElementById(link.dataset.section));
   const search = document.querySelector('#chapter-search');
   const searchStatus = document.querySelector('.search-status');
@@ -66,6 +67,9 @@
       const match = terms.every(term => chapterText[index].includes(term));
       link.hidden = !match;
       if (match) count += 1;
+    });
+    chapterGroups.forEach(group => {
+      group.hidden = !Array.from(group.querySelectorAll('[data-section]')).some(link => !link.hidden);
     });
     searchStatus.hidden = terms.length === 0;
     searchStatus.textContent = count
