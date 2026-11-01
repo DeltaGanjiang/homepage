@@ -84,60 +84,6 @@
   reducedMotion.addEventListener('change', setMarqueeMotion);
   setMarqueeMotion();
 
-  var views = {
-    identify: {
-      title: '古埃及化妆粉 · 实测图谱', legend: 'Observed',
-      heading: '让每一个候选，都有图谱依据',
-      copy: '从衍射信号出发，逐步识别与校验候选物相。', value: 'XRD / CIF',
-      alt: '古埃及化妆粉的实测 XRD 图谱，以衍射角为横轴、相对强度为纵轴。'
-    },
-    decompose: {
-      title: '五相分量 · 各相独立归一化并错位显示', legend: 'Phase profiles',
-      heading: '把混合信号，拆成可理解的物相',
-      copy: '该研究案例包含石膏等五种矿物，分量曲线由峰参数重建。', value: '5 PHASES',
-      alt: '五种矿物的 XRD 分量曲线，各相独立归一化并沿纵轴错位展示；曲线来自官网案例的导出峰参数。'
-    },
-    refine: {
-      title: '实测与计算对照 · 底部为差值', legend: 'Observed / Fit',
-      heading: '用实测信号，检验结构解释',
-      copy: '对照计算曲线与残差，回到证据本身。指标仅对应此案例。', value: 'Rwp 13.08%',
-      alt: '官网研究案例的实测图谱、计算图谱和差值曲线，案例 Rwp 为 13.08%，并非软件通用精度承诺。'
-    }
-  };
-  var tabs = Array.from(document.querySelectorAll('[data-view]'));
-  function selectView(tab) {
-    var view = views[tab.dataset.view];
-    if (!view) return;
-    tabs.forEach(function (item) {
-      var selected = item === tab;
-      item.setAttribute('aria-selected', String(selected));
-      item.tabIndex = selected ? 0 : -1;
-    });
-    byId('analysis-panel').setAttribute('aria-labelledby', tab.id);
-    document.querySelector('.workbench').dataset.analysisView = tab.dataset.view;
-    var themeSuffix = document.documentElement.dataset.theme === 'light' ? '-light' : '';
-    byId('analysis-plot').src = './assets/' + tab.dataset.view + themeSuffix + '.svg';
-    byId('analysis-plot').alt = t(view.alt);
-    byId('plot-title').textContent = t(view.title);
-    byId('plot-legend').replaceChildren();
-    byId('plot-legend').append(document.createElement('i'), document.createTextNode(view.legend));
-    byId('insight-title').textContent = t(view.heading);
-    byId('insight-copy').textContent = t(view.copy);
-    byId('insight-value').textContent = view.value;
-  }
-  tabs.forEach(function (tab, index) {
-    tab.addEventListener('click', function () { selectView(tab); });
-    tab.addEventListener('keydown', function (event) {
-      var next;
-      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
-      else if (event.key === 'ArrowLeft') next = (index + tabs.length - 1) % tabs.length;
-      else if (event.key === 'Home') next = 0;
-      else if (event.key === 'End') next = tabs.length - 1;
-      else return;
-      event.preventDefault(); selectView(tabs[next]); tabs[next].focus();
-    });
-  });
-
   var form = byId('credit-form');
   function readInput() {
     return {
@@ -212,13 +158,9 @@
     var downloadLink = document.querySelector('[data-download]');
     downloadLink.querySelector('span').textContent = t(downloadLink.hasAttribute('href') ? '前往下载中心' : '下载入口即将开放');
     marqueeButton.querySelector('span').textContent = t(marqueeButton.getAttribute('aria-pressed') === 'true' ? '继续滚动' : '暂停滚动');
-    selectView(tabs.find(function (tab) { return tab.getAttribute('aria-selected') === 'true'; }) || tabs[0]);
     renderMoneyReferences();
     updateEstimate();
   }
   window.addEventListener('ganjiang:languagechange', renderLanguage);
-  window.addEventListener('ganjiang:themechange', function () {
-    selectView(tabs.find(function (tab) { return tab.getAttribute('aria-selected') === 'true'; }) || tabs[0]);
-  });
   renderLanguage();
 })();

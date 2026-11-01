@@ -9,11 +9,13 @@
     <meta property="og:title" content="下载干将 GanJiang · 让 XRD 分析进入你的工作台" />
     <meta property="og:description" content="macOS 与 Windows 客户端、XRD 分析能力、积分参考与任务费用估算。" />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://ganjiang.asia/assets/video/ganjiang-scientist-film-poster.webp" />
     <title>下载干将 GanJiang · XRD 科学智能体</title>
     <link rel="icon" href="../assets/images/favicon.png" />
+    <link rel="preload" as="image" href="../assets/video/ganjiang-scientist-film-poster.webp" type="image/webp" />
     <link rel="stylesheet" href="./apps.css" />
     <link rel="stylesheet" href="../site-chrome.css" />
-    <link rel="stylesheet" href="./hero.css" />
+    <link rel="stylesheet" href="./landing.css" />
     <link rel="stylesheet" href="../education.css" />
     <link rel="stylesheet" href="../theme.css" />
     <script defer src="./downloads.js"></script>
@@ -22,6 +24,7 @@
     <script defer src="./locales.en.js"></script>
     <script defer src="./i18n.js"></script>
     <script defer src="./apps.js"></script>
+    <script defer src="./product-film.js"></script>
     <script defer src="../partners.js"></script>
     <script defer src="../title-style.js"></script>
 </head>
@@ -40,38 +43,43 @@
           <p class="topup-news-value"><strong>人民币 0.99 元</strong><span aria-hidden="true">=</span><span>990 积分</span></p>
         </div>
       </aside>
-      <section class="hero desktop-hero shell" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <div class="desktop-product"><span class="desktop-product-icon" aria-hidden="true"><img src="../assets/images/logo-small.webp" width="42" height="42" alt="" /></span><div><p class="eyebrow">GANJIANG FOR DESKTOP</p><p class="desktop-product-note">为材料研究而构建</p></div></div>
-          <h1 id="hero-title"><span class="hero-title-line">让 XRD 分析</span><span class="hero-title-line">进入你的工作台</span></h1>
-          <div class="hero-description"><p class="hero-description-lead">从一张衍射图谱，到有证据的结构判断。</p><p>干将连接物相识别、多相分解与结构精修，<br class="desktop-break" />陪你走完每一步分析。</p></div>
-          <div class="platform-downloads">
-            <a class="platform-download platform-download-macos" href="#downloads" data-download-jump aria-label="macOS：前往客户端下载区"><img src="./assets/platforms/apple.svg" width="30" height="36" alt="" /><span>macOS</span></a>
-            <a class="platform-download platform-download-windows" href="#downloads" data-download-jump aria-label="Windows：前往客户端下载区"><img src="./assets/platforms/windows.svg" width="32" height="32" alt="" /><span>Windows</span></a>
+      <section class="download-hero shell" aria-labelledby="hero-title">
+        <div class="download-hero-intro">
+          <div class="download-hero-heading">
+            <div class="download-product"><img src="../assets/images/logo-small.webp" width="34" height="42" alt="" /><p class="eyebrow">GANJIANG FOR DESKTOP</p></div>
+            <h1 id="hero-title"><span>把干将，</span><span>带到你的工作台。</span></h1>
+          </div>
+          <div class="download-hero-copy">
+            <p class="download-lead">从数据出发，像科学家一样分析。</p>
+            <p class="download-description">规划步骤、调用专业模型、核对结果。让干将处理复杂的分析，把时间留给你的发现。</p>
+            <div class="download-platforms">
+              <a class="download-platform download-platform-primary" href="#downloads" data-download-jump aria-label="macOS：前往客户端下载区"><img src="./assets/platforms/apple.svg" width="22" height="26" alt="" /><span>macOS</span><span class="platform-arrow" aria-hidden="true">↓</span></a>
+              <a class="download-platform" href="#downloads" data-download-jump aria-label="Windows：前往客户端下载区"><img src="./assets/platforms/windows.svg" width="23" height="23" alt="" /><span>Windows</span><span class="platform-arrow" aria-hidden="true">↓</span></a>
+            </div>
+            <div class="download-hero-footnote"><p><span>每个账户赠送</span> <strong>20,000</strong> <span>积分</span></p><a href="../booklet/index.html" data-download-manual>使用说明书 <span aria-hidden="true">↗</span></a></div>
           </div>
         </div>
-        <div class="hero-visual">
-          <div class="workbench" data-analysis-view="identify">
-            <div class="window-bar"><div class="window-identity"><span class="window-app-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m12 2 9 5v10l-9 5-9-5V7Zm0 0v10m-9-5 9 5 9-5m-9 5v10"/></svg></span><span>GanJiang <span class="window-title-divider">/</span> XRD Workspace</span></div><span class="window-demo">案例演示</span></div>
-            <div class="workbench-layout">
-              <div class="workbench-rail" aria-hidden="true"><span class="rail-home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M4 4h6v6H4Zm10 0h6v6h-6ZM4 14h6v6H4Zm10 0h6v6h-6Z"/></svg></span><span class="rail-divider"></span><span data-rail-view="identify"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h3l3-12 3 14 3-10 3 8h3"/></svg></span><span data-rail-view="decompose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 9-5 9 5-9 5Zm0 5 9 5 9-5M3 18l9 5 9-5"/></svg></span><span data-rail-view="refine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 3v18M12 3v18M18 3v18"/><path d="M3 8h6m0 8h6m0-10h6" stroke-width="3"/></svg></span><span class="rail-bottom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></span></div>
-            <div class="workbench-body">
-              <div class="workbench-title"><div><p>ANALYSIS / 001</p><h2>从信号，找到结构</h2></div><span class="sample-tag">粉末 XRD</span></div>
-              <div class="analysis-tabs" role="tablist" aria-label="切换分析案例视图"><button id="tab-identify" role="tab" type="button" aria-selected="true" aria-controls="analysis-panel" data-view="identify"><span class="analysis-tab-number" aria-hidden="true">01</span><span>物相识别</span></button><button id="tab-decompose" role="tab" type="button" aria-selected="false" aria-controls="analysis-panel" tabindex="-1" data-view="decompose"><span class="analysis-tab-number" aria-hidden="true">02</span><span>多相分解</span></button><button id="tab-refine" role="tab" type="button" aria-selected="false" aria-controls="analysis-panel" tabindex="-1" data-view="refine"><span class="analysis-tab-number" aria-hidden="true">03</span><span>结构精修</span></button></div>
-              <div id="analysis-panel" role="tabpanel" aria-labelledby="tab-identify" tabindex="0">
-                <div class="analysis-chart">
-                <div class="plot-meta"><span id="plot-title">古埃及化妆粉 · 实测图谱</span><span id="plot-legend"><i></i>Observed</span></div>
-                <img id="analysis-plot" src="./assets/identify.svg" width="720" height="280" alt="古埃及化妆粉的实测 XRD 图谱，以衍射角为横轴、相对强度为纵轴。" fetchpriority="high" />
-                </div>
-                <div class="analysis-insight"><span class="insight-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4v6c0 4-8 8-8 8s-8-4-8-8V7Z"/><path d="m8 12 3 3 5-6"/></svg></span><div><strong id="insight-title">让每一个候选，都有图谱依据</strong><p id="insight-copy">从衍射信号出发，逐步识别与校验候选物相。</p></div><span id="insight-value">XRD / CIF</span></div>
-              </div>
-              <div class="phase-strip" aria-label="案例中的五种物相"><span>CaSO₄·2H₂O</span><span>Pb₂Cl₂CO₃</span><span>PbCO₃</span><span>PbS</span><span>PbOHCl</span></div>
-            </div>
-            </div>
-            <div class="workbench-status" aria-hidden="true"><span><i></i> XRD / CIF</span><span>SIGNAL <b>→</b> STRUCTURE</span></div>
+        <figure id="product-film" class="product-film" aria-labelledby="product-film-title">
+          <div class="product-film-heading"><h2 id="product-film-title">57 秒，看干将如何工作</h2><span>GANJIANG IN ACTION · 00:57</span></div>
+          <div class="product-film-screen">
+            <video id="product-film-video" width="1920" height="1080" playsinline controls preload="none" poster="../assets/video/ganjiang-scientist-film-poster.webp" aria-label="干将 57 秒产品动画：数据分析、任务规划、计算验证与应用场景" tabindex="0">
+              <source src="../assets/video/ganjiang-scientist-film-57s-en.mp4" type="video/mp4" />
+              <a href="../assets/video/ganjiang-scientist-film-57s-en.mp4">下载短片</a>
+            </video>
+            <button class="product-film-cover" type="button" aria-controls="product-film-video" hidden><span class="product-film-play"><svg width="20" height="22" viewBox="0 0 20 22" aria-hidden="true"><path d="M3 2 18 11 3 20Z" fill="currentColor" /></svg><span data-film-play-label>播放短片</span></span></button>
           </div>
-          <div class="visual-caption"><span><span class="caption-cross" aria-hidden="true">＋</span> 官网研究案例数据 · 分析流程示意，非软件截图</span><a href="../index.html#egypt-story">查看案例</a></div>
-        </div>
+          <figcaption class="product-film-caption">
+            <a class="product-film-youtube" href="https://www.youtube.com/watch?v=vPLoMgQSxSk" target="_blank" rel="noopener noreferrer" aria-label="在 YouTube 观看干将产品短片"><svg width="28" height="20" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="6" fill="#ff0000" /><path d="M11 5.5 19 10l-8 4.5Z" fill="#fff" /></svg><span>YouTube</span><span aria-hidden="true">↗</span></a>
+            <p>英文配音与字幕 · 产品流程演示</p>
+            <a class="product-film-download" href="../assets/video/ganjiang-scientist-film-57s-en.mp4" download>下载短片 <span aria-hidden="true">↓</span></a>
+          </figcaption>
+          <p id="product-film-status" role="status" hidden></p>
+          <div class="product-film-chapters" role="group" aria-label="跳转至短片章节" hidden>
+            <button type="button" data-film-time="6.5" aria-controls="product-film-video"><span>01</span><span>数据与问题</span><time>00:06</time></button>
+            <button type="button" data-film-time="11.7" aria-controls="product-film-video"><span>02</span><span>分析与验证</span><time>00:12</time></button>
+            <button type="button" data-film-time="42.7" aria-controls="product-film-video"><span>03</span><span>教学与研发</span><time>00:43</time></button>
+          </div>
+        </figure>
       </section>
 
       <section class="engine-band shell" aria-labelledby="engine-heading">
