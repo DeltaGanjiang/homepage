@@ -22,3 +22,15 @@ Names are visible beside the decorative images. Maintain both the shared copy in
 `partners.js` and download-page strings in `apps/locales.en.js` when renaming a
 partner. All three HTML pages keep the same static markup, with relative image
 paths adjusted for the download page.
+
+## Education collaboration logos
+
+The education page lists the following two institutions under “已达成合作意向”,
+as specified by the user. The logos were downloaded from the official university
+websites on 2026-11-13 and are kept in their original colors and proportions.
+Both white wordmarks use a dark display background in either page theme.
+
+| Local file | Institution | Official source |
+| --- | --- | --- |
+| hkust-guangzhou-wordmark.png | 香港科技大学（广州） | https://www.hkust-gz.edu.cn/wp-content/themes/hkust-gz-official-0827/images/logo-e-white-2x.png |
+| shanghai-university.svg | 上海大学 | https://www.shu.edu.cn/images/logo.svg |
