@@ -48,3 +48,6 @@ venv/
 !/assets/video/ganjiang-full-film.mp4
 !/assets/video/ganjiang-full-film-poster.jpg
 !/assets/video/*-poster.webp
+
+# Temporary database reference; the website uses a small, independent preview.
+/ganjiang_pdf.pkl
