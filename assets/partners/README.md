@@ -42,3 +42,12 @@ the user-provided `上海大学MGI-干将PR.docx` on 2026-11-18. Its caption ide
 course guest Zhang Tongyi lecturing to students. The collaboration article is
 stored in `education.html`, with English copy in `education.js`; neither the
 article nor the photo depends on the source document remaining in the repository.
+
+## HKUST Guangzhou MCPF education collaboration
+
+`hkust-guangzhou-mcpf.png` is the original platform overview image extracted from
+the user-provided `港科广MCPF.docx` on 2026-11-19. Its caption identifies the
+Materials Characterization and Preparation Facility (MCPF). The collaboration
+article is stored in `education.html`, with English copy in `education.js`;
+neither the article nor the image depends on the source document remaining in
+the repository. The facility's official website is https://mcpf.hkust-gz.edu.cn/.
