@@ -75,6 +75,19 @@ html[data-theme="light"] body.education-page {
 .edu-partner-logo { display: flex; align-items: center; justify-content: center; width: 84px; height: 44px; padding: 6px; border-radius: 6px; background: #1c1e21; }
 .edu-partner-logo img { display: block; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
 .education-page .edu-partner > p { padding: 14px; border-top: 1px solid var(--edu-rule); color: var(--edu-muted); font-size: 12px; line-height: 1.8; }
+.edu-partner-list > li:has(> .edu-partner-article[open]) { grid-column: 1 / -1; }
+.edu-partner-article[open] > summary { border-bottom: 1px solid var(--edu-rule); }
+.edu-partner-story { max-width: 860px; margin-inline: auto; padding: clamp(20px, 4vw, 40px); overflow-wrap: anywhere; }
+.education-page .edu-partner-story h3 { font-size: clamp(20px, 2.4vw, 26px); font-weight: 550; line-height: 1.6; letter-spacing: -.02em; }
+.edu-partner-story h4 { margin: 30px 0 12px; color: var(--edu-ink); font-size: 18px; font-weight: 550; line-height: 1.6; }
+.education-page .edu-partner-story p { margin-top: 16px; color: var(--edu-muted); font-size: 14px; line-height: 2; }
+.education-page .edu-partner-story a { color: var(--edu-accent); text-decoration: underline; text-underline-offset: 4px; }
+.edu-partner-photo { margin: 26px 0; }
+.edu-partner-photo img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.edu-partner-photo figcaption { margin-top: 10px; color: var(--edu-muted); font-size: 12px; line-height: 1.8; text-align: center; }
+.edu-partner-support { display: grid; gap: 12px; margin: 20px 0; padding: 20px 20px 20px 38px; border-radius: 10px; background: var(--edu-surface); color: var(--edu-muted); font-size: 14px; line-height: 1.9; }
+.edu-partner-support li::marker { color: var(--edu-accent); }
+.edu-partner-support strong { color: var(--edu-ink); font-weight: 550; }
 .education-page .edu-plan { display: block; padding-block: 82px 0; border: 0; }
 .education-page .edu-section-intro h2 { font-size: clamp(28px, 3vw, 36px); font-weight: 550; line-height: 1.35; letter-spacing: -.03em; text-wrap: balance; }
 .education-page .edu-plan-heading > .edu-plan-one-line { max-width: none; margin-top: 15px; font-size: 16px; line-height: 1.7; }

@@ -34,3 +34,11 @@ Both white wordmarks use a dark display background in either page theme.
 | --- | --- | --- |
 | hkust-guangzhou-wordmark.png | 香港科技大学（广州） | https://www.hkust-gz.edu.cn/wp-content/themes/hkust-gz-official-0827/images/logo-e-white-2x.png |
 | shanghai-university.svg | 上海大学 | https://www.shu.edu.cn/images/logo.svg |
+
+## Shanghai University education collaboration
+
+`shanghai-university-ai-course.jpg` is the original classroom photo extracted from
+the user-provided `上海大学MGI-干将PR.docx` on 2026-11-18. Its caption identifies
+course guest Zhang Tongyi lecturing to students. The collaboration article is
+stored in `education.html`, with English copy in `education.js`; neither the
+article nor the photo depends on the source document remaining in the repository.
