@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="GJ-PDF-V1，干将自主构建的粉末衍射数据库。207,146 条参考记录，89 种元素，支持 Cu、Co、Mo、Cr、Fe、Ag 六种靶材。年度订阅 30 万元人民币。" />
+    <meta name="description" content="GJ-PDF-V1 干将自主粉末衍射数据库：207,146 个结构条目，89 种元素，六种靶材衍射参考。全部结构均由团队独立计算，并经弛豫得到稳定结构，建立六靶材衍射参考。数据库独立订阅 30 万元 / 年；干将 App 已内置本数据库。" />
     <meta name="theme-color" content="#060918" />
     <script src="theme.js"></script>
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:title" content="GJ-PDF-V1 — 干将自主粉末衍射数据库" />
-    <meta property="og:description" content="把数据积累成资产，让关键判断有底气。支持六种 X 射线靶材，年度订阅 30 万元人民币。" />
+    <meta property="og:description" content="从团队独立计算的稳定结构，到六种靶材的衍射依据。207,146 个结构条目，独立计算、关联索引与数据完整性核验。数据库独立订阅 30 万元 / 年；干将 App 已内置本数据库。" />
     <meta property="og:image" content="https://ganjiang.asia/assets/images/gj-pdf-crystal.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="GJ-PDF-V1 — 干将自主粉末衍射数据库" />
-    <meta name="twitter:description" content="把数据积累成资产，让关键判断有底气。支持六种 X 射线靶材，年度订阅 30 万元人民币。" />
+    <meta name="twitter:description" content="从团队独立计算的稳定结构，到六种靶材的衍射依据。207,146 个结构条目，数据库独立订阅 30 万元 / 年；干将 App 已内置本数据库。" />
     <meta name="twitter:image" content="https://ganjiang.asia/assets/images/gj-pdf-crystal.webp" />
     <link rel="canonical" href="https://ganjiang.asia/gj-pdf.html" />
     <title>GJ-PDF-V1 — 干将自主粉末衍射数据库</title>
@@ -28,72 +28,108 @@
     <script defer src="script.js"></script>
     <script defer src="design.js"></script>
     <script defer src="assets/science/gj-pdf-v1.js"></script>
+    <script defer src="assets/science/gj-pdf-structures.js"></script>
     <script defer src="gj-pdf.js"></script>
-    <script defer src="title-style.js"></script>
   </head>
   <body class="site-v2 gj-pdf-page" data-gj-pdf>
     <a class="skip-link" href="#gj-pdf-main" data-design-copy="skip">跳到主要内容</a>
     <header class="site-header shared-header">
       <a class="brand" href="index.html#home" aria-label="GanJiang Home"><img class="brand-logo" width="30" height="30" decoding="async" src="assets/images/logo-small.webp" alt="" /> GanJiang</a>
       <div class="header-actions"><button class="language-toggle" type="button" aria-label="Switch to English">EN</button><button aria-controls="site-nav" class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false">菜单</button></div>
-      <nav id="site-nav" class="nav" aria-label="Main navigation"><a href="index.html#home" data-i18n="backHome">返回主页</a><a href="#gj-pdf-data" data-pdf-copy="navData">数据底座</a><a href="#gj-pdf-targets" data-pdf-copy="navTargets">支持靶材</a><a href="#gj-pdf-preview" data-pdf-copy="navPreview">数据预览</a><a class="nav-cta" href="#gj-pdf-subscription" data-pdf-copy="navSubscribe">年度订阅</a></nav>
+      <nav id="site-nav" class="nav" aria-label="Main navigation"><a href="index.html#home" data-i18n="backHome">返回主页</a><a href="#gj-pdf-data" data-pdf-copy="navData">数据规模</a><a href="#gj-pdf-quality" data-pdf-copy="navQuality">数据品质</a><a href="#gj-pdf-preview" data-pdf-copy="navPreview">多靶材预览</a><a class="nav-cta" href="#gj-pdf-subscription" data-pdf-copy="navSubscribe">数据库订阅</a></nav>
       <div class="reading-progress" aria-hidden="true"><i></i></div>
     </header>
     <main id="gj-pdf-main" tabindex="-1">
-      <section class="gj-pdf-product-hero section-shell" aria-labelledby="gj-pdf-product-title">
-        <div class="gj-pdf-product-copy"><p class="gj-pdf-kicker">GANJIANG / POWDER DIFFRACTION FILE</p><h1 id="gj-pdf-product-title">GJ-PDF-V1</h1><p class="gj-pdf-product-statement"><span data-pdf-copy="statement">把数据积累成资产</span><em data-pdf-copy="statementTwo">让关键判断有底气</em></p><p class="gj-pdf-intro" data-pdf-copy="intro">干将自主构建的粉末衍射数据库。207,146 条参考记录、6,125,958 条特征峰数据，连接化学组成与晶体学证据，为每一次候选检索、物相比对与结论复查提供坚实支撑。</p><div class="gj-pdf-actions"><a class="button" href="#gj-pdf-subscription" data-pdf-copy="subscribeCta">了解年度订阅</a><a class="text-link" href="#gj-pdf-preview"><span data-pdf-copy="view">查看真实条目</span></a></div><p class="gj-pdf-hero-price"><span data-pdf-copy="annualLabel">年度订阅</span><strong>¥300,000</strong><span data-pdf-copy="perYear">人民币 / 年</span></p></div>
-        <figure class="gj-pdf-art"><img src="assets/images/gj-pdf-crystal.webp" width="1536" height="1024" fetchpriority="high" decoding="async" alt="晶体、内部有序点阵与衍射光线的艺术示意" data-pdf-art /></figure>
+      <section class="pdf-hero section-shell" aria-labelledby="pdf-title">
+        <div class="pdf-hero-copy">
+          <p class="gj-pdf-kicker">GANJIANG / POWDER DIFFRACTION FILE</p>
+          <h1 id="pdf-title">GJ-PDF<span>-V1</span></h1>
+          <p class="pdf-statement"><span data-pdf-copy="statement">从团队独立计算的稳定结构</span><em data-pdf-copy="statementTwo">到每一次物相判断的依据</em></p>
+          <p class="pdf-intro" data-pdf-copy="intro">207,146 个结构条目，全部由团队独立计算，并<strong class="pdf-structure-emphasis">经弛豫得到稳定结构</strong>，再建立六种靶材下的衍射参考。把独立计算与弛豫后的结构、谱峰与检索索引连成一体，为物相判断提供统一依据。</p>
+          <div class="pdf-actions"><a class="button" href="#gj-pdf-preview" data-pdf-copy="view">探索真实数据</a><a class="text-link" href="#gj-pdf-subscription" data-pdf-copy="subscribeCta">了解数据库独立订阅</a></div>
+          <p class="pdf-app-note"><span data-pdf-copy="appIncluded">干将 App 已内置本数据库。</span><a href="apps/index.html" data-pdf-copy="appLink">体验干将 App</a></p>
+          <div class="pdf-hero-tags"><span data-pdf-copy="tagStructures">团队独立计算</span><span data-pdf-copy="tagRelaxed">稳定结构建库</span><span data-pdf-copy="tagTargets">六靶材参考</span></div>
+        </div>
+        <figure class="pdf-hero-visual">
+          <div class="pdf-visual-head"><span>STRUCTURE → DIFFRACTION</span><span>GJ-PDF / V1</span></div>
+          <img src="assets/images/gj-pdf-crystal.webp" width="1536" height="1024" fetchpriority="high" decoding="async" alt="有序晶体点阵与衍射光线的艺术示意" data-pdf-art />
+          <figcaption><strong>207,146<span data-pdf-copy="heroStructures">个结构条目 · 同一套参考体系</span></strong><div class="pdf-target-symbols" aria-label="Cu, Co, Mo, Cr, Fe, Ag"><span>Cu</span><span>Co</span><span>Mo</span><span>Cr</span><span>Fe</span><span>Ag</span></div></figcaption>
+        </figure>
       </section>
-      <section class="gj-pdf-value section-shell" aria-labelledby="gj-pdf-value-title">
-        <div class="gj-pdf-value-intro"><p class="gj-pdf-kicker">THE VALUE OF THE DATABASE</p><h2 id="gj-pdf-value-title"><span data-pdf-copy="valueTitle">数据建设的门槛</span><em data-pdf-copy="valueTitleTwo">藏在每一条参考里</em></h2><p data-pdf-copy="valueIntro">一套有价值的衍射数据库，需要把广泛的化学覆盖、相互关联的晶体学信息与可用的检索体系同时建立起来。数据的珍贵，体现在它能够反复支撑新的材料问题。</p><div class="gj-pdf-value-evidence"><strong>6,125,958</strong><span data-pdf-copy="valuePeakLabel">条特征峰数据，组成可反复查阅的衍射参考</span></div></div>
-        <div class="gj-pdf-value-work"><article><span>01 / COVERAGE</span><h3 data-pdf-copy="valueCoverageTitle">跨体系覆盖，需要系统积累</h3><p data-pdf-copy="valueCoverageBody">89 种元素、46,627 类元素组合、228 个空间群。把广阔的化学空间纳入同一参考框架，为新体系与复杂样品保留更多候选可能。</p></article><article><span>02 / CONNECTION</span><h3 data-pdf-copy="valueContextTitle">让峰有归属，让判断有上下文</h3><p data-pdf-copy="valueContextBody">从化学组成到空间群，从峰位、强度到晶面指数与晶面间距，多维信息在同一条目中对应。研究者能沿着参考记录，逐项核对匹配依据。</p></article><article><span>03 / REUSE</span><h3 data-pdf-copy="valueReuseTitle">一次系统组织，服务反复探索</h3><p data-pdf-copy="valueReuseBody">统一 GJ 编号、标准化字段与双层元素索引，让海量记录形成可机读、可检索、可复用的数据资产，为干将的物相分析提供持续可用的参考底座。</p></article></div>
-      </section>
-      <section id="gj-pdf-data" class="gj-pdf section-shell" aria-labelledby="gj-pdf-title">
-        <div class="gj-pdf-heading">
-          <div class="gj-pdf-copy">
-            <p class="gj-pdf-kicker">THE DATA FOUNDATION</p>
-            <h2 id="gj-pdf-title" class="gj-pdf-foundation-title" data-pdf-copy="foundationTitle">20 万余条参考，构筑科研数据底座</h2>
-            <p class="gj-pdf-intro" data-pdf-copy="foundationIntro">从一条物相记录，到一套把数据积累成资产。GJ-PDF-V1 用统一编号与标准化字段，把化学组成、晶体学信息和衍射特征连接起来，为材料研究提供可检索、可比对、可追溯的参考。</p>
+
+      <section id="gj-pdf-data" class="pdf-data section-shell" aria-labelledby="pdf-data-title">
+        <div class="pdf-section-head"><div><p class="gj-pdf-kicker">A FOUNDATION YOU CAN MEASURE</p><h2 id="pdf-data-title"><span data-pdf-copy="dataTitle">规模，看得见</span><em data-pdf-copy="dataTitleTwo">价值，经得起逐条核对</em></h2></div><p data-pdf-copy="dataIntro">跨越元素、化学体系与晶体对称性，建立可检索、可比对的自主参考底座。每一种靶材，都有对应的衍射数据。</p></div>
+        <dl class="pdf-metrics">
+          <div class="pdf-metric-primary"><dt data-pdf-copy="structures">个结构条目</dt><dd data-pdf-stat="entries">207,146</dd></div>
+          <div><dt data-pdf-copy="elements">种元素</dt><dd data-pdf-stat="elements">89</dd></div>
+          <div><dt data-pdf-copy="systems">类元素组合</dt><dd data-pdf-stat="chemicalSystems">46,627</dd></div>
+          <div><dt data-pdf-copy="spacegroups">个空间群编号</dt><dd data-pdf-stat="spacegroups">228</dd></div>
+        </dl>
+        <p class="pdf-data-note" data-pdf-copy="structureNote">统一 GJ 编号，关联组成、空间群与衍射峰</p>
+        <div class="pdf-coverage" data-pdf-coverage hidden>
+          <div class="pdf-coverage-title">
+            <h3 data-pdf-copy="coverageTitle">你的材料体系，在覆盖范围内吗？</h3>
+            <p data-pdf-copy="coverageIntro">选择元素，查看包含该元素的结构条目数。</p>
+            <p class="pdf-element-readout" aria-live="polite" aria-atomic="true"><strong data-pdf-element-symbol>O</strong><span><b data-pdf-element-count>—</b> <span data-pdf-copy="elementEntries">个结构条目包含此元素</span></span></p>
+            <figure class="pdf-element-identity">
+              <svg class="pdf-element-logo" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+                <g class="pdf-element-orbits"><ellipse cx="100" cy="100" rx="88" ry="34" transform="rotate(-30 100 100)"/><ellipse cx="100" cy="100" rx="88" ry="34" transform="rotate(30 100 100)"/><ellipse cx="100" cy="100" rx="88" ry="34" transform="rotate(90 100 100)"/></g>
+                <g class="pdf-element-points"><circle cx="171.4" cy="76.7" r="4"/><circle cx="28.6" cy="76.7" r="4"/><circle cx="100" cy="188" r="4"/></g>
+                <circle class="pdf-element-core" cx="100" cy="100" r="32"/>
+                <text x="100" y="103" data-pdf-element-logo-symbol>O</text>
+              </svg>
+              <figcaption><strong data-pdf-element-name>氧</strong><span data-pdf-element-english>OXYGEN</span><p><span data-pdf-copy="atomicNumber">原子序数</span> <b data-pdf-element-number>8</b></p></figcaption>
+            </figure>
           </div>
-          <dl class="gj-pdf-stats">
-            <div class="gj-pdf-stat-main"><dt data-pdf-copy="entries">条衍射参考记录</dt><dd>207,146</dd><span data-pdf-copy="entryNote">统一 GJ 编号，连接组成、结构与谱峰</span></div>
-            <div><dt data-pdf-copy="elements">种元素</dt><dd>89</dd></div>
-            <div><dt data-pdf-copy="systems">类元素组合</dt><dd>46,627</dd></div>
-            <div><dt data-pdf-copy="spacegroups">个空间群</dt><dd>228</dd></div>
-          </dl>
+          <div class="pdf-periodic-wrap"><div class="pdf-periodic" data-pdf-periodic role="group" aria-label="数据库覆盖元素"></div><p class="pdf-coverage-note" data-pdf-copy="coverageNote">绿色为已收录元素；单个结构可包含多种元素，各元素条目数不作加总。</p></div>
         </div>
-        <div class="gj-pdf-advantages">
-          <article><span class="gj-pdf-index">01 /</span><h3 data-pdf-copy="ownTitle">广泛覆盖，拓展候选空间</h3><p data-pdf-copy="ownBody">跨越 46,627 类元素组合，将分属不同化学体系的参考记录纳入统一数据框架，为陌生样品与复杂组成提供更广的候选视野。</p></article>
-          <article><span class="gj-pdf-index">02 /</span><h3 data-pdf-copy="filterTitle">双层索引，让检索更聚焦</h3><p data-pdf-copy="filterBody">元素组合索引与单元素倒排索引相互配合，将成分信息转化为筛选条件，让研究者把比对精力集中在相关候选上。</p></article>
-          <article><span class="gj-pdf-index">03 /</span><h3 data-pdf-copy="evidenceTitle">多维证据，支撑逐项核查</h3><p data-pdf-copy="evidenceBody">在同一条记录中关联峰位、相对强度、hkl、d 间距与空间群。从一个匹配结果回到具体晶面，为科研判断保留可复查的依据。</p></article>
-        </div>
-        <section id="gj-pdf-targets" class="gj-pdf-targets" aria-labelledby="gj-pdf-targets-title">
-          <div class="gj-pdf-targets-heading"><div><p class="gj-pdf-kicker">SIX TARGETS. ONE FOUNDATION.</p><h2 id="gj-pdf-targets-title" data-pdf-copy="targetsTitle">六种靶材，拓宽研究边界</h2></div><p data-pdf-copy="targetsIntro">支持铜、钴、钼、铬、铁和银六种 X 射线靶材，让自主衍射数据底座适配更多实验条件与材料研究场景。</p></div>
-          <ul class="gj-pdf-target-grid" aria-label="Supported X-ray target materials">
-            <li><span class="gj-pdf-target-number">29</span><strong>Cu</strong><span data-pdf-copy="copper">铜</span><small>COPPER</small></li>
-            <li><span class="gj-pdf-target-number">27</span><strong>Co</strong><span data-pdf-copy="cobalt">钴</span><small>COBALT</small></li>
-            <li><span class="gj-pdf-target-number">42</span><strong>Mo</strong><span data-pdf-copy="molybdenum">钼</span><small>MOLYBDENUM</small></li>
-            <li><span class="gj-pdf-target-number">24</span><strong>Cr</strong><span data-pdf-copy="chromium">铬</span><small>CHROMIUM</small></li>
-            <li><span class="gj-pdf-target-number">26</span><strong>Fe</strong><span data-pdf-copy="iron">铁</span><small>IRON</small></li>
-            <li><span class="gj-pdf-target-number">47</span><strong>Ag</strong><span data-pdf-copy="silver">银</span><small>SILVER</small></li>
-          </ul>
-        </section>
-        <div id="gj-pdf-preview" class="gj-pdf-preview">
-          <div class="gj-pdf-preview-heading"><div><span class="gj-pdf-preview-kicker" data-pdf-copy="previewKicker">数据库一瞥</span><h3 data-pdf-copy="previewTitle">让数据，自己说话</h3></div><div class="gj-pdf-samples" role="group" aria-label="选择参考条目" hidden><button type="button" data-pdf-sample="0" aria-pressed="true" aria-controls="gj-pdf-entry">Ti–O</button><button type="button" data-pdf-sample="1" aria-pressed="false" aria-controls="gj-pdf-entry">Si</button><button type="button" data-pdf-sample="2" aria-pressed="false" aria-controls="gj-pdf-entry">Li–Fe–P–O</button></div></div>
-          <div id="gj-pdf-entry" class="gj-pdf-entry">
-            <div class="gj-pdf-entry-info" aria-live="polite" aria-atomic="true"><span class="gj-pdf-entry-id" data-pdf-entry-id>gj-73744</span><h4 data-pdf-formula>O₈Ti₄</h4><dl><div><dt data-pdf-copy="composition">元素组成</dt><dd data-pdf-elements>O · Ti</dd></div><div><dt data-pdf-copy="spacegroup">空间群</dt><dd data-pdf-spacegroup>P4₂/mnm · #136</dd></div><div><dt data-pdf-copy="peakCount">收录特征峰</dt><dd><span data-pdf-peak-count>30</span> <span data-pdf-copy="peakUnit">条</span></dd></div></dl><p data-pdf-copy="rawFormula">化学式按库内原始条目展示。</p></div>
-            <figure class="gj-pdf-chart"><svg id="gj-pdf-plot" viewBox="0 0 680 230" role="img" aria-labelledby="gj-pdf-plot-title gj-pdf-plot-description"><title id="gj-pdf-plot-title">O8Ti4 参考衍射峰</title><desc id="gj-pdf-plot-description">库内条目 gj-73744 的参考棒图，横轴为 2θ，纵轴为相对强度。</desc><g class="gj-pdf-chart-grid"><path d="M42 32H660M42 111H660M42 190H660" /></g><g class="gj-pdf-chart-axis"><text x="8" y="36">100</text><text x="15" y="115">50</text><text x="22" y="194">0</text><text x="42" y="214">10°</text><text x="196.5" y="214">30°</text><text x="351" y="214">50°</text><text x="505.5" y="214">70°</text><text x="641" y="214">90°</text><text x="330" y="230">2θ</text></g><g class="gj-pdf-chart-peaks" data-pdf-peaks><path d="M176.572 190V32.000" /><path d="M176.586 190V32.044" /><path d="M243.550 190V80.154" /><path d="M243.551 190V153.385" /><path d="M497.634 190V155.834" /><path d="M401.918 190V161.924" /><path d="M401.948 190V161.926" /><path d="M449.901 190V163.318" /><path d="M384.300 190V166.898" /><path d="M384.301 190V166.898" /><path d="M384.300 190V166.898" /><path d="M384.300 190V166.898" /><path d="M384.315 190V166.904" /><path d="M384.315 190V166.904" /><path d="M384.316 190V166.904" /><path d="M384.315 190V166.904" /><path d="M497.634 190V172.917" /><path d="M497.635 190V172.917" /><path d="M283.365 190V174.816" /><path d="M283.365 190V174.816" /><path d="M283.355 190V174.816" /><path d="M283.356 190V174.816" /><path d="M267.328 190V179.456" /><path d="M267.329 190V179.457" /><path d="M504.234 190V181.587" /><path d="M504.234 190V181.587" /><path d="M504.240 190V181.588" /><path d="M504.241 190V181.588" /><path d="M459.233 190V183.124" /><path d="M459.234 190V183.124" /></g></svg><figcaption><span data-pdf-copy="chartCaption">库内参考峰 · 相对强度归一化至 100</span><span>Cu Kα / 10–90°</span></figcaption></figure>
-          </div>
-          <details class="gj-pdf-details"><summary data-pdf-copy="details">查看峰位与晶面信息</summary><div class="gj-pdf-table-scroll" role="region" tabindex="0" aria-label="参考峰数据"><table class="gj-pdf-peak-table"><caption data-pdf-copy="tableCaption">当前条目中相对强度最高的 6 条特征峰</caption><thead><tr><th scope="col">2θ (°)</th><th scope="col" data-pdf-copy="intensity">相对强度</th><th scope="col">d (Å)</th><th scope="col">hkl</th></tr></thead><tbody data-pdf-peak-rows><tr><td>27.420</td><td>100.00</td><td>3.2527</td><td>(1 -1 1)</td></tr><tr><td>27.422</td><td>99.97</td><td>3.2525</td><td>(1 1 -1)</td></tr><tr><td>36.091</td><td>69.52</td><td>2.4887</td><td>(2 -1 -1) · (1 0 -2)</td></tr><tr><td>36.091</td><td>23.17</td><td>2.4887</td><td>(0 1 1)</td></tr><tr><td>68.982</td><td>21.62</td><td>1.3614</td><td>(1 2 -4)</td></tr><tr><td>56.591</td><td>17.77</td><td>1.6263</td><td>(2 -2 2)</td></tr></tbody></table></div></details>
-          <p class="gj-pdf-preview-note" data-pdf-copy="previewNote">选取 V1 中的 3 条记录展示，参考峰不代表实测图谱；完整数据库的物相检索请在干将中体验。</p>
-        </div>
-        <div class="gj-pdf-footnote"><p><span class="gj-pdf-footnote-dot" aria-hidden="true"></span><span data-pdf-copy="footnote">V1 数据快照 · 6,125,958 条特征峰数据 · 每条记录最多保留 30 条特征峰</span></p><a href="collaborate.html"><span data-pdf-copy="collaborate">共建下一代衍射数据底座</span></a></div>
       </section>
-      <section id="gj-pdf-subscription" class="gj-pdf-subscription section-shell" aria-labelledby="gj-pdf-subscription-title">
-        <div class="gj-pdf-subscription-copy"><p class="gj-pdf-kicker">ANNUAL SUBSCRIPTION</p><h2 id="gj-pdf-subscription-title"><span data-pdf-copy="subscriptionTitle">让系统的数据积累</span><span data-pdf-copy="subscriptionTitleTwo">成为持续的科研支撑</span></h2><p data-pdf-copy="subscriptionIntro">订阅 GJ-PDF-V1，将海量参考记录、晶体学关联与元素索引带入日常研究。把更多时间留给材料问题，让每一次比对都有统一的数据依据。</p><a class="gj-pdf-contact" href="mailto:bincao@hkust-gz.edu.cn">bincao@hkust-gz.edu.cn </a></div>
-        <div class="gj-pdf-price-card"><div class="gj-pdf-plan"><span>GJ-PDF-V1</span><span data-pdf-copy="annualPlan">年度订阅</span></div><p class="gj-pdf-price"><span>¥</span>300,000</p><p class="gj-pdf-price-unit" data-pdf-copy="priceUnit">人民币 / 年 · RMB / YEAR</p><ul class="gj-pdf-plan-features"><li data-pdf-copy="planDatabase">自主粉末衍射数据库</li><li data-pdf-copy="planEntries">207,146 条参考记录 · 89 种元素</li><li data-pdf-copy="planTargets">支持 Cu / Co / Mo / Cr / Fe / Ag 六种靶材</li></ul><a class="button" href="mailto:bincao@hkust-gz.edu.cn?subject=GJ-PDF-V1%20Annual%20Subscription"><span data-pdf-copy="contactSales">咨询年度订阅</span></a></div>
+
+      <section id="gj-pdf-quality" class="pdf-quality section-shell" aria-labelledby="pdf-quality-title">
+        <div class="pdf-section-head"><div><p class="gj-pdf-kicker">BUILT FOR TRUST, FROM THE START</p><h2 id="pdf-quality-title"><span data-pdf-copy="qualityTitle">数据的功夫</span><em data-pdf-copy="qualityTitleTwo">做在你开始检索之前</em></h2></div><p data-pdf-copy="qualityIntro">全部结构均由团队独立计算，并<strong class="pdf-structure-emphasis">经弛豫得到稳定结构</strong>，再生成六种靶材的衍射参考。将结构计算、衍射建库与数据完整性核验衔接起来，为每条参考建立可复查的依据。</p></div>
+        <div class="pdf-quality-grid">
+          <article><span class="pdf-quality-label">STRUCTURE</span><h3 data-pdf-copy="qualityStructureTitle">独立计算，结构弛豫</h3><p data-pdf-copy="qualityStructureBody">207,146 个结构条目均由团队独立计算，并<strong class="pdf-structure-emphasis">经弛豫得到稳定结构</strong>，以此建立自主数据库。每个条目关联化学式、元素组成、原子数、空间群与统一 GJ 编号，将结构计算的成果落实到衍射参考。</p><div class="pdf-quality-evidence"><strong data-pdf-stat="entries">207,146</strong><span data-pdf-copy="qualityStructureEvidence">个团队独立计算的稳定结构条目</span></div></article>
+          <article><span class="pdf-quality-label">CALCULATION</span><h3 data-pdf-copy="qualityCalculationTitle">六种靶材，分别计算</h3><p data-pdf-copy="qualityCalculationBody">基于同一套结构，按 Cu、Co、Mo、Cr、Fe、Ag 的波长分别生成衍射参考。峰位与相对强度随靶材对应，支持跨实验条件的物相比对。</p><div class="pdf-quality-evidence"><strong>6</strong><span data-pdf-copy="qualityCalculationEvidence">种靶材 · Kα 加权平均波长</span></div></article>
+          <article><span class="pdf-quality-label">INTEGRITY</span><h3 data-pdf-copy="qualityIntegrityTitle">完整性，逐项核验</h3><p data-pdf-copy="qualityIntegrityBody">检查编号唯一性、必要字段、谱峰数组长度、数值有效性与索引引用，排查空字段、峰表错位与失效索引，让数据在检索和读取时保持完整。</p><div class="pdf-quality-evidence"><strong data-pdf-copy="qualityIntegrityNumber">逐条</strong><span data-pdf-copy="qualityIntegrityEvidence">核验结构条目与关联谱峰</span></div></article>
+        </div>
+        <div class="pdf-quality-strip"><span data-pdf-copy="qualityStripTitle">从结构到谱峰，保留可复查的联系</span><p>GJ ID <i>/</i> <span data-pdf-copy="fieldFormula">化学式</span> <i>/</i> <span data-pdf-copy="fieldSpacegroup">空间群</span> <i>/</i> 2θ <i>/</i> I <i>/</i> d <i>/</i> hkl</p></div>
+      </section>
+
+      <section id="gj-pdf-preview" class="pdf-explorer section-shell" aria-labelledby="pdf-explorer-title">
+        <div class="pdf-section-head"><div><p class="gj-pdf-kicker">SIX TARGETS. REAL REFERENCES.</p><h2 id="pdf-explorer-title"><span data-pdf-copy="previewTitle">换一种靶材</span><em data-pdf-copy="previewTitleTwo">亲眼看见数据的不同</em></h2></div><p data-pdf-copy="previewIntro">选择靶材与示例结构，直接查看库内参考峰、波长和晶面信息。这里的每一个峰，都来自对应靶材的实际数据快照。</p></div>
+        <div class="pdf-explorer-panel">
+          <div class="pdf-target-tabs" role="group" aria-label="选择 X 射线靶材" data-pdf-targets hidden>
+            <button type="button" data-pdf-target="Cu" aria-pressed="true" aria-controls="pdf-reference"><span>Cu</span><small data-pdf-copy="copper">铜</small><span class="pdf-tab-wave">1.5418 Å</span></button>
+            <button type="button" data-pdf-target="Co" aria-pressed="false" aria-controls="pdf-reference"><span>Co</span><small data-pdf-copy="cobalt">钴</small><span class="pdf-tab-wave">1.7903 Å</span></button>
+            <button type="button" data-pdf-target="Mo" aria-pressed="false" aria-controls="pdf-reference"><span>Mo</span><small data-pdf-copy="molybdenum">钼</small><span class="pdf-tab-wave">0.7107 Å</span></button>
+            <button type="button" data-pdf-target="Cr" aria-pressed="false" aria-controls="pdf-reference"><span>Cr</span><small data-pdf-copy="chromium">铬</small><span class="pdf-tab-wave">2.2910 Å</span></button>
+            <button type="button" data-pdf-target="Fe" aria-pressed="false" aria-controls="pdf-reference"><span>Fe</span><small data-pdf-copy="iron">铁</small><span class="pdf-tab-wave">1.9374 Å</span></button>
+            <button type="button" data-pdf-target="Ag" aria-pressed="false" aria-controls="pdf-reference"><span>Ag</span><small data-pdf-copy="silver">银</small><span class="pdf-tab-wave">0.5609 Å</span></button>
+          </div>
+          <div class="pdf-target-summary" aria-live="polite" aria-atomic="true"><p><strong data-pdf-active-target>Cu Kα</strong><span>λ = <b data-pdf-wavelength>1.5418</b> Å</span></p><p><b data-pdf-target-entries>207,146</b> <span data-pdf-copy="targetStructures">个结构条目</span><i>/</i><b data-pdf-target-peaks>6,125,967</b> <span data-pdf-copy="targetPeaks">条特征峰</span></p></div>
+          <div class="pdf-sample-toolbar"><span data-pdf-copy="samplePrompt">选择示例结构</span><div class="gj-pdf-samples" role="group" aria-label="选择参考条目" hidden><button type="button" data-pdf-sample="0" aria-pressed="true" aria-controls="pdf-reference">Ti–O</button><button type="button" data-pdf-sample="1" aria-pressed="false" aria-controls="pdf-reference">Si</button><button type="button" data-pdf-sample="2" aria-pressed="false" aria-controls="pdf-reference">Li–Fe–P–O</button></div></div>
+          <div id="pdf-reference" class="pdf-reference">
+            <div class="pdf-reference-info" aria-live="polite" aria-atomic="true"><span class="pdf-entry-id" data-pdf-entry-id>gj-73744</span><h3 data-pdf-formula>O₈Ti₄</h3><dl><div><dt data-pdf-copy="composition">元素组成</dt><dd data-pdf-elements>O · Ti</dd></div><div><dt data-pdf-copy="spacegroup">空间群</dt><dd data-pdf-spacegroup>P4₂/mnm · #136</dd></div><div><dt data-pdf-copy="peakCount">收录特征峰</dt><dd><span data-pdf-peak-count>30</span> <span data-pdf-copy="peakUnit">条</span></dd></div></dl><p data-pdf-copy="rawFormula">化学式与晶面信息按库内原始条目展示。</p></div>
+            <figure class="pdf-structure" data-pdf-structure hidden>
+              <div class="pdf-structure-head"><span data-pdf-copy="structureViewTitle">晶体结构</span><button type="button" data-pdf-structure-reset data-pdf-copy="structureReset">重置视角</button></div>
+              <div class="pdf-structure-viewport" data-pdf-structure-viewport tabindex="0" role="group" aria-label="晶体结构，拖动或使用方向键旋转">
+                <svg id="pdf-structure-plot" viewBox="0 0 360 300" role="img" aria-labelledby="pdf-structure-title pdf-structure-description"><title id="pdf-structure-title">库内晶体结构</title><desc id="pdf-structure-description">根据对应结构条目的真实原子坐标绘制。</desc><defs data-pdf-structure-defs></defs><g data-pdf-structure-scene></g></svg>
+              </div>
+              <figcaption><div class="pdf-structure-legend" data-pdf-structure-legend></div><p class="pdf-structure-cell" data-pdf-structure-cell></p><p data-pdf-copy="structureCaption">真实原子坐标 · 单晶胞视图 · 拖动旋转</p><p class="pdf-structure-note" data-pdf-copy="structureContactNote">连线为晶胞内近邻示意，球体大小用于显示。</p></figcaption>
+            </figure>
+            <figure class="pdf-chart"><svg id="gj-pdf-plot" viewBox="0 0 720 292" role="img" aria-labelledby="gj-pdf-plot-title gj-pdf-plot-description"><title id="gj-pdf-plot-title">O8Ti4 / Cu Kα 参考衍射峰</title><desc id="gj-pdf-plot-description">条目 gj-73744 的参考棒图，横轴 2θ 为 10–90°，纵轴为相对强度。</desc><g class="pdf-chart-grid"><path d="M48 36H700M48 130H700M48 224H700" /></g><g class="pdf-chart-axis"><text x="5" y="41">100</text><text x="13" y="135">50</text><text x="21" y="229">0</text><text x="48" y="251">10°</text><text x="211" y="251">30°</text><text x="374" y="251">50°</text><text x="537" y="251">70°</text><text x="677" y="251">90°</text><text x="356" y="280">2θ (°)</text></g><g class="pdf-chart-peaks" data-pdf-peaks><path d="M190 224V36M260.6 224V93.3M260.6 224V180.4M528.7 224V183.3M427.7 224V190.6M478.4 224V192.3M409.1 224V196.5M302.6 224V205.9M285.7 224V211.5M535.7 224V214M488.2 224V215.8" /></g></svg><figcaption><span data-pdf-copy="chartCaption">库内计算参考峰 · 相对强度归一化至 100</span><span data-pdf-chart-condition>Cu Kα / 10–90°</span></figcaption></figure>
+          </div>
+          <details class="pdf-details"><summary data-pdf-copy="details">查看峰位、d 间距与晶面指数</summary><div class="pdf-table-scroll" role="region" tabindex="0" aria-label="参考峰数据"><table class="pdf-peak-table"><caption data-pdf-copy="tableCaption">当前条目中相对强度最高的 6 条特征峰</caption><thead><tr><th scope="col">2θ (°)</th><th scope="col" data-pdf-copy="intensity">相对强度</th><th scope="col">d (Å)</th><th scope="col">hkl</th></tr></thead><tbody data-pdf-peak-rows><tr><td>27.420</td><td>100.00</td><td>3.2527</td><td>(1 -1 1)</td></tr><tr><td>27.422</td><td>99.97</td><td>3.2525</td><td>(1 1 -1)</td></tr><tr><td>36.091</td><td>69.52</td><td>2.4887</td><td>(2 -1 -1) · (1 0 -2)</td></tr><tr><td>36.091</td><td>23.17</td><td>2.4887</td><td>(0 1 1)</td></tr><tr><td>68.982</td><td>21.62</td><td>1.3614</td><td>(1 2 -4)</td></tr><tr><td>56.591</td><td>17.77</td><td>1.6263</td><td>(2 -2 2)</td></tr></tbody></table></div></details>
+          <p class="pdf-preview-note" data-pdf-copy="previewNote">每种靶材展示 3 个示例结构。参考峰为计算数据，非实测图谱；完整数据库检索请在干将中体验。</p>
+        </div>
+        <div class="pdf-spectrum-total"><p><strong data-pdf-stat="totalPeaks">35,972,083</strong><span data-pdf-copy="totalPeaksLabel">条特征峰，覆盖六种靶材</span></p><span data-pdf-copy="countNote">结构条目按统一 GJ 编号计数；峰数为六靶材累计，每条记录最多保留 30 条峰。</span></div>
+      </section>
+
+      <section id="gj-pdf-subscription" class="pdf-subscription section-shell" aria-labelledby="pdf-subscription-title">
+        <div class="pdf-subscription-copy"><p class="gj-pdf-kicker">GJ-PDF-V1 / STANDALONE DATABASE</p><h2 id="pdf-subscription-title" data-pdf-copy="subscriptionTitle">数据库独立订阅</h2><p data-pdf-copy="subscriptionIntro">从 207,146 个由团队独立计算与弛豫得到的稳定结构，到六种靶材的衍射参考、关联索引与完整性核验，GJ-PDF-V1 将系统计算与建库成果转化为可持续使用的科研数据资产。</p><div class="pdf-value-list"><div><h3 data-pdf-copy="valueCoverageTitle">面向更广的材料问题</h3><p data-pdf-copy="valueCoverageBody">89 种元素、46,627 类元素组合，为新体系与复杂样品保留更多候选。</p></div><div><h3 data-pdf-copy="valueReuseTitle">让每次比对有共同依据</h3><p data-pdf-copy="valueReuseBody">统一编号、标准字段与双层元素索引，让数据接入、候选筛选与结论复查更有章可循。</p></div></div><a class="pdf-contact" href="mailto:ganjiang@yzailab.com">ganjiang@yzailab.com</a></div>
+        <div class="pdf-price-card"><div class="pdf-plan"><span>GJ-PDF-V1</span><span data-pdf-copy="annualPlan">数据库独立订阅</span></div><p class="pdf-price"><span>¥</span>300,000</p><p class="pdf-price-unit" data-pdf-copy="priceUnit">人民币 / 年 · 数据库独立订阅价格</p><div class="pdf-included-notice"><strong data-pdf-copy="includedTitle">干将 App 已内置本数据库</strong><p data-pdf-copy="includedBody">本页报价适用于单独订阅 GJ-PDF-V1 数据库。通过干将 App 使用内置数据库，无需另行购买本页的独立数据库订阅。</p><a href="apps/index.html" data-pdf-copy="appLink">体验干将 App</a></div><p class="pdf-plan-statement" data-pdf-copy="planStatement">一套自主数据底座，支撑持续的科研判断。</p><ul class="pdf-plan-features"><li data-pdf-copy="planStructures">207,146 个团队独立计算的稳定结构的衍射参考</li><li data-pdf-copy="planTargets">Cu / Co / Mo / Cr / Fe / Ag 六靶材数据</li><li data-pdf-copy="planEvidence">峰位、相对强度、d 间距与 hkl 关联</li><li data-pdf-copy="planIndexes">元素组合索引与单元素倒排索引</li><li data-pdf-copy="planIntegrity">条目、谱峰与索引完整性核验</li></ul><a class="button" href="mailto:ganjiang@yzailab.com?subject=GJ-PDF-V1%20Standalone%20Database%20Subscription" data-pdf-copy="contactSales">咨询数据库独立订阅</a></div>
       </section>
     </main>
-    <footer class="shared-footer"><div class="footer-identity"><a class="brand" href="index.html#home"><img class="brand-logo" width="30" height="30" decoding="async" src="assets/images/logo-small.webp" alt="" /> GanJiang</a><p>GJ-PDF-V1 / POWDER DIFFRACTION FILE</p></div><div class="footer-links"><a href="index.html#home" data-i18n="backHome">返回主页</a><a href="collaborate.html" data-design-copy="navCollaboration">生态合作</a><a href="mailto:bincao@hkust-gz.edu.cn">bincao@hkust-gz.edu.cn</a></div></footer>
+    <footer class="shared-footer"><div class="footer-identity"><a class="brand" href="index.html#home"><img class="brand-logo" width="30" height="30" decoding="async" src="assets/images/logo-small.webp" alt="" /> GanJiang</a><p>GJ-PDF-V1 / POWDER DIFFRACTION FILE</p></div><div class="footer-links"><a href="index.html#home" data-i18n="backHome">返回主页</a><a href="collaborate.html" data-design-copy="navCollaboration">生态合作</a><a href="mailto:ganjiang@yzailab.com">ganjiang@yzailab.com</a></div></footer>
   </body>
 </html>

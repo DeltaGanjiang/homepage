@@ -51,3 +51,4 @@ venv/
 
 # Temporary database reference; the website uses a small, independent preview.
 /ganjiang_pdf.pkl
+/PDF-data/
