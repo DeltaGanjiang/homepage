@@ -77,15 +77,18 @@
     const model = activeStructure;
     const center = [0, 1, 2].map(j => model.cell.reduce((sum, axis) => sum + axis[j] / 2, 0));
     const radius = Math.max(...model.corners.map(position => Math.hypot(...position.map((v, j) => v - center[j]))));
-    const scale = 128 / radius;
     const rotate = ([x, y, z]) => {
       const u = x * Math.cos(structureYaw) + z * Math.sin(structureYaw);
       const v = -x * Math.sin(structureYaw) + z * Math.cos(structureYaw);
       return [u, y * Math.cos(structurePitch) - v * Math.sin(structurePitch), y * Math.sin(structurePitch) + v * Math.cos(structurePitch)];
     };
+    const rotatedCorners = model.corners.map(position => rotate(position.map((value, j) => value - center[j])));
+    const bounds = [0, 1].map(axis => [Math.min(...rotatedCorners.map(p => p[axis])), Math.max(...rotatedCorners.map(p => p[axis]))]);
+    const scale = Math.min(278 / Math.max(1e-6, bounds[0][1] - bounds[0][0]), 228 / Math.max(1e-6, bounds[1][1] - bounds[1][0]));
+    const midpoint = bounds.map(([low, high]) => (low + high) / 2);
     const project = position => {
       const [x, y, z] = rotate(position.map((value, j) => value - center[j]));
-      return {x: 180 + x * scale, y: 146 - y * scale, z};
+      return {x: 180 + (x - midpoint[0]) * scale, y: 142 - (y - midpoint[1]) * scale, z};
     };
     const atoms = model.atoms.map(atom => ({...atom, ...project(atom.position)}));
     const corners = model.corners.map(project);
@@ -142,6 +145,7 @@
     setText('#pdf-structure-title', `${entry.formula} · ${entry.id} · ${c.structureViewTitle}`);
     setText('#pdf-structure-description', c.structureDescription(model));
     setText('[data-pdf-structure-cell]', model.cellLengths.map((value, index) => `${'abc'[index]} ${value.toFixed(3)}`).join(' · ') + ' Å');
+    setText('[data-pdf-structure-angles]', model.cellAngles.map((value, index) => `${'αβγ'[index]} ${value.toFixed(1)}°`).join(' · '));
     section.querySelector('[data-pdf-structure-viewport]').setAttribute('aria-label', c.structureControls);
     figure.hidden = false;
     figure.parentElement.classList.add('has-structure');
