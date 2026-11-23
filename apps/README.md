@@ -45,7 +45,7 @@ form. Rules are based on `publisher/干将XRD功能积分与费用估算.md`, wi
 subsequent confirmed corrections taking precedence. The source checkout stays
 ignored by the parent repository.
 
-- Every account receives 20,000 complimentary credits. RMB 9.9 purchases 990
+- Every account receives 10,000 complimentary credits. RMB 9.9 purchases 990
   credits, and periodic community events offer additional credits.
 - Figures are reference estimates, not live account balances or billing data.
 - Tool credits and model usage are separate. RMB can purchase credits; credits
