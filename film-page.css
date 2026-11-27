@@ -24,6 +24,8 @@
 .full-film-youtube:focus-visible { outline: 2px solid var(--theme-border-accent, #77f6d2); outline-offset: 4px; }
 .full-film-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 4px; }
 .full-film-links a { min-height: 44px; }
+.film-page .agent-system { margin-top: 48px; min-height: 0; border-top: 1px solid var(--theme-border, #283752); }
+.film-page .agent-system-shell { width: 100%; }
 .full-film-error { padding: 14px 18px; border: 1px solid var(--theme-border-strong, #435577); border-radius: 4px; color: var(--theme-text, #dce6ff); font-size: 14px; }
 .full-film-error[hidden] { display: none; }
 .full-film-next { display: grid; grid-template-columns: 1.4fr 1fr 1fr; align-items: center; gap: 32px; margin-top: 44px; padding-top: 36px; border-top: 1px solid var(--theme-border, #283752); }

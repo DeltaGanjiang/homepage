@@ -4,7 +4,7 @@
   if (!video) return;
   const copy = {
     zh: {
-      eyebrow: 'GAN JIANG · 项目介绍', title: '走近干将。',
+      eyebrow: 'GanJiang · 项目介绍', title: '走近干将。',
       intro: '从一张衍射图谱，到材料的结构与变化。用一部完整短片，了解干将的分析流程、研究案例与评测结果。',
       openVideo: '打开完整视频', download: '下载完整视频', team: '认识团队',
       nextEyebrow: '继续探索', nextTitle: '从介绍，走向研究。', research: '探索研究案例', try: '体验干将',
@@ -13,13 +13,13 @@
       description: '用 9 分 42 秒，了解干将的分析流程、研究案例与评测结果。'
     },
     en: {
-      eyebrow: 'GAN JIANG · THE PROJECT FILM', title: 'Get to know Gan Jiang.',
-      intro: 'A self-learning scientific agent for X-ray diffraction. Discover Gan Jiang’s analytical workflow, research case studies and benchmark results in the full project film.',
+      eyebrow: 'GanJiang · THE PROJECT FILM', title: 'Get to know GanJiang.',
+      intro: 'A self-learning scientific agent for X-ray diffraction. Discover GanJiang’s analytical workflow, research case studies and benchmark results in the full project film.',
       openVideo: 'Open the full film', download: 'Download the full film', team: 'Meet the team',
-      nextEyebrow: 'KEEP EXPLORING', nextTitle: 'From the film to the research.', research: 'Explore the research', try: 'Try Gan Jiang',
+      nextEyebrow: 'KEEP EXPLORING', nextTitle: 'From the film to the research.', research: 'Explore the research', try: 'Try GanJiang',
       error: 'The video could not be loaded. Use the link below to open or download the full film.',
-      pageTitle: 'Gan Jiang: A self-learning scientific agent for X-ray diffraction',
-      description: 'Discover Gan Jiang’s analytical workflow, research case studies and benchmark results in a 9-minute, 42-second film.'
+      pageTitle: 'GanJiang: A self-learning scientific agent for X-ray diffraction',
+      description: 'Discover GanJiang’s analytical workflow, research case studies and benchmark results in a 9-minute, 42-second film.'
     }
   };
   function translate() {

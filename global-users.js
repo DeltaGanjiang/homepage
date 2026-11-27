@@ -36,27 +36,27 @@
   const copy = {
     zh: {
       title: '用户来自全球', intro: '跨越时区与山海，让对材料的探索彼此连接。',
-      points: '个地图展示点', reach: '连接世界的每一份好奇', userKey: '用户分布点位', placeKey: '科研地标',
+      users: '用户量', reach: '链接全球学者', userKey: '用户分布点位', placeKey: '科研地标',
       places: '探索高校与科研地标', select: '点击定位', drag: '拖动探索用户分布',
       note: '红点为用户位置示意图',
       reset: '重置视角', pause: '暂停旋转', resume: '继续旋转',
       location: '探索全球科研地标', locationHint: '选择单位，将地球转向它所在的城市',
       help: '拖动旋转 · 双击局部放大 · 点击地球后滚轮缩放 · 方向键旋转，+/− 缩放',
       zoom: '地球缩放', zoomIn: '放大地球', zoomOut: '缩小地球', zoomLevel: '缩放比例',
-      canvas: '可旋转的全球分布地球，含 500+ 个用户位置示意点和 12 个科研地标',
+      canvas: '可旋转的全球分布地球，展示用户位置示意点和 12 个科研地标',
       loading: '正在加载地球…', error: '地球暂时未能加载，请重试。', retry: '重新加载',
       unsupported: '当前浏览器无法绘制地球，请使用支持 Canvas 的浏览器。', locate: '定位'
     },
     en: {
       title: 'A worldwide community', intro: 'Across borders and time zones, connected by a curiosity for materials.',
-      points: 'points on the globe', reach: 'A shared curiosity, around the world', userKey: 'User distribution points', placeKey: 'Research landmarks',
+      users: 'Users', reach: 'Connecting scholars worldwide', userKey: 'User distribution points', placeKey: 'Research landmarks',
       places: 'Explore research landmarks', select: 'Select to explore', drag: 'Drag to explore user locations',
       note: 'Red dots illustrate user locations.',
       reset: 'Reset view', pause: 'Pause rotation', resume: 'Resume rotation',
       location: 'Explore research around the world', locationHint: 'Select an institution to find its city on the globe',
       help: 'Drag to rotate · Double-click to zoom in · Click the globe, then scroll to zoom · Arrow keys rotate, +/− zoom',
       zoom: 'Globe zoom', zoomIn: 'Zoom in', zoomOut: 'Zoom out', zoomLevel: 'Zoom level',
-      canvas: 'Rotatable globe illustrating 500+ user locations and 12 research landmarks',
+      canvas: 'Rotatable globe illustrating user locations and 12 research landmarks',
       loading: 'Loading the globe…', error: 'The globe could not load. Please try again.', retry: 'Retry',
       unsupported: 'This browser cannot draw the globe. Please use a browser with Canvas support.', locate: 'Locate'
     }

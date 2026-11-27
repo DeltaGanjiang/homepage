@@ -3,7 +3,7 @@
   const map=document.querySelector('#agent-system-map');if(!map)return;
   const nodes=[...map.querySelectorAll('[data-system-node]')];
   const play=document.querySelector('#system-sequence-play'),replay=document.querySelector('#system-sequence-replay');
-  const captions={zh:['从研究问题出发','干将理解意图，规划分析路径','接入结构数据库与分析工具','调度模型，识别、分解与精修','连接实验测量，获得新的证据','将实验反馈带回下一次判断'],en:['Start with a research question','Gan Jiang interprets intent and plans the analysis','Connect structural databases and analysis tools','Identify phases, decompose signals, refine structures','Connect measurements and collect new evidence','Bring experimental feedback into the next decision']};
+  const captions={zh:['从研究问题出发','干将理解意图，规划分析路径','接入结构数据库与分析工具','调度模型，识别、分解与精修','连接实验测量，获得新的证据','将实验反馈带回下一次判断'],en:['Start with a research question','GanJiang interprets intent and plans the analysis','Connect structural databases and analysis tools','Identify phases, decompose signals, refine structures','Connect measurements and collect new evidence','Bring experimental feedback into the next decision']};
   const order=[0,2,4,1,3,2],motion=matchMedia('(prefers-reduced-motion: reduce)');
   let stage=motion.matches?5:0,playing=!motion.matches,visible=false,timer=null;
   function paint(){

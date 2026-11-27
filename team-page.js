@@ -24,7 +24,7 @@
     },
     en: {
       eyebrow: 'Research · Engineering · Collaboration',
-      title: 'Gan Jiang Project Team',
+      title: 'GanJiang Project Team',
       mission: 'Connecting materials science,<br /><em>AI and engineering.</em>',
       intro: 'Led by <a href="https://www.caobin.asia/" target="_blank" rel="noopener noreferrer">Dr. Bin Cao</a> and based at AI Lab, The Yangtze River Delta, our team brings together researchers from industry labs and universities. We develop scientific agents for phase identification, multiphase decomposition and structural refinement in powder X-ray diffraction, combining research with engineering implementation.',
       meet: 'Meet the team', contactLink: 'Get in touch',
@@ -32,13 +32,13 @@
       discipline1: 'Materials science', discipline2: 'Artificial intelligence', discipline3: 'Engineering',
       directory: 'Team directory',
       leadNote: 'Connecting research questions with project development.',
-      coreNote: 'Advancing Gan Jiang’s academic research and analytical methods.',
+      coreNote: 'Advancing GanJiang’s academic research and analytical methods.',
       advisorsNote: 'Academic perspectives that support continued exploration.',
-      engineeringNote: 'Contributing to Gan Jiang’s technology and tool development.',
+      engineeringNote: 'Contributing to GanJiang’s technology and tool development.',
       testingNote: 'Improving the user experience through testing and feedback.',
       operationsNote: 'Connecting the project, its users and future collaborators.',
       contactTitle: 'A conversation.<br />A new collaboration.',
-      contactIntro: 'To learn about Gan Jiang, ask about the product or explore a collaboration, get in touch with our team.',
+      contactIntro: 'To learn about GanJiang, ask about the product or explore a collaboration, get in touch with our team.',
       tryLink: 'Explore access options'
     }
   };

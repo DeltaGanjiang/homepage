@@ -40,7 +40,7 @@
       previous: 'Previous', next: 'Next', expand: 'Enlarge', close: 'Close', retry: 'Retry',
       region: 'Project presentation', dialog: 'Enlarged project presentation', open: 'Open full-size slide',
       loading: 'Loading slide…', error: 'This slide could not load. Retry or download the PPT.',
-      slide: page => `Gan Jiang presentation, slide ${page} of ${count}`
+      slide: page => `GanJiang presentation, slide ${page} of ${count}`
     }
   };
 

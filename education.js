@@ -30,7 +30,7 @@
     ineligibleText: 'Please apply through your department or second-level unit',
     applyUnit: 'One application from your institutional unit',
     stepPrepare: 'Send application details', stepReview: 'Receive a review outcome', stepActivate: 'Activate approved access',
-    launch: 'GANJIANG EDUCATION SUPPORT · NOW OPEN',
+    launch: 'GanJiang EDUCATION SUPPORT · NOW OPEN',
     pageTitle: 'GanJiang Education Support Program',
     heroIntro: 'Free access for a limited time for departments and second-level units within universities and research institutions, supporting teaching, researcher training and academic research.',
     applyCta: 'Apply for education support', readPlan: 'Read the program details',

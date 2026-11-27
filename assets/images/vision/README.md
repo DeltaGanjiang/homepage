@@ -1,0 +1,24 @@
+# GanJiang materials intelligence imagery
+
+Generated using the built-in ImageGen tool for the GanJiang company website. These are conceptual scientific illustrations, not photographs of GanJiang facilities or instruments. WebP files are optimized versions of the generated images.
+
+Final assets: `characterize.webp`, `predict.webp`, `design.webp`, `experiment.webp`.
+
+## Final prompt set
+
+### characterize
+
+Use case: stylized-concept. Asset type: premium cinematic scientific website image, landscape 16:9. Style: photorealistic scientific editorial art direction, exceptionally refined luxury industrial photography, physically based materials, deep midnight navy and graphite background, subtle cold silver and jade teal highlights, sophisticated studio illumination, tactile realism, restrained composition, depth of field. Absolutely no text, lettering, labels, logos, watermarks, UI, diagrams, cartoon symbols, arrows or infographic. Main subject must remain readable at a small website card size. Primary request: an exquisite macro photograph of a metallic crystalline material sample under a precise narrow X-ray-like beam in a dark advanced characterization instrument chamber. A sharply faceted polished silver crystal, visible microscopic surface texture and internal geometric planes, one subtle jade diffraction scattering arc in the distance. Tangible matter and scientific precision. Close crop, strong singular composition, light from upper left, rich shadows and controlled highlights.
+
+### predict
+
+Use case: stylized-concept. Asset type: premium cinematic scientific website image, landscape 16:9. Style: photorealistic scientific editorial art direction, exceptionally refined luxury industrial photography, physically based materials, deep midnight navy and graphite background, subtle cold silver and jade teal highlights, sophisticated studio illumination, tactile realism, restrained composition, depth of field. Absolutely no text, lettering, labels, logos, watermarks, UI, diagrams, cartoon symbols, arrows or infographic. Main subject must remain readable at a small website card size. Primary request: a photorealistic futuristic scientific visualization of a silver atomistic material lattice bending gently into a translucent flowing surface representing predicted material properties. Precise metallic spheres and fine bonds occupy foreground, a delicate jade and ice-blue probabilistic field recedes into depth, sophisticated computational materials science, beautiful real metal, glass and light. No numerals, no chart axes, no screens, no labels. One coherent cinematic scene, minimal elegant details.
+
+### design
+
+Use case: stylized-concept. Asset type: premium cinematic scientific website image, landscape 16:9. Style: photorealistic scientific editorial art direction, exceptionally refined luxury industrial photography, physically based materials, deep midnight navy and graphite background, subtle cold silver and jade teal highlights, sophisticated studio illumination, tactile realism, restrained composition, depth of field. Absolutely no text, lettering, labels, logos, watermarks, UI, diagrams, cartoon symbols, arrows or infographic. Main subject must remain readable at a small website card size. Primary request: a museum-quality photorealistic computationally designed metallic gyroid lattice material specimen, elegantly sculpted titanium with complex interconnected pores and precise architectural geometry, levitating just above a dark graphite plinth in a scientific studio. Beside it a small faceted candidate crystal, one refined jade rim light. Macro product photography of an extraordinary next-generation material, expressive sculptural form, precise optical reflections, calm powerful composition.
+
+### experiment
+
+Use case: stylized-concept. Asset type: premium cinematic scientific website image, landscape 16:9. Style: photorealistic scientific editorial art direction, exceptionally refined luxury industrial photography, physically based materials, deep midnight navy and graphite background, subtle cold silver and jade teal highlights, sophisticated studio illumination, tactile realism, restrained composition, depth of field. Absolutely no text, lettering, labels, logos, watermarks, UI, diagrams, cartoon symbols, arrows or infographic. Main subject must remain readable at a small website card size. Primary request: a photorealistic close-up of a pristine autonomous materials research laboratory, a precision brushed titanium robotic gripper placing a small crystal sample into a compact scientific instrument on a spotless dark laboratory workbench. Cinematic angle, exquisitely engineered industrial details, a few material sample vessels arranged in soft focus, jade and ice-blue accent lights, no people, no legible markings, no branding. Real advanced laboratory, not fantasy spaceship.
+

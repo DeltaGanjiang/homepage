@@ -33,9 +33,9 @@
       label: '干将 58 秒说明短片：晶体结构的意义与干将的贡献'
     });
     Object.assign(copy.en, {
-      body: 'In 58 seconds, discover how atomic arrangements shape materials, how XRD reveals structure, and how Gan Jiang connects tools, checks evidence and learns from experience.',
+      body: 'In 58 seconds, discover how atomic arrangements shape materials, how XRD reveals structure, and how GanJiang connects tools, checks evidence and learns from experience.',
       note: '',
-      label: 'Gan Jiang: a 58-second introduction to crystal structures and our contribution'
+      label: 'GanJiang: a 58-second introduction to crystal structures and our contribution'
     });
   }
   let visible = false;

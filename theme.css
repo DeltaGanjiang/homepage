@@ -1,5 +1,6 @@
 /* Light-only semantic tokens. Each component keeps its original dark fallback. */
 :root { color-scheme: dark; }
+.eyebrow, .co-eyebrow, .edu-eyebrow { text-transform: none; }
 :root[data-theme="light"] {
   color-scheme: light;
   --theme-page: #ffffff;
