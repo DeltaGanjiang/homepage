@@ -67,7 +67,7 @@ html[lang="zh-CN"] .site-v2 .hero-text { max-width: none; width: max-content; ma
 .materials-vision.has-entered .vision-design { animation-delay: .24s; }
 .materials-vision.has-entered .vision-experiment { animation-delay: .36s; }
 .vision-image-note { margin: 10px 0 0; font-size: 12px; line-height: 1.6; color: var(--theme-subtle, #8495ab); text-align: right; }
-.vision-core .phyevo-mark { display: block; width: 52px; height: 52px; margin-bottom: 2px; }
+.vision-core .phyevo-mark { display: block; width: 76px; height: 76px; margin-bottom: 2px; }
 .vision-core .phyevo-wordmark { font: 550 clamp(26px, 2.5vw, 36px)/1.2 var(--display); letter-spacing: -.055em; color: var(--theme-text, #eff4ff); }
 .phyevo-wordmark > span { font-weight: 350; color: var(--vision-accent); }
 .vision-core .phyevo-chinese { font-size: 12px; line-height: 1.4; letter-spacing: .02em; color: var(--theme-muted, #a7b6d4); }

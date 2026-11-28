@@ -1,7 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
   <title>PhyEvo AI</title>
-  <desc>P for Physics shares its stem with an E for Evolution. Three emerging bars express progressive discovery grounded in physical structure.</desc>
-  <path fill-rule="evenodd" d="M12 6h31c16 0 25 8 25 21S59 48 43 48H26v26H12V6Zm14 12v18h16c8 0 12-3 12-9s-4-9-12-9H26Z" fill="#5AB49B"/>
-  <path d="M26 52h31c2 0 3 1 2 3l-4 5H26v-8Z" fill="#79CDB0"/>
-  <path d="M26 64h43c2 0 3 1 2 3l-5 7H26V64Z" fill="#9BE1C2"/>
+  <desc>An angular crystal unfolds into a continuous flowing surface, expressing matter evolving through physical intelligence.</desc>
+  <path d="M15 87 9 70 22 54C22 68 19 79 15 87Z" fill="#257E70"/>
+  <path d="M15 87C23 63 20 54 36 47C49 41 58 47 67 39C73 34 75 29 73 24C83 37 77 47 66 52C57 57 47 56 37 63C27 70 23 78 15 87Z" fill="#77C5A4"/>
+  <path d="M56 17C68 6 83 15 89 27C98 45 84 61 65 69C79 57 82 47 79 35C76 23 67 15 56 17Z" fill="#257E70"/>
+  <path d="M15 87C29 73 40 72 52 74C67 76 83 66 90 52C88 75 73 91 51 91L15 87Z" fill="#257E70"/>
 </svg>

@@ -1,6 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 88" fill="none">
   <title>物演AI — PhyEvo AI</title>
-  <g transform="translate(0 4)"><path fill-rule="evenodd" d="M12 6h31c16 0 25 8 25 21S59 48 43 48H26v26H12V6Zm14 12v18h16c8 0 12-3 12-9s-4-9-12-9H26Z" fill="#328F78"/><path d="M26 52h31c2 0 3 1 2 3l-4 5H26v-8Z" fill="#48A38B"/><path d="M26 64h43c2 0 3 1 2 3l-5 7H26V64Z" fill="#64B99E"/></g>
+  <g transform="translate(0 0) scale(.88)">
+    <path d="M15 87 9 70 22 54C22 68 19 79 15 87Z" fill="#257E70"/>
+    <path d="M15 87C23 63 20 54 36 47C49 41 58 47 67 39C73 34 75 29 73 24C83 37 77 47 66 52C57 57 47 56 37 63C27 70 23 78 15 87Z" fill="#77C5A4"/>
+    <path d="M56 17C68 6 83 15 89 27C98 45 84 61 65 69C79 57 82 47 79 35C76 23 67 15 56 17Z" fill="#257E70"/>
+    <path d="M15 87C29 73 40 72 52 74C67 76 83 66 90 52C88 75 73 91 51 91L15 87Z" fill="#257E70"/>
+  </g>
   <text x="91" y="47" fill="#243746" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="600" letter-spacing="-1.6">PhyEvo <tspan font-weight="400">AI</tspan></text>
   <text x="93" y="71" fill="#526570" font-family="PingFang SC,Microsoft YaHei,Arial,sans-serif" font-size="16" letter-spacing="3">物演AI</text>
 </svg>
